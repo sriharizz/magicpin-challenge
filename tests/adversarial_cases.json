@@ -1,0 +1,6327 @@
+[
+  {
+    "case_id": "adv_0001",
+    "adversarial_scenario": "cross_category_distraction",
+    "category": "veterinary",
+    "category_context": {
+      "slug": "veterinary",
+      "voice": {
+        "tone": "compassionate_clinical",
+        "register": "veterinary_peer",
+        "vocab_allowed": [
+          "canine atopy",
+          "monoclonal",
+          "cytopoint",
+          "pruritus"
+        ],
+        "vocab_taboo": [
+          "miracle cure"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_vet_01",
+          "title": "Long-Term Monoclonal Antibody Safety in Canine Atopy",
+          "summary": "Sustained pruritus reduction over 24 months without immunosuppressive adverse events.",
+          "actionable": "Review maintenance scheduling for seasonal canine atopic dermatitis.",
+          "patient_segment": "canine_atopy",
+          "source": "Vet Dermatology 2025",
+          "trial_n": 890
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_000",
+      "category_slug": "veterinary",
+      "identity": {
+        "name": "Adversarial Clinic 0",
+        "city": "Jaipur",
+        "locality": "C-Scheme",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "offers": [
+        {
+          "id": "off_fake",
+          "title": "50% off root canal and dental crown",
+          "discount_pct": 50
+        }
+      ],
+      "signals": [
+        "frequent_dental_chair_inquiries"
+      ]
+    },
+    "trigger_context": {
+      "id": "trg_adv_0001",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0002",
+    "adversarial_scenario": "irrelevant_high_value_metric",
+    "category": "diagnostic_labs",
+    "category_context": {
+      "slug": "diagnostic_labs",
+      "voice": {
+        "tone": "analytical_rigorous",
+        "register": "laboratory_peer",
+        "vocab_allowed": [
+          "sensitivity",
+          "specificity",
+          "turnaround time",
+          "hemolysis"
+        ],
+        "vocab_taboo": [
+          "instant error-free"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_lab_01",
+          "title": "Pre-Analytical Sample Quality Protocol in High-Volume Labs",
+          "summary": "Standardized tube transport protocols cut sample rejection rates by 42%.",
+          "actionable": "Audit phlebotomy collection transport times.",
+          "patient_segment": "routine_biochemistry",
+          "source": "Clinica Chimica Acta 2026",
+          "trial_n": 15000
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_001",
+      "category_slug": "diagnostic_labs",
+      "identity": {
+        "name": "Adversarial Clinic 1",
+        "city": "Pune",
+        "locality": "Koregaon Park",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "signals": [
+        "lottery_jackpot_winner_100000000_usd",
+        "random_unverified_views_99999999"
+      ]
+    },
+    "trigger_context": {
+      "id": "trg_adv_0002",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0003",
+    "adversarial_scenario": "conflicting_operational_signals",
+    "category": "cardiology",
+    "category_context": {
+      "slug": "cardiology",
+      "voice": {
+        "tone": "clinical_rigorous",
+        "register": "professional_peer",
+        "vocab_allowed": [
+          "ejection fraction",
+          "hypertension",
+          "statin",
+          "lipid cohort"
+        ],
+        "vocab_taboo": [
+          "cure all",
+          "magic pill",
+          "guaranteed"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_card_01",
+          "title": "SGLT2 Inhibitor Microvascular Outcomes",
+          "summary": "Reduction in cardiovascular mortality observed across high-risk diabetic cohorts.",
+          "actionable": "Review heart-failure protocols for diabetic patients.",
+          "patient_segment": "diabetic_cardio",
+          "source": "Lancet Cardiology 2026",
+          "trial_n": 4820
+        },
+        {
+          "id": "d_card_02",
+          "title": "Early Statin Titration in Post-PCI Recovery",
+          "summary": "High-intensity statin regimens reduced 90-day recurrent ischemic events.",
+          "actionable": "Audit post-PCI lipid panel follow-ups.",
+          "patient_segment": "post_pci",
+          "source": "JACC 2025",
+          "trial_n": 3200
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_002",
+      "category_slug": "cardiology",
+      "identity": {
+        "name": "Adversarial Clinic 2",
+        "city": "Bengaluru",
+        "locality": "Whitefield",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0003",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0004",
+    "adversarial_scenario": "commercial_leakage_in_clinical",
+    "category": "diagnostic_labs",
+    "category_context": {
+      "slug": "diagnostic_labs",
+      "voice": {
+        "tone": "analytical_rigorous",
+        "register": "laboratory_peer",
+        "vocab_allowed": [
+          "sensitivity",
+          "specificity",
+          "turnaround time",
+          "hemolysis"
+        ],
+        "vocab_taboo": [
+          "instant error-free"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_lab_01",
+          "title": "Pre-Analytical Sample Quality Protocol in High-Volume Labs",
+          "summary": "Standardized tube transport protocols cut sample rejection rates by 42%.",
+          "actionable": "Audit phlebotomy collection transport times.",
+          "patient_segment": "routine_biochemistry",
+          "source": "Clinica Chimica Acta 2026",
+          "trial_n": 15000
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_003",
+      "category_slug": "diagnostic_labs",
+      "identity": {
+        "name": "Adversarial Clinic 3",
+        "city": "Hyderabad",
+        "locality": "Gachibowli",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "performance": {
+        "revenue_usd": 450000,
+        "leads_30d": 999,
+        "conversion_rate": 0.88
+      },
+      "offers": [
+        {
+          "title": "Buy 1 Get 1 Free Statin",
+          "discount": "50% off"
+        }
+      ]
+    },
+    "trigger_context": {
+      "id": "trg_adv_0004",
+      "kind": "research_digest",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "research_digest",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0005",
+    "adversarial_scenario": "distracting_locality_in_global_digest",
+    "category": "cardiology",
+    "category_context": {
+      "slug": "cardiology",
+      "voice": {
+        "tone": "clinical_rigorous",
+        "register": "professional_peer",
+        "vocab_allowed": [
+          "ejection fraction",
+          "hypertension",
+          "statin",
+          "lipid cohort"
+        ],
+        "vocab_taboo": [
+          "cure all",
+          "magic pill",
+          "guaranteed"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_card_01",
+          "title": "SGLT2 Inhibitor Microvascular Outcomes",
+          "summary": "Reduction in cardiovascular mortality observed across high-risk diabetic cohorts.",
+          "actionable": "Review heart-failure protocols for diabetic patients.",
+          "patient_segment": "diabetic_cardio",
+          "source": "Lancet Cardiology 2026",
+          "trial_n": 4820
+        },
+        {
+          "id": "d_card_02",
+          "title": "Early Statin Titration in Post-PCI Recovery",
+          "summary": "High-intensity statin regimens reduced 90-day recurrent ischemic events.",
+          "actionable": "Audit post-PCI lipid panel follow-ups.",
+          "patient_segment": "post_pci",
+          "source": "JACC 2025",
+          "trial_n": 3200
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_004",
+      "category_slug": "cardiology",
+      "identity": {
+        "name": "Adversarial Clinic 4",
+        "city": "Delhi",
+        "locality": "Greater Kailash",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0005",
+      "kind": "research_digest",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "research_digest",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0006",
+    "adversarial_scenario": "relevant_locality_in_local_spike",
+    "category": "cardiology",
+    "category_context": {
+      "slug": "cardiology",
+      "voice": {
+        "tone": "clinical_rigorous",
+        "register": "professional_peer",
+        "vocab_allowed": [
+          "ejection fraction",
+          "hypertension",
+          "statin",
+          "lipid cohort"
+        ],
+        "vocab_taboo": [
+          "cure all",
+          "magic pill",
+          "guaranteed"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_card_01",
+          "title": "SGLT2 Inhibitor Microvascular Outcomes",
+          "summary": "Reduction in cardiovascular mortality observed across high-risk diabetic cohorts.",
+          "actionable": "Review heart-failure protocols for diabetic patients.",
+          "patient_segment": "diabetic_cardio",
+          "source": "Lancet Cardiology 2026",
+          "trial_n": 4820
+        },
+        {
+          "id": "d_card_02",
+          "title": "Early Statin Titration in Post-PCI Recovery",
+          "summary": "High-intensity statin regimens reduced 90-day recurrent ischemic events.",
+          "actionable": "Audit post-PCI lipid panel follow-ups.",
+          "patient_segment": "post_pci",
+          "source": "JACC 2025",
+          "trial_n": 3200
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_005",
+      "category_slug": "cardiology",
+      "identity": {
+        "name": "Adversarial Clinic 5",
+        "city": "Hyderabad",
+        "locality": "Gachibowli",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0006",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0007",
+    "adversarial_scenario": "distracting_established_year",
+    "category": "diagnostic_labs",
+    "category_context": {
+      "slug": "diagnostic_labs",
+      "voice": {
+        "tone": "analytical_rigorous",
+        "register": "laboratory_peer",
+        "vocab_allowed": [
+          "sensitivity",
+          "specificity",
+          "turnaround time",
+          "hemolysis"
+        ],
+        "vocab_taboo": [
+          "instant error-free"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_lab_01",
+          "title": "Pre-Analytical Sample Quality Protocol in High-Volume Labs",
+          "summary": "Standardized tube transport protocols cut sample rejection rates by 42%.",
+          "actionable": "Audit phlebotomy collection transport times.",
+          "patient_segment": "routine_biochemistry",
+          "source": "Clinica Chimica Acta 2026",
+          "trial_n": 15000
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_006",
+      "category_slug": "diagnostic_labs",
+      "identity": {
+        "name": "Adversarial Clinic 6",
+        "city": "Mumbai",
+        "locality": "Bandra West",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0007",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0008",
+    "adversarial_scenario": "sensitive_billing_in_patient_inquiry",
+    "category": "dermatology",
+    "category_context": {
+      "slug": "dermatology",
+      "voice": {
+        "tone": "consultative_clinical",
+        "register": "peer_medical",
+        "vocab_allowed": [
+          "melasma",
+          "retinoid",
+          "barrier repair",
+          "transepidermal"
+        ],
+        "vocab_taboo": [
+          "fairness",
+          "instant glow",
+          "bleach"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_derm_01",
+          "title": "Topical Cysteamine vs Hydroquinone for Melasma",
+          "summary": "Comparable efficacy with significantly lower erythema and rebound hyperpigmentation.",
+          "actionable": "Consider non-hydroquinone protocols for recalcitrant melasma.",
+          "patient_segment": "hyperpigmentation",
+          "source": "JAAD 2026",
+          "trial_n": 640
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_007",
+      "category_slug": "dermatology",
+      "identity": {
+        "name": "Adversarial Clinic 7",
+        "city": "Hyderabad",
+        "locality": "Banjara Hills",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "subscription": {
+        "card_last4": "4242",
+        "internal_arrears_balance": 14500,
+        "billing_status": "overdue_warning"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0008",
+      "kind": "inbound_inquiry",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {
+        "question": "Does your clinic accept senior citizen cardiac rehab?"
+      }
+    },
+    "trigger_kind": "inbound_inquiry",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0009",
+    "adversarial_scenario": "massive_context_overload",
+    "category": "dermatology",
+    "category_context": {
+      "slug": "dermatology",
+      "voice": {
+        "tone": "consultative_clinical",
+        "register": "peer_medical",
+        "vocab_allowed": [
+          "melasma",
+          "retinoid",
+          "barrier repair",
+          "transepidermal"
+        ],
+        "vocab_taboo": [
+          "fairness",
+          "instant glow",
+          "bleach"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_derm_01",
+          "title": "Topical Cysteamine vs Hydroquinone for Melasma",
+          "summary": "Comparable efficacy with significantly lower erythema and rebound hyperpigmentation.",
+          "actionable": "Consider non-hydroquinone protocols for recalcitrant melasma.",
+          "patient_segment": "hyperpigmentation",
+          "source": "JAAD 2026",
+          "trial_n": 640
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_008",
+      "category_slug": "dermatology",
+      "identity": {
+        "name": "Adversarial Clinic 8",
+        "city": "Pune",
+        "locality": "Koregaon Park",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "noise_metric_0": "noise_val_0",
+      "noise_metric_1": "noise_val_17",
+      "noise_metric_2": "noise_val_34",
+      "noise_metric_3": "noise_val_51",
+      "noise_metric_4": "noise_val_68",
+      "noise_metric_5": "noise_val_85",
+      "noise_metric_6": "noise_val_102",
+      "noise_metric_7": "noise_val_119",
+      "noise_metric_8": "noise_val_136",
+      "noise_metric_9": "noise_val_153",
+      "noise_metric_10": "noise_val_170",
+      "noise_metric_11": "noise_val_187",
+      "noise_metric_12": "noise_val_204",
+      "noise_metric_13": "noise_val_221",
+      "noise_metric_14": "noise_val_238",
+      "noise_metric_15": "noise_val_255",
+      "noise_metric_16": "noise_val_272",
+      "noise_metric_17": "noise_val_289",
+      "noise_metric_18": "noise_val_306",
+      "noise_metric_19": "noise_val_323",
+      "noise_metric_20": "noise_val_340",
+      "noise_metric_21": "noise_val_357",
+      "noise_metric_22": "noise_val_374",
+      "noise_metric_23": "noise_val_391",
+      "noise_metric_24": "noise_val_408",
+      "noise_metric_25": "noise_val_425",
+      "noise_metric_26": "noise_val_442",
+      "noise_metric_27": "noise_val_459",
+      "noise_metric_28": "noise_val_476",
+      "noise_metric_29": "noise_val_493",
+      "noise_metric_30": "noise_val_510",
+      "noise_metric_31": "noise_val_527",
+      "noise_metric_32": "noise_val_544",
+      "noise_metric_33": "noise_val_561",
+      "noise_metric_34": "noise_val_578",
+      "noise_metric_35": "noise_val_595",
+      "noise_metric_36": "noise_val_612",
+      "noise_metric_37": "noise_val_629",
+      "noise_metric_38": "noise_val_646",
+      "noise_metric_39": "noise_val_663"
+    },
+    "trigger_context": {
+      "id": "trg_adv_0009",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0010",
+    "adversarial_scenario": "extreme_sparsity_single_field",
+    "category": "veterinary",
+    "category_context": {
+      "slug": "veterinary",
+      "voice": {
+        "tone": "compassionate_clinical",
+        "register": "veterinary_peer",
+        "vocab_allowed": [
+          "canine atopy",
+          "monoclonal",
+          "cytopoint",
+          "pruritus"
+        ],
+        "vocab_taboo": [
+          "miracle cure"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_vet_01",
+          "title": "Long-Term Monoclonal Antibody Safety in Canine Atopy",
+          "summary": "Sustained pruritus reduction over 24 months without immunosuppressive adverse events.",
+          "actionable": "Review maintenance scheduling for seasonal canine atopic dermatitis.",
+          "patient_segment": "canine_atopy",
+          "source": "Vet Dermatology 2025",
+          "trial_n": 890
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_009",
+      "category_slug": "veterinary"
+    },
+    "trigger_context": {
+      "id": "trg_adv_0010",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0011",
+    "adversarial_scenario": "cross_category_distraction",
+    "category": "wellness_spa",
+    "category_context": {
+      "slug": "wellness_spa",
+      "voice": {
+        "tone": "serene_consultative",
+        "register": "hospitality_expert",
+        "vocab_allowed": [
+          "aromatherapy",
+          "lymphatic drainage",
+          "stress reduction",
+          "repeat booking"
+        ],
+        "vocab_taboo": [
+          "detox guaranteed"
+        ]
+      },
+      "digest": []
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_010",
+      "category_slug": "wellness_spa",
+      "identity": {
+        "name": "Adversarial Clinic 10",
+        "city": "Ahmedabad",
+        "locality": "Bodakdev",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "offers": [
+        {
+          "id": "off_fake",
+          "title": "50% off root canal and dental crown",
+          "discount_pct": 50
+        }
+      ],
+      "signals": [
+        "frequent_dental_chair_inquiries"
+      ]
+    },
+    "trigger_context": {
+      "id": "trg_adv_0011",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0012",
+    "adversarial_scenario": "irrelevant_high_value_metric",
+    "category": "wellness_spa",
+    "category_context": {
+      "slug": "wellness_spa",
+      "voice": {
+        "tone": "serene_consultative",
+        "register": "hospitality_expert",
+        "vocab_allowed": [
+          "aromatherapy",
+          "lymphatic drainage",
+          "stress reduction",
+          "repeat booking"
+        ],
+        "vocab_taboo": [
+          "detox guaranteed"
+        ]
+      },
+      "digest": []
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_011",
+      "category_slug": "wellness_spa",
+      "identity": {
+        "name": "Adversarial Clinic 11",
+        "city": "Pune",
+        "locality": "Koregaon Park",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "signals": [
+        "lottery_jackpot_winner_100000000_usd",
+        "random_unverified_views_99999999"
+      ]
+    },
+    "trigger_context": {
+      "id": "trg_adv_0012",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0013",
+    "adversarial_scenario": "conflicting_operational_signals",
+    "category": "fitness_gyms",
+    "category_context": {
+      "slug": "fitness_gyms",
+      "voice": {
+        "tone": "energetic_coaching",
+        "register": "fitness_expert",
+        "vocab_allowed": [
+          "hypertrophy",
+          "progressive overload",
+          "retention",
+          "re-engagement"
+        ],
+        "vocab_taboo": [
+          "get shredded in 3 days",
+          "anabolic secret"
+        ]
+      },
+      "digest": []
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_012",
+      "category_slug": "fitness_gyms",
+      "identity": {
+        "name": "Adversarial Clinic 12",
+        "city": "Hyderabad",
+        "locality": "Banjara Hills",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0013",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0014",
+    "adversarial_scenario": "commercial_leakage_in_clinical",
+    "category": "fitness_gyms",
+    "category_context": {
+      "slug": "fitness_gyms",
+      "voice": {
+        "tone": "energetic_coaching",
+        "register": "fitness_expert",
+        "vocab_allowed": [
+          "hypertrophy",
+          "progressive overload",
+          "retention",
+          "re-engagement"
+        ],
+        "vocab_taboo": [
+          "get shredded in 3 days",
+          "anabolic secret"
+        ]
+      },
+      "digest": []
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_013",
+      "category_slug": "fitness_gyms",
+      "identity": {
+        "name": "Adversarial Clinic 13",
+        "city": "Delhi",
+        "locality": "Vasant Kunj",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "performance": {
+        "revenue_usd": 450000,
+        "leads_30d": 999,
+        "conversion_rate": 0.88
+      },
+      "offers": [
+        {
+          "title": "Buy 1 Get 1 Free Statin",
+          "discount": "50% off"
+        }
+      ]
+    },
+    "trigger_context": {
+      "id": "trg_adv_0014",
+      "kind": "research_digest",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "research_digest",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0015",
+    "adversarial_scenario": "distracting_locality_in_global_digest",
+    "category": "fitness_gyms",
+    "category_context": {
+      "slug": "fitness_gyms",
+      "voice": {
+        "tone": "energetic_coaching",
+        "register": "fitness_expert",
+        "vocab_allowed": [
+          "hypertrophy",
+          "progressive overload",
+          "retention",
+          "re-engagement"
+        ],
+        "vocab_taboo": [
+          "get shredded in 3 days",
+          "anabolic secret"
+        ]
+      },
+      "digest": []
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_014",
+      "category_slug": "fitness_gyms",
+      "identity": {
+        "name": "Adversarial Clinic 14",
+        "city": "Mumbai",
+        "locality": "Bandra West",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0015",
+      "kind": "research_digest",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "research_digest",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0016",
+    "adversarial_scenario": "relevant_locality_in_local_spike",
+    "category": "dermatology",
+    "category_context": {
+      "slug": "dermatology",
+      "voice": {
+        "tone": "consultative_clinical",
+        "register": "peer_medical",
+        "vocab_allowed": [
+          "melasma",
+          "retinoid",
+          "barrier repair",
+          "transepidermal"
+        ],
+        "vocab_taboo": [
+          "fairness",
+          "instant glow",
+          "bleach"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_derm_01",
+          "title": "Topical Cysteamine vs Hydroquinone for Melasma",
+          "summary": "Comparable efficacy with significantly lower erythema and rebound hyperpigmentation.",
+          "actionable": "Consider non-hydroquinone protocols for recalcitrant melasma.",
+          "patient_segment": "hyperpigmentation",
+          "source": "JAAD 2026",
+          "trial_n": 640
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_015",
+      "category_slug": "dermatology",
+      "identity": {
+        "name": "Adversarial Clinic 15",
+        "city": "Chennai",
+        "locality": "Alwarpet",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0016",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0017",
+    "adversarial_scenario": "distracting_established_year",
+    "category": "veterinary",
+    "category_context": {
+      "slug": "veterinary",
+      "voice": {
+        "tone": "compassionate_clinical",
+        "register": "veterinary_peer",
+        "vocab_allowed": [
+          "canine atopy",
+          "monoclonal",
+          "cytopoint",
+          "pruritus"
+        ],
+        "vocab_taboo": [
+          "miracle cure"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_vet_01",
+          "title": "Long-Term Monoclonal Antibody Safety in Canine Atopy",
+          "summary": "Sustained pruritus reduction over 24 months without immunosuppressive adverse events.",
+          "actionable": "Review maintenance scheduling for seasonal canine atopic dermatitis.",
+          "patient_segment": "canine_atopy",
+          "source": "Vet Dermatology 2025",
+          "trial_n": 890
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_016",
+      "category_slug": "veterinary",
+      "identity": {
+        "name": "Adversarial Clinic 16",
+        "city": "Chennai",
+        "locality": "Alwarpet",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0017",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0018",
+    "adversarial_scenario": "sensitive_billing_in_patient_inquiry",
+    "category": "fitness_gyms",
+    "category_context": {
+      "slug": "fitness_gyms",
+      "voice": {
+        "tone": "energetic_coaching",
+        "register": "fitness_expert",
+        "vocab_allowed": [
+          "hypertrophy",
+          "progressive overload",
+          "retention",
+          "re-engagement"
+        ],
+        "vocab_taboo": [
+          "get shredded in 3 days",
+          "anabolic secret"
+        ]
+      },
+      "digest": []
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_017",
+      "category_slug": "fitness_gyms",
+      "identity": {
+        "name": "Adversarial Clinic 17",
+        "city": "Delhi",
+        "locality": "Greater Kailash",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "subscription": {
+        "card_last4": "4242",
+        "internal_arrears_balance": 14500,
+        "billing_status": "overdue_warning"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0018",
+      "kind": "inbound_inquiry",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {
+        "question": "Does your clinic accept senior citizen cardiac rehab?"
+      }
+    },
+    "trigger_kind": "inbound_inquiry",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0019",
+    "adversarial_scenario": "massive_context_overload",
+    "category": "dermatology",
+    "category_context": {
+      "slug": "dermatology",
+      "voice": {
+        "tone": "consultative_clinical",
+        "register": "peer_medical",
+        "vocab_allowed": [
+          "melasma",
+          "retinoid",
+          "barrier repair",
+          "transepidermal"
+        ],
+        "vocab_taboo": [
+          "fairness",
+          "instant glow",
+          "bleach"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_derm_01",
+          "title": "Topical Cysteamine vs Hydroquinone for Melasma",
+          "summary": "Comparable efficacy with significantly lower erythema and rebound hyperpigmentation.",
+          "actionable": "Consider non-hydroquinone protocols for recalcitrant melasma.",
+          "patient_segment": "hyperpigmentation",
+          "source": "JAAD 2026",
+          "trial_n": 640
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_018",
+      "category_slug": "dermatology",
+      "identity": {
+        "name": "Adversarial Clinic 18",
+        "city": "Bengaluru",
+        "locality": "Whitefield",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "noise_metric_0": "noise_val_0",
+      "noise_metric_1": "noise_val_17",
+      "noise_metric_2": "noise_val_34",
+      "noise_metric_3": "noise_val_51",
+      "noise_metric_4": "noise_val_68",
+      "noise_metric_5": "noise_val_85",
+      "noise_metric_6": "noise_val_102",
+      "noise_metric_7": "noise_val_119",
+      "noise_metric_8": "noise_val_136",
+      "noise_metric_9": "noise_val_153",
+      "noise_metric_10": "noise_val_170",
+      "noise_metric_11": "noise_val_187",
+      "noise_metric_12": "noise_val_204",
+      "noise_metric_13": "noise_val_221",
+      "noise_metric_14": "noise_val_238",
+      "noise_metric_15": "noise_val_255",
+      "noise_metric_16": "noise_val_272",
+      "noise_metric_17": "noise_val_289",
+      "noise_metric_18": "noise_val_306",
+      "noise_metric_19": "noise_val_323",
+      "noise_metric_20": "noise_val_340",
+      "noise_metric_21": "noise_val_357",
+      "noise_metric_22": "noise_val_374",
+      "noise_metric_23": "noise_val_391",
+      "noise_metric_24": "noise_val_408",
+      "noise_metric_25": "noise_val_425",
+      "noise_metric_26": "noise_val_442",
+      "noise_metric_27": "noise_val_459",
+      "noise_metric_28": "noise_val_476",
+      "noise_metric_29": "noise_val_493",
+      "noise_metric_30": "noise_val_510",
+      "noise_metric_31": "noise_val_527",
+      "noise_metric_32": "noise_val_544",
+      "noise_metric_33": "noise_val_561",
+      "noise_metric_34": "noise_val_578",
+      "noise_metric_35": "noise_val_595",
+      "noise_metric_36": "noise_val_612",
+      "noise_metric_37": "noise_val_629",
+      "noise_metric_38": "noise_val_646",
+      "noise_metric_39": "noise_val_663"
+    },
+    "trigger_context": {
+      "id": "trg_adv_0019",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0020",
+    "adversarial_scenario": "extreme_sparsity_single_field",
+    "category": "diagnostic_labs",
+    "category_context": {
+      "slug": "diagnostic_labs",
+      "voice": {
+        "tone": "analytical_rigorous",
+        "register": "laboratory_peer",
+        "vocab_allowed": [
+          "sensitivity",
+          "specificity",
+          "turnaround time",
+          "hemolysis"
+        ],
+        "vocab_taboo": [
+          "instant error-free"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_lab_01",
+          "title": "Pre-Analytical Sample Quality Protocol in High-Volume Labs",
+          "summary": "Standardized tube transport protocols cut sample rejection rates by 42%.",
+          "actionable": "Audit phlebotomy collection transport times.",
+          "patient_segment": "routine_biochemistry",
+          "source": "Clinica Chimica Acta 2026",
+          "trial_n": 15000
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_019",
+      "category_slug": "diagnostic_labs"
+    },
+    "trigger_context": {
+      "id": "trg_adv_0020",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0021",
+    "adversarial_scenario": "cross_category_distraction",
+    "category": "veterinary",
+    "category_context": {
+      "slug": "veterinary",
+      "voice": {
+        "tone": "compassionate_clinical",
+        "register": "veterinary_peer",
+        "vocab_allowed": [
+          "canine atopy",
+          "monoclonal",
+          "cytopoint",
+          "pruritus"
+        ],
+        "vocab_taboo": [
+          "miracle cure"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_vet_01",
+          "title": "Long-Term Monoclonal Antibody Safety in Canine Atopy",
+          "summary": "Sustained pruritus reduction over 24 months without immunosuppressive adverse events.",
+          "actionable": "Review maintenance scheduling for seasonal canine atopic dermatitis.",
+          "patient_segment": "canine_atopy",
+          "source": "Vet Dermatology 2025",
+          "trial_n": 890
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_020",
+      "category_slug": "veterinary",
+      "identity": {
+        "name": "Adversarial Clinic 20",
+        "city": "Hyderabad",
+        "locality": "Gachibowli",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "offers": [
+        {
+          "id": "off_fake",
+          "title": "50% off root canal and dental crown",
+          "discount_pct": 50
+        }
+      ],
+      "signals": [
+        "frequent_dental_chair_inquiries"
+      ]
+    },
+    "trigger_context": {
+      "id": "trg_adv_0021",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0022",
+    "adversarial_scenario": "irrelevant_high_value_metric",
+    "category": "diagnostic_labs",
+    "category_context": {
+      "slug": "diagnostic_labs",
+      "voice": {
+        "tone": "analytical_rigorous",
+        "register": "laboratory_peer",
+        "vocab_allowed": [
+          "sensitivity",
+          "specificity",
+          "turnaround time",
+          "hemolysis"
+        ],
+        "vocab_taboo": [
+          "instant error-free"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_lab_01",
+          "title": "Pre-Analytical Sample Quality Protocol in High-Volume Labs",
+          "summary": "Standardized tube transport protocols cut sample rejection rates by 42%.",
+          "actionable": "Audit phlebotomy collection transport times.",
+          "patient_segment": "routine_biochemistry",
+          "source": "Clinica Chimica Acta 2026",
+          "trial_n": 15000
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_021",
+      "category_slug": "diagnostic_labs",
+      "identity": {
+        "name": "Adversarial Clinic 21",
+        "city": "Hyderabad",
+        "locality": "Gachibowli",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "signals": [
+        "lottery_jackpot_winner_100000000_usd",
+        "random_unverified_views_99999999"
+      ]
+    },
+    "trigger_context": {
+      "id": "trg_adv_0022",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0023",
+    "adversarial_scenario": "conflicting_operational_signals",
+    "category": "wellness_spa",
+    "category_context": {
+      "slug": "wellness_spa",
+      "voice": {
+        "tone": "serene_consultative",
+        "register": "hospitality_expert",
+        "vocab_allowed": [
+          "aromatherapy",
+          "lymphatic drainage",
+          "stress reduction",
+          "repeat booking"
+        ],
+        "vocab_taboo": [
+          "detox guaranteed"
+        ]
+      },
+      "digest": []
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_022",
+      "category_slug": "wellness_spa",
+      "identity": {
+        "name": "Adversarial Clinic 22",
+        "city": "Hyderabad",
+        "locality": "Gachibowli",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0023",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0024",
+    "adversarial_scenario": "commercial_leakage_in_clinical",
+    "category": "dermatology",
+    "category_context": {
+      "slug": "dermatology",
+      "voice": {
+        "tone": "consultative_clinical",
+        "register": "peer_medical",
+        "vocab_allowed": [
+          "melasma",
+          "retinoid",
+          "barrier repair",
+          "transepidermal"
+        ],
+        "vocab_taboo": [
+          "fairness",
+          "instant glow",
+          "bleach"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_derm_01",
+          "title": "Topical Cysteamine vs Hydroquinone for Melasma",
+          "summary": "Comparable efficacy with significantly lower erythema and rebound hyperpigmentation.",
+          "actionable": "Consider non-hydroquinone protocols for recalcitrant melasma.",
+          "patient_segment": "hyperpigmentation",
+          "source": "JAAD 2026",
+          "trial_n": 640
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_023",
+      "category_slug": "dermatology",
+      "identity": {
+        "name": "Adversarial Clinic 23",
+        "city": "Delhi",
+        "locality": "Greater Kailash",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "performance": {
+        "revenue_usd": 450000,
+        "leads_30d": 999,
+        "conversion_rate": 0.88
+      },
+      "offers": [
+        {
+          "title": "Buy 1 Get 1 Free Statin",
+          "discount": "50% off"
+        }
+      ]
+    },
+    "trigger_context": {
+      "id": "trg_adv_0024",
+      "kind": "research_digest",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "research_digest",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0025",
+    "adversarial_scenario": "distracting_locality_in_global_digest",
+    "category": "wellness_spa",
+    "category_context": {
+      "slug": "wellness_spa",
+      "voice": {
+        "tone": "serene_consultative",
+        "register": "hospitality_expert",
+        "vocab_allowed": [
+          "aromatherapy",
+          "lymphatic drainage",
+          "stress reduction",
+          "repeat booking"
+        ],
+        "vocab_taboo": [
+          "detox guaranteed"
+        ]
+      },
+      "digest": []
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_024",
+      "category_slug": "wellness_spa",
+      "identity": {
+        "name": "Adversarial Clinic 24",
+        "city": "Mumbai",
+        "locality": "Bandra West",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0025",
+      "kind": "research_digest",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "research_digest",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0026",
+    "adversarial_scenario": "relevant_locality_in_local_spike",
+    "category": "veterinary",
+    "category_context": {
+      "slug": "veterinary",
+      "voice": {
+        "tone": "compassionate_clinical",
+        "register": "veterinary_peer",
+        "vocab_allowed": [
+          "canine atopy",
+          "monoclonal",
+          "cytopoint",
+          "pruritus"
+        ],
+        "vocab_taboo": [
+          "miracle cure"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_vet_01",
+          "title": "Long-Term Monoclonal Antibody Safety in Canine Atopy",
+          "summary": "Sustained pruritus reduction over 24 months without immunosuppressive adverse events.",
+          "actionable": "Review maintenance scheduling for seasonal canine atopic dermatitis.",
+          "patient_segment": "canine_atopy",
+          "source": "Vet Dermatology 2025",
+          "trial_n": 890
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_025",
+      "category_slug": "veterinary",
+      "identity": {
+        "name": "Adversarial Clinic 25",
+        "city": "Kolkata",
+        "locality": "Salt Lake",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0026",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0027",
+    "adversarial_scenario": "distracting_established_year",
+    "category": "fitness_gyms",
+    "category_context": {
+      "slug": "fitness_gyms",
+      "voice": {
+        "tone": "energetic_coaching",
+        "register": "fitness_expert",
+        "vocab_allowed": [
+          "hypertrophy",
+          "progressive overload",
+          "retention",
+          "re-engagement"
+        ],
+        "vocab_taboo": [
+          "get shredded in 3 days",
+          "anabolic secret"
+        ]
+      },
+      "digest": []
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_026",
+      "category_slug": "fitness_gyms",
+      "identity": {
+        "name": "Adversarial Clinic 26",
+        "city": "Lucknow",
+        "locality": "Gomti Nagar",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0027",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0028",
+    "adversarial_scenario": "sensitive_billing_in_patient_inquiry",
+    "category": "diagnostic_labs",
+    "category_context": {
+      "slug": "diagnostic_labs",
+      "voice": {
+        "tone": "analytical_rigorous",
+        "register": "laboratory_peer",
+        "vocab_allowed": [
+          "sensitivity",
+          "specificity",
+          "turnaround time",
+          "hemolysis"
+        ],
+        "vocab_taboo": [
+          "instant error-free"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_lab_01",
+          "title": "Pre-Analytical Sample Quality Protocol in High-Volume Labs",
+          "summary": "Standardized tube transport protocols cut sample rejection rates by 42%.",
+          "actionable": "Audit phlebotomy collection transport times.",
+          "patient_segment": "routine_biochemistry",
+          "source": "Clinica Chimica Acta 2026",
+          "trial_n": 15000
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_027",
+      "category_slug": "diagnostic_labs",
+      "identity": {
+        "name": "Adversarial Clinic 27",
+        "city": "Mumbai",
+        "locality": "Bandra West",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "subscription": {
+        "card_last4": "4242",
+        "internal_arrears_balance": 14500,
+        "billing_status": "overdue_warning"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0028",
+      "kind": "inbound_inquiry",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {
+        "question": "Does your clinic accept senior citizen cardiac rehab?"
+      }
+    },
+    "trigger_kind": "inbound_inquiry",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0029",
+    "adversarial_scenario": "massive_context_overload",
+    "category": "optometry",
+    "category_context": {
+      "slug": "optometry",
+      "voice": {
+        "tone": "precise_clinical",
+        "register": "technical_peer",
+        "vocab_allowed": [
+          "myopia control",
+          "orthokeratology",
+          "axial length",
+          "diopters"
+        ],
+        "vocab_taboo": [
+          "laser guarantee",
+          "100% cure"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_opt_01",
+          "title": "Low-Dose Atropine combined with Defocus Lenses",
+          "summary": "Synergistic slowdown in axial elongation among pediatric progressive myopes.",
+          "actionable": "Evaluate dual-therapy protocols for fast-progressing pediatric myopia.",
+          "patient_segment": "pediatric_myopia",
+          "source": "Ophthalmology 2026",
+          "trial_n": 1250
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_028",
+      "category_slug": "optometry",
+      "identity": {
+        "name": "Adversarial Clinic 28",
+        "city": "Ahmedabad",
+        "locality": "Bodakdev",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "noise_metric_0": "noise_val_0",
+      "noise_metric_1": "noise_val_17",
+      "noise_metric_2": "noise_val_34",
+      "noise_metric_3": "noise_val_51",
+      "noise_metric_4": "noise_val_68",
+      "noise_metric_5": "noise_val_85",
+      "noise_metric_6": "noise_val_102",
+      "noise_metric_7": "noise_val_119",
+      "noise_metric_8": "noise_val_136",
+      "noise_metric_9": "noise_val_153",
+      "noise_metric_10": "noise_val_170",
+      "noise_metric_11": "noise_val_187",
+      "noise_metric_12": "noise_val_204",
+      "noise_metric_13": "noise_val_221",
+      "noise_metric_14": "noise_val_238",
+      "noise_metric_15": "noise_val_255",
+      "noise_metric_16": "noise_val_272",
+      "noise_metric_17": "noise_val_289",
+      "noise_metric_18": "noise_val_306",
+      "noise_metric_19": "noise_val_323",
+      "noise_metric_20": "noise_val_340",
+      "noise_metric_21": "noise_val_357",
+      "noise_metric_22": "noise_val_374",
+      "noise_metric_23": "noise_val_391",
+      "noise_metric_24": "noise_val_408",
+      "noise_metric_25": "noise_val_425",
+      "noise_metric_26": "noise_val_442",
+      "noise_metric_27": "noise_val_459",
+      "noise_metric_28": "noise_val_476",
+      "noise_metric_29": "noise_val_493",
+      "noise_metric_30": "noise_val_510",
+      "noise_metric_31": "noise_val_527",
+      "noise_metric_32": "noise_val_544",
+      "noise_metric_33": "noise_val_561",
+      "noise_metric_34": "noise_val_578",
+      "noise_metric_35": "noise_val_595",
+      "noise_metric_36": "noise_val_612",
+      "noise_metric_37": "noise_val_629",
+      "noise_metric_38": "noise_val_646",
+      "noise_metric_39": "noise_val_663"
+    },
+    "trigger_context": {
+      "id": "trg_adv_0029",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0030",
+    "adversarial_scenario": "extreme_sparsity_single_field",
+    "category": "dermatology",
+    "category_context": {
+      "slug": "dermatology",
+      "voice": {
+        "tone": "consultative_clinical",
+        "register": "peer_medical",
+        "vocab_allowed": [
+          "melasma",
+          "retinoid",
+          "barrier repair",
+          "transepidermal"
+        ],
+        "vocab_taboo": [
+          "fairness",
+          "instant glow",
+          "bleach"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_derm_01",
+          "title": "Topical Cysteamine vs Hydroquinone for Melasma",
+          "summary": "Comparable efficacy with significantly lower erythema and rebound hyperpigmentation.",
+          "actionable": "Consider non-hydroquinone protocols for recalcitrant melasma.",
+          "patient_segment": "hyperpigmentation",
+          "source": "JAAD 2026",
+          "trial_n": 640
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_029",
+      "category_slug": "dermatology"
+    },
+    "trigger_context": {
+      "id": "trg_adv_0030",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0031",
+    "adversarial_scenario": "cross_category_distraction",
+    "category": "diagnostic_labs",
+    "category_context": {
+      "slug": "diagnostic_labs",
+      "voice": {
+        "tone": "analytical_rigorous",
+        "register": "laboratory_peer",
+        "vocab_allowed": [
+          "sensitivity",
+          "specificity",
+          "turnaround time",
+          "hemolysis"
+        ],
+        "vocab_taboo": [
+          "instant error-free"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_lab_01",
+          "title": "Pre-Analytical Sample Quality Protocol in High-Volume Labs",
+          "summary": "Standardized tube transport protocols cut sample rejection rates by 42%.",
+          "actionable": "Audit phlebotomy collection transport times.",
+          "patient_segment": "routine_biochemistry",
+          "source": "Clinica Chimica Acta 2026",
+          "trial_n": 15000
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_030",
+      "category_slug": "diagnostic_labs",
+      "identity": {
+        "name": "Adversarial Clinic 30",
+        "city": "Hyderabad",
+        "locality": "Gachibowli",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "offers": [
+        {
+          "id": "off_fake",
+          "title": "50% off root canal and dental crown",
+          "discount_pct": 50
+        }
+      ],
+      "signals": [
+        "frequent_dental_chair_inquiries"
+      ]
+    },
+    "trigger_context": {
+      "id": "trg_adv_0031",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0032",
+    "adversarial_scenario": "irrelevant_high_value_metric",
+    "category": "optometry",
+    "category_context": {
+      "slug": "optometry",
+      "voice": {
+        "tone": "precise_clinical",
+        "register": "technical_peer",
+        "vocab_allowed": [
+          "myopia control",
+          "orthokeratology",
+          "axial length",
+          "diopters"
+        ],
+        "vocab_taboo": [
+          "laser guarantee",
+          "100% cure"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_opt_01",
+          "title": "Low-Dose Atropine combined with Defocus Lenses",
+          "summary": "Synergistic slowdown in axial elongation among pediatric progressive myopes.",
+          "actionable": "Evaluate dual-therapy protocols for fast-progressing pediatric myopia.",
+          "patient_segment": "pediatric_myopia",
+          "source": "Ophthalmology 2026",
+          "trial_n": 1250
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_031",
+      "category_slug": "optometry",
+      "identity": {
+        "name": "Adversarial Clinic 31",
+        "city": "Bengaluru",
+        "locality": "Indiranagar",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "signals": [
+        "lottery_jackpot_winner_100000000_usd",
+        "random_unverified_views_99999999"
+      ]
+    },
+    "trigger_context": {
+      "id": "trg_adv_0032",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0033",
+    "adversarial_scenario": "conflicting_operational_signals",
+    "category": "wellness_spa",
+    "category_context": {
+      "slug": "wellness_spa",
+      "voice": {
+        "tone": "serene_consultative",
+        "register": "hospitality_expert",
+        "vocab_allowed": [
+          "aromatherapy",
+          "lymphatic drainage",
+          "stress reduction",
+          "repeat booking"
+        ],
+        "vocab_taboo": [
+          "detox guaranteed"
+        ]
+      },
+      "digest": []
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_032",
+      "category_slug": "wellness_spa",
+      "identity": {
+        "name": "Adversarial Clinic 32",
+        "city": "Chennai",
+        "locality": "Anna Nagar",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0033",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0034",
+    "adversarial_scenario": "commercial_leakage_in_clinical",
+    "category": "veterinary",
+    "category_context": {
+      "slug": "veterinary",
+      "voice": {
+        "tone": "compassionate_clinical",
+        "register": "veterinary_peer",
+        "vocab_allowed": [
+          "canine atopy",
+          "monoclonal",
+          "cytopoint",
+          "pruritus"
+        ],
+        "vocab_taboo": [
+          "miracle cure"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_vet_01",
+          "title": "Long-Term Monoclonal Antibody Safety in Canine Atopy",
+          "summary": "Sustained pruritus reduction over 24 months without immunosuppressive adverse events.",
+          "actionable": "Review maintenance scheduling for seasonal canine atopic dermatitis.",
+          "patient_segment": "canine_atopy",
+          "source": "Vet Dermatology 2025",
+          "trial_n": 890
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_033",
+      "category_slug": "veterinary",
+      "identity": {
+        "name": "Adversarial Clinic 33",
+        "city": "Bengaluru",
+        "locality": "Whitefield",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "performance": {
+        "revenue_usd": 450000,
+        "leads_30d": 999,
+        "conversion_rate": 0.88
+      },
+      "offers": [
+        {
+          "title": "Buy 1 Get 1 Free Statin",
+          "discount": "50% off"
+        }
+      ]
+    },
+    "trigger_context": {
+      "id": "trg_adv_0034",
+      "kind": "research_digest",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "research_digest",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0035",
+    "adversarial_scenario": "distracting_locality_in_global_digest",
+    "category": "diagnostic_labs",
+    "category_context": {
+      "slug": "diagnostic_labs",
+      "voice": {
+        "tone": "analytical_rigorous",
+        "register": "laboratory_peer",
+        "vocab_allowed": [
+          "sensitivity",
+          "specificity",
+          "turnaround time",
+          "hemolysis"
+        ],
+        "vocab_taboo": [
+          "instant error-free"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_lab_01",
+          "title": "Pre-Analytical Sample Quality Protocol in High-Volume Labs",
+          "summary": "Standardized tube transport protocols cut sample rejection rates by 42%.",
+          "actionable": "Audit phlebotomy collection transport times.",
+          "patient_segment": "routine_biochemistry",
+          "source": "Clinica Chimica Acta 2026",
+          "trial_n": 15000
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_034",
+      "category_slug": "diagnostic_labs",
+      "identity": {
+        "name": "Adversarial Clinic 34",
+        "city": "Bengaluru",
+        "locality": "Indiranagar",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0035",
+      "kind": "research_digest",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "research_digest",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0036",
+    "adversarial_scenario": "relevant_locality_in_local_spike",
+    "category": "wellness_spa",
+    "category_context": {
+      "slug": "wellness_spa",
+      "voice": {
+        "tone": "serene_consultative",
+        "register": "hospitality_expert",
+        "vocab_allowed": [
+          "aromatherapy",
+          "lymphatic drainage",
+          "stress reduction",
+          "repeat booking"
+        ],
+        "vocab_taboo": [
+          "detox guaranteed"
+        ]
+      },
+      "digest": []
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_035",
+      "category_slug": "wellness_spa",
+      "identity": {
+        "name": "Adversarial Clinic 35",
+        "city": "Bengaluru",
+        "locality": "Indiranagar",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0036",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0037",
+    "adversarial_scenario": "distracting_established_year",
+    "category": "wellness_spa",
+    "category_context": {
+      "slug": "wellness_spa",
+      "voice": {
+        "tone": "serene_consultative",
+        "register": "hospitality_expert",
+        "vocab_allowed": [
+          "aromatherapy",
+          "lymphatic drainage",
+          "stress reduction",
+          "repeat booking"
+        ],
+        "vocab_taboo": [
+          "detox guaranteed"
+        ]
+      },
+      "digest": []
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_036",
+      "category_slug": "wellness_spa",
+      "identity": {
+        "name": "Adversarial Clinic 36",
+        "city": "Jaipur",
+        "locality": "C-Scheme",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0037",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0038",
+    "adversarial_scenario": "sensitive_billing_in_patient_inquiry",
+    "category": "fitness_gyms",
+    "category_context": {
+      "slug": "fitness_gyms",
+      "voice": {
+        "tone": "energetic_coaching",
+        "register": "fitness_expert",
+        "vocab_allowed": [
+          "hypertrophy",
+          "progressive overload",
+          "retention",
+          "re-engagement"
+        ],
+        "vocab_taboo": [
+          "get shredded in 3 days",
+          "anabolic secret"
+        ]
+      },
+      "digest": []
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_037",
+      "category_slug": "fitness_gyms",
+      "identity": {
+        "name": "Adversarial Clinic 37",
+        "city": "Bengaluru",
+        "locality": "Indiranagar",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "subscription": {
+        "card_last4": "4242",
+        "internal_arrears_balance": 14500,
+        "billing_status": "overdue_warning"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0038",
+      "kind": "inbound_inquiry",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {
+        "question": "Does your clinic accept senior citizen cardiac rehab?"
+      }
+    },
+    "trigger_kind": "inbound_inquiry",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0039",
+    "adversarial_scenario": "massive_context_overload",
+    "category": "dermatology",
+    "category_context": {
+      "slug": "dermatology",
+      "voice": {
+        "tone": "consultative_clinical",
+        "register": "peer_medical",
+        "vocab_allowed": [
+          "melasma",
+          "retinoid",
+          "barrier repair",
+          "transepidermal"
+        ],
+        "vocab_taboo": [
+          "fairness",
+          "instant glow",
+          "bleach"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_derm_01",
+          "title": "Topical Cysteamine vs Hydroquinone for Melasma",
+          "summary": "Comparable efficacy with significantly lower erythema and rebound hyperpigmentation.",
+          "actionable": "Consider non-hydroquinone protocols for recalcitrant melasma.",
+          "patient_segment": "hyperpigmentation",
+          "source": "JAAD 2026",
+          "trial_n": 640
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_038",
+      "category_slug": "dermatology",
+      "identity": {
+        "name": "Adversarial Clinic 38",
+        "city": "Lucknow",
+        "locality": "Gomti Nagar",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "noise_metric_0": "noise_val_0",
+      "noise_metric_1": "noise_val_17",
+      "noise_metric_2": "noise_val_34",
+      "noise_metric_3": "noise_val_51",
+      "noise_metric_4": "noise_val_68",
+      "noise_metric_5": "noise_val_85",
+      "noise_metric_6": "noise_val_102",
+      "noise_metric_7": "noise_val_119",
+      "noise_metric_8": "noise_val_136",
+      "noise_metric_9": "noise_val_153",
+      "noise_metric_10": "noise_val_170",
+      "noise_metric_11": "noise_val_187",
+      "noise_metric_12": "noise_val_204",
+      "noise_metric_13": "noise_val_221",
+      "noise_metric_14": "noise_val_238",
+      "noise_metric_15": "noise_val_255",
+      "noise_metric_16": "noise_val_272",
+      "noise_metric_17": "noise_val_289",
+      "noise_metric_18": "noise_val_306",
+      "noise_metric_19": "noise_val_323",
+      "noise_metric_20": "noise_val_340",
+      "noise_metric_21": "noise_val_357",
+      "noise_metric_22": "noise_val_374",
+      "noise_metric_23": "noise_val_391",
+      "noise_metric_24": "noise_val_408",
+      "noise_metric_25": "noise_val_425",
+      "noise_metric_26": "noise_val_442",
+      "noise_metric_27": "noise_val_459",
+      "noise_metric_28": "noise_val_476",
+      "noise_metric_29": "noise_val_493",
+      "noise_metric_30": "noise_val_510",
+      "noise_metric_31": "noise_val_527",
+      "noise_metric_32": "noise_val_544",
+      "noise_metric_33": "noise_val_561",
+      "noise_metric_34": "noise_val_578",
+      "noise_metric_35": "noise_val_595",
+      "noise_metric_36": "noise_val_612",
+      "noise_metric_37": "noise_val_629",
+      "noise_metric_38": "noise_val_646",
+      "noise_metric_39": "noise_val_663"
+    },
+    "trigger_context": {
+      "id": "trg_adv_0039",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0040",
+    "adversarial_scenario": "extreme_sparsity_single_field",
+    "category": "veterinary",
+    "category_context": {
+      "slug": "veterinary",
+      "voice": {
+        "tone": "compassionate_clinical",
+        "register": "veterinary_peer",
+        "vocab_allowed": [
+          "canine atopy",
+          "monoclonal",
+          "cytopoint",
+          "pruritus"
+        ],
+        "vocab_taboo": [
+          "miracle cure"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_vet_01",
+          "title": "Long-Term Monoclonal Antibody Safety in Canine Atopy",
+          "summary": "Sustained pruritus reduction over 24 months without immunosuppressive adverse events.",
+          "actionable": "Review maintenance scheduling for seasonal canine atopic dermatitis.",
+          "patient_segment": "canine_atopy",
+          "source": "Vet Dermatology 2025",
+          "trial_n": 890
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_039",
+      "category_slug": "veterinary"
+    },
+    "trigger_context": {
+      "id": "trg_adv_0040",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0041",
+    "adversarial_scenario": "cross_category_distraction",
+    "category": "ayurveda",
+    "category_context": {
+      "slug": "ayurveda",
+      "voice": {
+        "tone": "authentic_traditional",
+        "register": "holistic_clinical",
+        "vocab_allowed": [
+          "dosha",
+          "panchakarma",
+          "rasayana",
+          "standardized extract"
+        ],
+        "vocab_taboo": [
+          "allopathic replacement",
+          "100% cure"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_ayu_01",
+          "title": "Standardized Ashwagandha Extract for Chronic Stress & Cortisol",
+          "summary": "Statistically significant reduction in serum cortisol and perceived stress scores.",
+          "actionable": "Integrate standardized botanical assessments in wellness consultations.",
+          "patient_segment": "stress_management",
+          "source": "Phytomedicine 2026",
+          "trial_n": 450
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_040",
+      "category_slug": "ayurveda",
+      "identity": {
+        "name": "Adversarial Clinic 40",
+        "city": "Bengaluru",
+        "locality": "Whitefield",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "offers": [
+        {
+          "id": "off_fake",
+          "title": "50% off root canal and dental crown",
+          "discount_pct": 50
+        }
+      ],
+      "signals": [
+        "frequent_dental_chair_inquiries"
+      ]
+    },
+    "trigger_context": {
+      "id": "trg_adv_0041",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0042",
+    "adversarial_scenario": "irrelevant_high_value_metric",
+    "category": "veterinary",
+    "category_context": {
+      "slug": "veterinary",
+      "voice": {
+        "tone": "compassionate_clinical",
+        "register": "veterinary_peer",
+        "vocab_allowed": [
+          "canine atopy",
+          "monoclonal",
+          "cytopoint",
+          "pruritus"
+        ],
+        "vocab_taboo": [
+          "miracle cure"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_vet_01",
+          "title": "Long-Term Monoclonal Antibody Safety in Canine Atopy",
+          "summary": "Sustained pruritus reduction over 24 months without immunosuppressive adverse events.",
+          "actionable": "Review maintenance scheduling for seasonal canine atopic dermatitis.",
+          "patient_segment": "canine_atopy",
+          "source": "Vet Dermatology 2025",
+          "trial_n": 890
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_041",
+      "category_slug": "veterinary",
+      "identity": {
+        "name": "Adversarial Clinic 41",
+        "city": "Lucknow",
+        "locality": "Gomti Nagar",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "signals": [
+        "lottery_jackpot_winner_100000000_usd",
+        "random_unverified_views_99999999"
+      ]
+    },
+    "trigger_context": {
+      "id": "trg_adv_0042",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0043",
+    "adversarial_scenario": "conflicting_operational_signals",
+    "category": "ayurveda",
+    "category_context": {
+      "slug": "ayurveda",
+      "voice": {
+        "tone": "authentic_traditional",
+        "register": "holistic_clinical",
+        "vocab_allowed": [
+          "dosha",
+          "panchakarma",
+          "rasayana",
+          "standardized extract"
+        ],
+        "vocab_taboo": [
+          "allopathic replacement",
+          "100% cure"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_ayu_01",
+          "title": "Standardized Ashwagandha Extract for Chronic Stress & Cortisol",
+          "summary": "Statistically significant reduction in serum cortisol and perceived stress scores.",
+          "actionable": "Integrate standardized botanical assessments in wellness consultations.",
+          "patient_segment": "stress_management",
+          "source": "Phytomedicine 2026",
+          "trial_n": 450
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_042",
+      "category_slug": "ayurveda",
+      "identity": {
+        "name": "Adversarial Clinic 42",
+        "city": "Hyderabad",
+        "locality": "Banjara Hills",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0043",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0044",
+    "adversarial_scenario": "commercial_leakage_in_clinical",
+    "category": "fitness_gyms",
+    "category_context": {
+      "slug": "fitness_gyms",
+      "voice": {
+        "tone": "energetic_coaching",
+        "register": "fitness_expert",
+        "vocab_allowed": [
+          "hypertrophy",
+          "progressive overload",
+          "retention",
+          "re-engagement"
+        ],
+        "vocab_taboo": [
+          "get shredded in 3 days",
+          "anabolic secret"
+        ]
+      },
+      "digest": []
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_043",
+      "category_slug": "fitness_gyms",
+      "identity": {
+        "name": "Adversarial Clinic 43",
+        "city": "Chennai",
+        "locality": "Anna Nagar",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "performance": {
+        "revenue_usd": 450000,
+        "leads_30d": 999,
+        "conversion_rate": 0.88
+      },
+      "offers": [
+        {
+          "title": "Buy 1 Get 1 Free Statin",
+          "discount": "50% off"
+        }
+      ]
+    },
+    "trigger_context": {
+      "id": "trg_adv_0044",
+      "kind": "research_digest",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "research_digest",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0045",
+    "adversarial_scenario": "distracting_locality_in_global_digest",
+    "category": "ayurveda",
+    "category_context": {
+      "slug": "ayurveda",
+      "voice": {
+        "tone": "authentic_traditional",
+        "register": "holistic_clinical",
+        "vocab_allowed": [
+          "dosha",
+          "panchakarma",
+          "rasayana",
+          "standardized extract"
+        ],
+        "vocab_taboo": [
+          "allopathic replacement",
+          "100% cure"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_ayu_01",
+          "title": "Standardized Ashwagandha Extract for Chronic Stress & Cortisol",
+          "summary": "Statistically significant reduction in serum cortisol and perceived stress scores.",
+          "actionable": "Integrate standardized botanical assessments in wellness consultations.",
+          "patient_segment": "stress_management",
+          "source": "Phytomedicine 2026",
+          "trial_n": 450
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_044",
+      "category_slug": "ayurveda",
+      "identity": {
+        "name": "Adversarial Clinic 44",
+        "city": "Delhi",
+        "locality": "Vasant Kunj",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0045",
+      "kind": "research_digest",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "research_digest",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0046",
+    "adversarial_scenario": "relevant_locality_in_local_spike",
+    "category": "wellness_spa",
+    "category_context": {
+      "slug": "wellness_spa",
+      "voice": {
+        "tone": "serene_consultative",
+        "register": "hospitality_expert",
+        "vocab_allowed": [
+          "aromatherapy",
+          "lymphatic drainage",
+          "stress reduction",
+          "repeat booking"
+        ],
+        "vocab_taboo": [
+          "detox guaranteed"
+        ]
+      },
+      "digest": []
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_045",
+      "category_slug": "wellness_spa",
+      "identity": {
+        "name": "Adversarial Clinic 45",
+        "city": "Hyderabad",
+        "locality": "Banjara Hills",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0046",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0047",
+    "adversarial_scenario": "distracting_established_year",
+    "category": "ayurveda",
+    "category_context": {
+      "slug": "ayurveda",
+      "voice": {
+        "tone": "authentic_traditional",
+        "register": "holistic_clinical",
+        "vocab_allowed": [
+          "dosha",
+          "panchakarma",
+          "rasayana",
+          "standardized extract"
+        ],
+        "vocab_taboo": [
+          "allopathic replacement",
+          "100% cure"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_ayu_01",
+          "title": "Standardized Ashwagandha Extract for Chronic Stress & Cortisol",
+          "summary": "Statistically significant reduction in serum cortisol and perceived stress scores.",
+          "actionable": "Integrate standardized botanical assessments in wellness consultations.",
+          "patient_segment": "stress_management",
+          "source": "Phytomedicine 2026",
+          "trial_n": 450
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_046",
+      "category_slug": "ayurveda",
+      "identity": {
+        "name": "Adversarial Clinic 46",
+        "city": "Chennai",
+        "locality": "Anna Nagar",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0047",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0048",
+    "adversarial_scenario": "sensitive_billing_in_patient_inquiry",
+    "category": "veterinary",
+    "category_context": {
+      "slug": "veterinary",
+      "voice": {
+        "tone": "compassionate_clinical",
+        "register": "veterinary_peer",
+        "vocab_allowed": [
+          "canine atopy",
+          "monoclonal",
+          "cytopoint",
+          "pruritus"
+        ],
+        "vocab_taboo": [
+          "miracle cure"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_vet_01",
+          "title": "Long-Term Monoclonal Antibody Safety in Canine Atopy",
+          "summary": "Sustained pruritus reduction over 24 months without immunosuppressive adverse events.",
+          "actionable": "Review maintenance scheduling for seasonal canine atopic dermatitis.",
+          "patient_segment": "canine_atopy",
+          "source": "Vet Dermatology 2025",
+          "trial_n": 890
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_047",
+      "category_slug": "veterinary",
+      "identity": {
+        "name": "Adversarial Clinic 47",
+        "city": "Lucknow",
+        "locality": "Gomti Nagar",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "subscription": {
+        "card_last4": "4242",
+        "internal_arrears_balance": 14500,
+        "billing_status": "overdue_warning"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0048",
+      "kind": "inbound_inquiry",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {
+        "question": "Does your clinic accept senior citizen cardiac rehab?"
+      }
+    },
+    "trigger_kind": "inbound_inquiry",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0049",
+    "adversarial_scenario": "massive_context_overload",
+    "category": "veterinary",
+    "category_context": {
+      "slug": "veterinary",
+      "voice": {
+        "tone": "compassionate_clinical",
+        "register": "veterinary_peer",
+        "vocab_allowed": [
+          "canine atopy",
+          "monoclonal",
+          "cytopoint",
+          "pruritus"
+        ],
+        "vocab_taboo": [
+          "miracle cure"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_vet_01",
+          "title": "Long-Term Monoclonal Antibody Safety in Canine Atopy",
+          "summary": "Sustained pruritus reduction over 24 months without immunosuppressive adverse events.",
+          "actionable": "Review maintenance scheduling for seasonal canine atopic dermatitis.",
+          "patient_segment": "canine_atopy",
+          "source": "Vet Dermatology 2025",
+          "trial_n": 890
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_048",
+      "category_slug": "veterinary",
+      "identity": {
+        "name": "Adversarial Clinic 48",
+        "city": "Delhi",
+        "locality": "Greater Kailash",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "noise_metric_0": "noise_val_0",
+      "noise_metric_1": "noise_val_17",
+      "noise_metric_2": "noise_val_34",
+      "noise_metric_3": "noise_val_51",
+      "noise_metric_4": "noise_val_68",
+      "noise_metric_5": "noise_val_85",
+      "noise_metric_6": "noise_val_102",
+      "noise_metric_7": "noise_val_119",
+      "noise_metric_8": "noise_val_136",
+      "noise_metric_9": "noise_val_153",
+      "noise_metric_10": "noise_val_170",
+      "noise_metric_11": "noise_val_187",
+      "noise_metric_12": "noise_val_204",
+      "noise_metric_13": "noise_val_221",
+      "noise_metric_14": "noise_val_238",
+      "noise_metric_15": "noise_val_255",
+      "noise_metric_16": "noise_val_272",
+      "noise_metric_17": "noise_val_289",
+      "noise_metric_18": "noise_val_306",
+      "noise_metric_19": "noise_val_323",
+      "noise_metric_20": "noise_val_340",
+      "noise_metric_21": "noise_val_357",
+      "noise_metric_22": "noise_val_374",
+      "noise_metric_23": "noise_val_391",
+      "noise_metric_24": "noise_val_408",
+      "noise_metric_25": "noise_val_425",
+      "noise_metric_26": "noise_val_442",
+      "noise_metric_27": "noise_val_459",
+      "noise_metric_28": "noise_val_476",
+      "noise_metric_29": "noise_val_493",
+      "noise_metric_30": "noise_val_510",
+      "noise_metric_31": "noise_val_527",
+      "noise_metric_32": "noise_val_544",
+      "noise_metric_33": "noise_val_561",
+      "noise_metric_34": "noise_val_578",
+      "noise_metric_35": "noise_val_595",
+      "noise_metric_36": "noise_val_612",
+      "noise_metric_37": "noise_val_629",
+      "noise_metric_38": "noise_val_646",
+      "noise_metric_39": "noise_val_663"
+    },
+    "trigger_context": {
+      "id": "trg_adv_0049",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0050",
+    "adversarial_scenario": "extreme_sparsity_single_field",
+    "category": "veterinary",
+    "category_context": {
+      "slug": "veterinary",
+      "voice": {
+        "tone": "compassionate_clinical",
+        "register": "veterinary_peer",
+        "vocab_allowed": [
+          "canine atopy",
+          "monoclonal",
+          "cytopoint",
+          "pruritus"
+        ],
+        "vocab_taboo": [
+          "miracle cure"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_vet_01",
+          "title": "Long-Term Monoclonal Antibody Safety in Canine Atopy",
+          "summary": "Sustained pruritus reduction over 24 months without immunosuppressive adverse events.",
+          "actionable": "Review maintenance scheduling for seasonal canine atopic dermatitis.",
+          "patient_segment": "canine_atopy",
+          "source": "Vet Dermatology 2025",
+          "trial_n": 890
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_049",
+      "category_slug": "veterinary"
+    },
+    "trigger_context": {
+      "id": "trg_adv_0050",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0051",
+    "adversarial_scenario": "cross_category_distraction",
+    "category": "veterinary",
+    "category_context": {
+      "slug": "veterinary",
+      "voice": {
+        "tone": "compassionate_clinical",
+        "register": "veterinary_peer",
+        "vocab_allowed": [
+          "canine atopy",
+          "monoclonal",
+          "cytopoint",
+          "pruritus"
+        ],
+        "vocab_taboo": [
+          "miracle cure"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_vet_01",
+          "title": "Long-Term Monoclonal Antibody Safety in Canine Atopy",
+          "summary": "Sustained pruritus reduction over 24 months without immunosuppressive adverse events.",
+          "actionable": "Review maintenance scheduling for seasonal canine atopic dermatitis.",
+          "patient_segment": "canine_atopy",
+          "source": "Vet Dermatology 2025",
+          "trial_n": 890
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_050",
+      "category_slug": "veterinary",
+      "identity": {
+        "name": "Adversarial Clinic 50",
+        "city": "Ahmedabad",
+        "locality": "Bodakdev",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "offers": [
+        {
+          "id": "off_fake",
+          "title": "50% off root canal and dental crown",
+          "discount_pct": 50
+        }
+      ],
+      "signals": [
+        "frequent_dental_chair_inquiries"
+      ]
+    },
+    "trigger_context": {
+      "id": "trg_adv_0051",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0052",
+    "adversarial_scenario": "irrelevant_high_value_metric",
+    "category": "dermatology",
+    "category_context": {
+      "slug": "dermatology",
+      "voice": {
+        "tone": "consultative_clinical",
+        "register": "peer_medical",
+        "vocab_allowed": [
+          "melasma",
+          "retinoid",
+          "barrier repair",
+          "transepidermal"
+        ],
+        "vocab_taboo": [
+          "fairness",
+          "instant glow",
+          "bleach"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_derm_01",
+          "title": "Topical Cysteamine vs Hydroquinone for Melasma",
+          "summary": "Comparable efficacy with significantly lower erythema and rebound hyperpigmentation.",
+          "actionable": "Consider non-hydroquinone protocols for recalcitrant melasma.",
+          "patient_segment": "hyperpigmentation",
+          "source": "JAAD 2026",
+          "trial_n": 640
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_051",
+      "category_slug": "dermatology",
+      "identity": {
+        "name": "Adversarial Clinic 51",
+        "city": "Lucknow",
+        "locality": "Gomti Nagar",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "signals": [
+        "lottery_jackpot_winner_100000000_usd",
+        "random_unverified_views_99999999"
+      ]
+    },
+    "trigger_context": {
+      "id": "trg_adv_0052",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0053",
+    "adversarial_scenario": "conflicting_operational_signals",
+    "category": "veterinary",
+    "category_context": {
+      "slug": "veterinary",
+      "voice": {
+        "tone": "compassionate_clinical",
+        "register": "veterinary_peer",
+        "vocab_allowed": [
+          "canine atopy",
+          "monoclonal",
+          "cytopoint",
+          "pruritus"
+        ],
+        "vocab_taboo": [
+          "miracle cure"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_vet_01",
+          "title": "Long-Term Monoclonal Antibody Safety in Canine Atopy",
+          "summary": "Sustained pruritus reduction over 24 months without immunosuppressive adverse events.",
+          "actionable": "Review maintenance scheduling for seasonal canine atopic dermatitis.",
+          "patient_segment": "canine_atopy",
+          "source": "Vet Dermatology 2025",
+          "trial_n": 890
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_052",
+      "category_slug": "veterinary",
+      "identity": {
+        "name": "Adversarial Clinic 52",
+        "city": "Ahmedabad",
+        "locality": "Bodakdev",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0053",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0054",
+    "adversarial_scenario": "commercial_leakage_in_clinical",
+    "category": "ayurveda",
+    "category_context": {
+      "slug": "ayurveda",
+      "voice": {
+        "tone": "authentic_traditional",
+        "register": "holistic_clinical",
+        "vocab_allowed": [
+          "dosha",
+          "panchakarma",
+          "rasayana",
+          "standardized extract"
+        ],
+        "vocab_taboo": [
+          "allopathic replacement",
+          "100% cure"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_ayu_01",
+          "title": "Standardized Ashwagandha Extract for Chronic Stress & Cortisol",
+          "summary": "Statistically significant reduction in serum cortisol and perceived stress scores.",
+          "actionable": "Integrate standardized botanical assessments in wellness consultations.",
+          "patient_segment": "stress_management",
+          "source": "Phytomedicine 2026",
+          "trial_n": 450
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_053",
+      "category_slug": "ayurveda",
+      "identity": {
+        "name": "Adversarial Clinic 53",
+        "city": "Ahmedabad",
+        "locality": "Bodakdev",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "performance": {
+        "revenue_usd": 450000,
+        "leads_30d": 999,
+        "conversion_rate": 0.88
+      },
+      "offers": [
+        {
+          "title": "Buy 1 Get 1 Free Statin",
+          "discount": "50% off"
+        }
+      ]
+    },
+    "trigger_context": {
+      "id": "trg_adv_0054",
+      "kind": "research_digest",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "research_digest",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0055",
+    "adversarial_scenario": "distracting_locality_in_global_digest",
+    "category": "dermatology",
+    "category_context": {
+      "slug": "dermatology",
+      "voice": {
+        "tone": "consultative_clinical",
+        "register": "peer_medical",
+        "vocab_allowed": [
+          "melasma",
+          "retinoid",
+          "barrier repair",
+          "transepidermal"
+        ],
+        "vocab_taboo": [
+          "fairness",
+          "instant glow",
+          "bleach"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_derm_01",
+          "title": "Topical Cysteamine vs Hydroquinone for Melasma",
+          "summary": "Comparable efficacy with significantly lower erythema and rebound hyperpigmentation.",
+          "actionable": "Consider non-hydroquinone protocols for recalcitrant melasma.",
+          "patient_segment": "hyperpigmentation",
+          "source": "JAAD 2026",
+          "trial_n": 640
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_054",
+      "category_slug": "dermatology",
+      "identity": {
+        "name": "Adversarial Clinic 54",
+        "city": "Mumbai",
+        "locality": "Bandra West",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0055",
+      "kind": "research_digest",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "research_digest",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0056",
+    "adversarial_scenario": "relevant_locality_in_local_spike",
+    "category": "veterinary",
+    "category_context": {
+      "slug": "veterinary",
+      "voice": {
+        "tone": "compassionate_clinical",
+        "register": "veterinary_peer",
+        "vocab_allowed": [
+          "canine atopy",
+          "monoclonal",
+          "cytopoint",
+          "pruritus"
+        ],
+        "vocab_taboo": [
+          "miracle cure"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_vet_01",
+          "title": "Long-Term Monoclonal Antibody Safety in Canine Atopy",
+          "summary": "Sustained pruritus reduction over 24 months without immunosuppressive adverse events.",
+          "actionable": "Review maintenance scheduling for seasonal canine atopic dermatitis.",
+          "patient_segment": "canine_atopy",
+          "source": "Vet Dermatology 2025",
+          "trial_n": 890
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_055",
+      "category_slug": "veterinary",
+      "identity": {
+        "name": "Adversarial Clinic 55",
+        "city": "Lucknow",
+        "locality": "Gomti Nagar",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0056",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0057",
+    "adversarial_scenario": "distracting_established_year",
+    "category": "dermatology",
+    "category_context": {
+      "slug": "dermatology",
+      "voice": {
+        "tone": "consultative_clinical",
+        "register": "peer_medical",
+        "vocab_allowed": [
+          "melasma",
+          "retinoid",
+          "barrier repair",
+          "transepidermal"
+        ],
+        "vocab_taboo": [
+          "fairness",
+          "instant glow",
+          "bleach"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_derm_01",
+          "title": "Topical Cysteamine vs Hydroquinone for Melasma",
+          "summary": "Comparable efficacy with significantly lower erythema and rebound hyperpigmentation.",
+          "actionable": "Consider non-hydroquinone protocols for recalcitrant melasma.",
+          "patient_segment": "hyperpigmentation",
+          "source": "JAAD 2026",
+          "trial_n": 640
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_056",
+      "category_slug": "dermatology",
+      "identity": {
+        "name": "Adversarial Clinic 56",
+        "city": "Chennai",
+        "locality": "Alwarpet",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0057",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0058",
+    "adversarial_scenario": "sensitive_billing_in_patient_inquiry",
+    "category": "diagnostic_labs",
+    "category_context": {
+      "slug": "diagnostic_labs",
+      "voice": {
+        "tone": "analytical_rigorous",
+        "register": "laboratory_peer",
+        "vocab_allowed": [
+          "sensitivity",
+          "specificity",
+          "turnaround time",
+          "hemolysis"
+        ],
+        "vocab_taboo": [
+          "instant error-free"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_lab_01",
+          "title": "Pre-Analytical Sample Quality Protocol in High-Volume Labs",
+          "summary": "Standardized tube transport protocols cut sample rejection rates by 42%.",
+          "actionable": "Audit phlebotomy collection transport times.",
+          "patient_segment": "routine_biochemistry",
+          "source": "Clinica Chimica Acta 2026",
+          "trial_n": 15000
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_057",
+      "category_slug": "diagnostic_labs",
+      "identity": {
+        "name": "Adversarial Clinic 57",
+        "city": "Ahmedabad",
+        "locality": "Bodakdev",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "subscription": {
+        "card_last4": "4242",
+        "internal_arrears_balance": 14500,
+        "billing_status": "overdue_warning"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0058",
+      "kind": "inbound_inquiry",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {
+        "question": "Does your clinic accept senior citizen cardiac rehab?"
+      }
+    },
+    "trigger_kind": "inbound_inquiry",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0059",
+    "adversarial_scenario": "massive_context_overload",
+    "category": "fitness_gyms",
+    "category_context": {
+      "slug": "fitness_gyms",
+      "voice": {
+        "tone": "energetic_coaching",
+        "register": "fitness_expert",
+        "vocab_allowed": [
+          "hypertrophy",
+          "progressive overload",
+          "retention",
+          "re-engagement"
+        ],
+        "vocab_taboo": [
+          "get shredded in 3 days",
+          "anabolic secret"
+        ]
+      },
+      "digest": []
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_058",
+      "category_slug": "fitness_gyms",
+      "identity": {
+        "name": "Adversarial Clinic 58",
+        "city": "Hyderabad",
+        "locality": "Gachibowli",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "noise_metric_0": "noise_val_0",
+      "noise_metric_1": "noise_val_17",
+      "noise_metric_2": "noise_val_34",
+      "noise_metric_3": "noise_val_51",
+      "noise_metric_4": "noise_val_68",
+      "noise_metric_5": "noise_val_85",
+      "noise_metric_6": "noise_val_102",
+      "noise_metric_7": "noise_val_119",
+      "noise_metric_8": "noise_val_136",
+      "noise_metric_9": "noise_val_153",
+      "noise_metric_10": "noise_val_170",
+      "noise_metric_11": "noise_val_187",
+      "noise_metric_12": "noise_val_204",
+      "noise_metric_13": "noise_val_221",
+      "noise_metric_14": "noise_val_238",
+      "noise_metric_15": "noise_val_255",
+      "noise_metric_16": "noise_val_272",
+      "noise_metric_17": "noise_val_289",
+      "noise_metric_18": "noise_val_306",
+      "noise_metric_19": "noise_val_323",
+      "noise_metric_20": "noise_val_340",
+      "noise_metric_21": "noise_val_357",
+      "noise_metric_22": "noise_val_374",
+      "noise_metric_23": "noise_val_391",
+      "noise_metric_24": "noise_val_408",
+      "noise_metric_25": "noise_val_425",
+      "noise_metric_26": "noise_val_442",
+      "noise_metric_27": "noise_val_459",
+      "noise_metric_28": "noise_val_476",
+      "noise_metric_29": "noise_val_493",
+      "noise_metric_30": "noise_val_510",
+      "noise_metric_31": "noise_val_527",
+      "noise_metric_32": "noise_val_544",
+      "noise_metric_33": "noise_val_561",
+      "noise_metric_34": "noise_val_578",
+      "noise_metric_35": "noise_val_595",
+      "noise_metric_36": "noise_val_612",
+      "noise_metric_37": "noise_val_629",
+      "noise_metric_38": "noise_val_646",
+      "noise_metric_39": "noise_val_663"
+    },
+    "trigger_context": {
+      "id": "trg_adv_0059",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0060",
+    "adversarial_scenario": "extreme_sparsity_single_field",
+    "category": "dermatology",
+    "category_context": {
+      "slug": "dermatology",
+      "voice": {
+        "tone": "consultative_clinical",
+        "register": "peer_medical",
+        "vocab_allowed": [
+          "melasma",
+          "retinoid",
+          "barrier repair",
+          "transepidermal"
+        ],
+        "vocab_taboo": [
+          "fairness",
+          "instant glow",
+          "bleach"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_derm_01",
+          "title": "Topical Cysteamine vs Hydroquinone for Melasma",
+          "summary": "Comparable efficacy with significantly lower erythema and rebound hyperpigmentation.",
+          "actionable": "Consider non-hydroquinone protocols for recalcitrant melasma.",
+          "patient_segment": "hyperpigmentation",
+          "source": "JAAD 2026",
+          "trial_n": 640
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_059",
+      "category_slug": "dermatology"
+    },
+    "trigger_context": {
+      "id": "trg_adv_0060",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0061",
+    "adversarial_scenario": "cross_category_distraction",
+    "category": "wellness_spa",
+    "category_context": {
+      "slug": "wellness_spa",
+      "voice": {
+        "tone": "serene_consultative",
+        "register": "hospitality_expert",
+        "vocab_allowed": [
+          "aromatherapy",
+          "lymphatic drainage",
+          "stress reduction",
+          "repeat booking"
+        ],
+        "vocab_taboo": [
+          "detox guaranteed"
+        ]
+      },
+      "digest": []
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_060",
+      "category_slug": "wellness_spa",
+      "identity": {
+        "name": "Adversarial Clinic 60",
+        "city": "Chennai",
+        "locality": "Alwarpet",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "offers": [
+        {
+          "id": "off_fake",
+          "title": "50% off root canal and dental crown",
+          "discount_pct": 50
+        }
+      ],
+      "signals": [
+        "frequent_dental_chair_inquiries"
+      ]
+    },
+    "trigger_context": {
+      "id": "trg_adv_0061",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0062",
+    "adversarial_scenario": "irrelevant_high_value_metric",
+    "category": "veterinary",
+    "category_context": {
+      "slug": "veterinary",
+      "voice": {
+        "tone": "compassionate_clinical",
+        "register": "veterinary_peer",
+        "vocab_allowed": [
+          "canine atopy",
+          "monoclonal",
+          "cytopoint",
+          "pruritus"
+        ],
+        "vocab_taboo": [
+          "miracle cure"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_vet_01",
+          "title": "Long-Term Monoclonal Antibody Safety in Canine Atopy",
+          "summary": "Sustained pruritus reduction over 24 months without immunosuppressive adverse events.",
+          "actionable": "Review maintenance scheduling for seasonal canine atopic dermatitis.",
+          "patient_segment": "canine_atopy",
+          "source": "Vet Dermatology 2025",
+          "trial_n": 890
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_061",
+      "category_slug": "veterinary",
+      "identity": {
+        "name": "Adversarial Clinic 61",
+        "city": "Chennai",
+        "locality": "Alwarpet",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "signals": [
+        "lottery_jackpot_winner_100000000_usd",
+        "random_unverified_views_99999999"
+      ]
+    },
+    "trigger_context": {
+      "id": "trg_adv_0062",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0063",
+    "adversarial_scenario": "conflicting_operational_signals",
+    "category": "cardiology",
+    "category_context": {
+      "slug": "cardiology",
+      "voice": {
+        "tone": "clinical_rigorous",
+        "register": "professional_peer",
+        "vocab_allowed": [
+          "ejection fraction",
+          "hypertension",
+          "statin",
+          "lipid cohort"
+        ],
+        "vocab_taboo": [
+          "cure all",
+          "magic pill",
+          "guaranteed"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_card_01",
+          "title": "SGLT2 Inhibitor Microvascular Outcomes",
+          "summary": "Reduction in cardiovascular mortality observed across high-risk diabetic cohorts.",
+          "actionable": "Review heart-failure protocols for diabetic patients.",
+          "patient_segment": "diabetic_cardio",
+          "source": "Lancet Cardiology 2026",
+          "trial_n": 4820
+        },
+        {
+          "id": "d_card_02",
+          "title": "Early Statin Titration in Post-PCI Recovery",
+          "summary": "High-intensity statin regimens reduced 90-day recurrent ischemic events.",
+          "actionable": "Audit post-PCI lipid panel follow-ups.",
+          "patient_segment": "post_pci",
+          "source": "JACC 2025",
+          "trial_n": 3200
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_062",
+      "category_slug": "cardiology",
+      "identity": {
+        "name": "Adversarial Clinic 62",
+        "city": "Jaipur",
+        "locality": "C-Scheme",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0063",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0064",
+    "adversarial_scenario": "commercial_leakage_in_clinical",
+    "category": "dermatology",
+    "category_context": {
+      "slug": "dermatology",
+      "voice": {
+        "tone": "consultative_clinical",
+        "register": "peer_medical",
+        "vocab_allowed": [
+          "melasma",
+          "retinoid",
+          "barrier repair",
+          "transepidermal"
+        ],
+        "vocab_taboo": [
+          "fairness",
+          "instant glow",
+          "bleach"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_derm_01",
+          "title": "Topical Cysteamine vs Hydroquinone for Melasma",
+          "summary": "Comparable efficacy with significantly lower erythema and rebound hyperpigmentation.",
+          "actionable": "Consider non-hydroquinone protocols for recalcitrant melasma.",
+          "patient_segment": "hyperpigmentation",
+          "source": "JAAD 2026",
+          "trial_n": 640
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_063",
+      "category_slug": "dermatology",
+      "identity": {
+        "name": "Adversarial Clinic 63",
+        "city": "Hyderabad",
+        "locality": "Banjara Hills",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "performance": {
+        "revenue_usd": 450000,
+        "leads_30d": 999,
+        "conversion_rate": 0.88
+      },
+      "offers": [
+        {
+          "title": "Buy 1 Get 1 Free Statin",
+          "discount": "50% off"
+        }
+      ]
+    },
+    "trigger_context": {
+      "id": "trg_adv_0064",
+      "kind": "research_digest",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "research_digest",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0065",
+    "adversarial_scenario": "distracting_locality_in_global_digest",
+    "category": "optometry",
+    "category_context": {
+      "slug": "optometry",
+      "voice": {
+        "tone": "precise_clinical",
+        "register": "technical_peer",
+        "vocab_allowed": [
+          "myopia control",
+          "orthokeratology",
+          "axial length",
+          "diopters"
+        ],
+        "vocab_taboo": [
+          "laser guarantee",
+          "100% cure"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_opt_01",
+          "title": "Low-Dose Atropine combined with Defocus Lenses",
+          "summary": "Synergistic slowdown in axial elongation among pediatric progressive myopes.",
+          "actionable": "Evaluate dual-therapy protocols for fast-progressing pediatric myopia.",
+          "patient_segment": "pediatric_myopia",
+          "source": "Ophthalmology 2026",
+          "trial_n": 1250
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_064",
+      "category_slug": "optometry",
+      "identity": {
+        "name": "Adversarial Clinic 64",
+        "city": "Delhi",
+        "locality": "Greater Kailash",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0065",
+      "kind": "research_digest",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "research_digest",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0066",
+    "adversarial_scenario": "relevant_locality_in_local_spike",
+    "category": "ayurveda",
+    "category_context": {
+      "slug": "ayurveda",
+      "voice": {
+        "tone": "authentic_traditional",
+        "register": "holistic_clinical",
+        "vocab_allowed": [
+          "dosha",
+          "panchakarma",
+          "rasayana",
+          "standardized extract"
+        ],
+        "vocab_taboo": [
+          "allopathic replacement",
+          "100% cure"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_ayu_01",
+          "title": "Standardized Ashwagandha Extract for Chronic Stress & Cortisol",
+          "summary": "Statistically significant reduction in serum cortisol and perceived stress scores.",
+          "actionable": "Integrate standardized botanical assessments in wellness consultations.",
+          "patient_segment": "stress_management",
+          "source": "Phytomedicine 2026",
+          "trial_n": 450
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_065",
+      "category_slug": "ayurveda",
+      "identity": {
+        "name": "Adversarial Clinic 65",
+        "city": "Lucknow",
+        "locality": "Gomti Nagar",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0066",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0067",
+    "adversarial_scenario": "distracting_established_year",
+    "category": "wellness_spa",
+    "category_context": {
+      "slug": "wellness_spa",
+      "voice": {
+        "tone": "serene_consultative",
+        "register": "hospitality_expert",
+        "vocab_allowed": [
+          "aromatherapy",
+          "lymphatic drainage",
+          "stress reduction",
+          "repeat booking"
+        ],
+        "vocab_taboo": [
+          "detox guaranteed"
+        ]
+      },
+      "digest": []
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_066",
+      "category_slug": "wellness_spa",
+      "identity": {
+        "name": "Adversarial Clinic 66",
+        "city": "Chennai",
+        "locality": "Alwarpet",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0067",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0068",
+    "adversarial_scenario": "sensitive_billing_in_patient_inquiry",
+    "category": "wellness_spa",
+    "category_context": {
+      "slug": "wellness_spa",
+      "voice": {
+        "tone": "serene_consultative",
+        "register": "hospitality_expert",
+        "vocab_allowed": [
+          "aromatherapy",
+          "lymphatic drainage",
+          "stress reduction",
+          "repeat booking"
+        ],
+        "vocab_taboo": [
+          "detox guaranteed"
+        ]
+      },
+      "digest": []
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_067",
+      "category_slug": "wellness_spa",
+      "identity": {
+        "name": "Adversarial Clinic 67",
+        "city": "Kolkata",
+        "locality": "Salt Lake",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "subscription": {
+        "card_last4": "4242",
+        "internal_arrears_balance": 14500,
+        "billing_status": "overdue_warning"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0068",
+      "kind": "inbound_inquiry",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {
+        "question": "Does your clinic accept senior citizen cardiac rehab?"
+      }
+    },
+    "trigger_kind": "inbound_inquiry",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0069",
+    "adversarial_scenario": "massive_context_overload",
+    "category": "cardiology",
+    "category_context": {
+      "slug": "cardiology",
+      "voice": {
+        "tone": "clinical_rigorous",
+        "register": "professional_peer",
+        "vocab_allowed": [
+          "ejection fraction",
+          "hypertension",
+          "statin",
+          "lipid cohort"
+        ],
+        "vocab_taboo": [
+          "cure all",
+          "magic pill",
+          "guaranteed"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_card_01",
+          "title": "SGLT2 Inhibitor Microvascular Outcomes",
+          "summary": "Reduction in cardiovascular mortality observed across high-risk diabetic cohorts.",
+          "actionable": "Review heart-failure protocols for diabetic patients.",
+          "patient_segment": "diabetic_cardio",
+          "source": "Lancet Cardiology 2026",
+          "trial_n": 4820
+        },
+        {
+          "id": "d_card_02",
+          "title": "Early Statin Titration in Post-PCI Recovery",
+          "summary": "High-intensity statin regimens reduced 90-day recurrent ischemic events.",
+          "actionable": "Audit post-PCI lipid panel follow-ups.",
+          "patient_segment": "post_pci",
+          "source": "JACC 2025",
+          "trial_n": 3200
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_068",
+      "category_slug": "cardiology",
+      "identity": {
+        "name": "Adversarial Clinic 68",
+        "city": "Bengaluru",
+        "locality": "Whitefield",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "noise_metric_0": "noise_val_0",
+      "noise_metric_1": "noise_val_17",
+      "noise_metric_2": "noise_val_34",
+      "noise_metric_3": "noise_val_51",
+      "noise_metric_4": "noise_val_68",
+      "noise_metric_5": "noise_val_85",
+      "noise_metric_6": "noise_val_102",
+      "noise_metric_7": "noise_val_119",
+      "noise_metric_8": "noise_val_136",
+      "noise_metric_9": "noise_val_153",
+      "noise_metric_10": "noise_val_170",
+      "noise_metric_11": "noise_val_187",
+      "noise_metric_12": "noise_val_204",
+      "noise_metric_13": "noise_val_221",
+      "noise_metric_14": "noise_val_238",
+      "noise_metric_15": "noise_val_255",
+      "noise_metric_16": "noise_val_272",
+      "noise_metric_17": "noise_val_289",
+      "noise_metric_18": "noise_val_306",
+      "noise_metric_19": "noise_val_323",
+      "noise_metric_20": "noise_val_340",
+      "noise_metric_21": "noise_val_357",
+      "noise_metric_22": "noise_val_374",
+      "noise_metric_23": "noise_val_391",
+      "noise_metric_24": "noise_val_408",
+      "noise_metric_25": "noise_val_425",
+      "noise_metric_26": "noise_val_442",
+      "noise_metric_27": "noise_val_459",
+      "noise_metric_28": "noise_val_476",
+      "noise_metric_29": "noise_val_493",
+      "noise_metric_30": "noise_val_510",
+      "noise_metric_31": "noise_val_527",
+      "noise_metric_32": "noise_val_544",
+      "noise_metric_33": "noise_val_561",
+      "noise_metric_34": "noise_val_578",
+      "noise_metric_35": "noise_val_595",
+      "noise_metric_36": "noise_val_612",
+      "noise_metric_37": "noise_val_629",
+      "noise_metric_38": "noise_val_646",
+      "noise_metric_39": "noise_val_663"
+    },
+    "trigger_context": {
+      "id": "trg_adv_0069",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0070",
+    "adversarial_scenario": "extreme_sparsity_single_field",
+    "category": "dermatology",
+    "category_context": {
+      "slug": "dermatology",
+      "voice": {
+        "tone": "consultative_clinical",
+        "register": "peer_medical",
+        "vocab_allowed": [
+          "melasma",
+          "retinoid",
+          "barrier repair",
+          "transepidermal"
+        ],
+        "vocab_taboo": [
+          "fairness",
+          "instant glow",
+          "bleach"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_derm_01",
+          "title": "Topical Cysteamine vs Hydroquinone for Melasma",
+          "summary": "Comparable efficacy with significantly lower erythema and rebound hyperpigmentation.",
+          "actionable": "Consider non-hydroquinone protocols for recalcitrant melasma.",
+          "patient_segment": "hyperpigmentation",
+          "source": "JAAD 2026",
+          "trial_n": 640
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_069",
+      "category_slug": "dermatology"
+    },
+    "trigger_context": {
+      "id": "trg_adv_0070",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0071",
+    "adversarial_scenario": "cross_category_distraction",
+    "category": "ayurveda",
+    "category_context": {
+      "slug": "ayurveda",
+      "voice": {
+        "tone": "authentic_traditional",
+        "register": "holistic_clinical",
+        "vocab_allowed": [
+          "dosha",
+          "panchakarma",
+          "rasayana",
+          "standardized extract"
+        ],
+        "vocab_taboo": [
+          "allopathic replacement",
+          "100% cure"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_ayu_01",
+          "title": "Standardized Ashwagandha Extract for Chronic Stress & Cortisol",
+          "summary": "Statistically significant reduction in serum cortisol and perceived stress scores.",
+          "actionable": "Integrate standardized botanical assessments in wellness consultations.",
+          "patient_segment": "stress_management",
+          "source": "Phytomedicine 2026",
+          "trial_n": 450
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_070",
+      "category_slug": "ayurveda",
+      "identity": {
+        "name": "Adversarial Clinic 70",
+        "city": "Delhi",
+        "locality": "Greater Kailash",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "offers": [
+        {
+          "id": "off_fake",
+          "title": "50% off root canal and dental crown",
+          "discount_pct": 50
+        }
+      ],
+      "signals": [
+        "frequent_dental_chair_inquiries"
+      ]
+    },
+    "trigger_context": {
+      "id": "trg_adv_0071",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0072",
+    "adversarial_scenario": "irrelevant_high_value_metric",
+    "category": "wellness_spa",
+    "category_context": {
+      "slug": "wellness_spa",
+      "voice": {
+        "tone": "serene_consultative",
+        "register": "hospitality_expert",
+        "vocab_allowed": [
+          "aromatherapy",
+          "lymphatic drainage",
+          "stress reduction",
+          "repeat booking"
+        ],
+        "vocab_taboo": [
+          "detox guaranteed"
+        ]
+      },
+      "digest": []
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_071",
+      "category_slug": "wellness_spa",
+      "identity": {
+        "name": "Adversarial Clinic 71",
+        "city": "Delhi",
+        "locality": "Greater Kailash",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "signals": [
+        "lottery_jackpot_winner_100000000_usd",
+        "random_unverified_views_99999999"
+      ]
+    },
+    "trigger_context": {
+      "id": "trg_adv_0072",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0073",
+    "adversarial_scenario": "conflicting_operational_signals",
+    "category": "wellness_spa",
+    "category_context": {
+      "slug": "wellness_spa",
+      "voice": {
+        "tone": "serene_consultative",
+        "register": "hospitality_expert",
+        "vocab_allowed": [
+          "aromatherapy",
+          "lymphatic drainage",
+          "stress reduction",
+          "repeat booking"
+        ],
+        "vocab_taboo": [
+          "detox guaranteed"
+        ]
+      },
+      "digest": []
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_072",
+      "category_slug": "wellness_spa",
+      "identity": {
+        "name": "Adversarial Clinic 72",
+        "city": "Delhi",
+        "locality": "Vasant Kunj",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0073",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0074",
+    "adversarial_scenario": "commercial_leakage_in_clinical",
+    "category": "cardiology",
+    "category_context": {
+      "slug": "cardiology",
+      "voice": {
+        "tone": "clinical_rigorous",
+        "register": "professional_peer",
+        "vocab_allowed": [
+          "ejection fraction",
+          "hypertension",
+          "statin",
+          "lipid cohort"
+        ],
+        "vocab_taboo": [
+          "cure all",
+          "magic pill",
+          "guaranteed"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_card_01",
+          "title": "SGLT2 Inhibitor Microvascular Outcomes",
+          "summary": "Reduction in cardiovascular mortality observed across high-risk diabetic cohorts.",
+          "actionable": "Review heart-failure protocols for diabetic patients.",
+          "patient_segment": "diabetic_cardio",
+          "source": "Lancet Cardiology 2026",
+          "trial_n": 4820
+        },
+        {
+          "id": "d_card_02",
+          "title": "Early Statin Titration in Post-PCI Recovery",
+          "summary": "High-intensity statin regimens reduced 90-day recurrent ischemic events.",
+          "actionable": "Audit post-PCI lipid panel follow-ups.",
+          "patient_segment": "post_pci",
+          "source": "JACC 2025",
+          "trial_n": 3200
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_073",
+      "category_slug": "cardiology",
+      "identity": {
+        "name": "Adversarial Clinic 73",
+        "city": "Kolkata",
+        "locality": "Salt Lake",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "performance": {
+        "revenue_usd": 450000,
+        "leads_30d": 999,
+        "conversion_rate": 0.88
+      },
+      "offers": [
+        {
+          "title": "Buy 1 Get 1 Free Statin",
+          "discount": "50% off"
+        }
+      ]
+    },
+    "trigger_context": {
+      "id": "trg_adv_0074",
+      "kind": "research_digest",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "research_digest",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0075",
+    "adversarial_scenario": "distracting_locality_in_global_digest",
+    "category": "ayurveda",
+    "category_context": {
+      "slug": "ayurveda",
+      "voice": {
+        "tone": "authentic_traditional",
+        "register": "holistic_clinical",
+        "vocab_allowed": [
+          "dosha",
+          "panchakarma",
+          "rasayana",
+          "standardized extract"
+        ],
+        "vocab_taboo": [
+          "allopathic replacement",
+          "100% cure"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_ayu_01",
+          "title": "Standardized Ashwagandha Extract for Chronic Stress & Cortisol",
+          "summary": "Statistically significant reduction in serum cortisol and perceived stress scores.",
+          "actionable": "Integrate standardized botanical assessments in wellness consultations.",
+          "patient_segment": "stress_management",
+          "source": "Phytomedicine 2026",
+          "trial_n": 450
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_074",
+      "category_slug": "ayurveda",
+      "identity": {
+        "name": "Adversarial Clinic 74",
+        "city": "Kolkata",
+        "locality": "Salt Lake",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0075",
+      "kind": "research_digest",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "research_digest",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0076",
+    "adversarial_scenario": "relevant_locality_in_local_spike",
+    "category": "optometry",
+    "category_context": {
+      "slug": "optometry",
+      "voice": {
+        "tone": "precise_clinical",
+        "register": "technical_peer",
+        "vocab_allowed": [
+          "myopia control",
+          "orthokeratology",
+          "axial length",
+          "diopters"
+        ],
+        "vocab_taboo": [
+          "laser guarantee",
+          "100% cure"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_opt_01",
+          "title": "Low-Dose Atropine combined with Defocus Lenses",
+          "summary": "Synergistic slowdown in axial elongation among pediatric progressive myopes.",
+          "actionable": "Evaluate dual-therapy protocols for fast-progressing pediatric myopia.",
+          "patient_segment": "pediatric_myopia",
+          "source": "Ophthalmology 2026",
+          "trial_n": 1250
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_075",
+      "category_slug": "optometry",
+      "identity": {
+        "name": "Adversarial Clinic 75",
+        "city": "Mumbai",
+        "locality": "Bandra West",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0076",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0077",
+    "adversarial_scenario": "distracting_established_year",
+    "category": "cardiology",
+    "category_context": {
+      "slug": "cardiology",
+      "voice": {
+        "tone": "clinical_rigorous",
+        "register": "professional_peer",
+        "vocab_allowed": [
+          "ejection fraction",
+          "hypertension",
+          "statin",
+          "lipid cohort"
+        ],
+        "vocab_taboo": [
+          "cure all",
+          "magic pill",
+          "guaranteed"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_card_01",
+          "title": "SGLT2 Inhibitor Microvascular Outcomes",
+          "summary": "Reduction in cardiovascular mortality observed across high-risk diabetic cohorts.",
+          "actionable": "Review heart-failure protocols for diabetic patients.",
+          "patient_segment": "diabetic_cardio",
+          "source": "Lancet Cardiology 2026",
+          "trial_n": 4820
+        },
+        {
+          "id": "d_card_02",
+          "title": "Early Statin Titration in Post-PCI Recovery",
+          "summary": "High-intensity statin regimens reduced 90-day recurrent ischemic events.",
+          "actionable": "Audit post-PCI lipid panel follow-ups.",
+          "patient_segment": "post_pci",
+          "source": "JACC 2025",
+          "trial_n": 3200
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_076",
+      "category_slug": "cardiology",
+      "identity": {
+        "name": "Adversarial Clinic 76",
+        "city": "Kolkata",
+        "locality": "Salt Lake",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0077",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0078",
+    "adversarial_scenario": "sensitive_billing_in_patient_inquiry",
+    "category": "cardiology",
+    "category_context": {
+      "slug": "cardiology",
+      "voice": {
+        "tone": "clinical_rigorous",
+        "register": "professional_peer",
+        "vocab_allowed": [
+          "ejection fraction",
+          "hypertension",
+          "statin",
+          "lipid cohort"
+        ],
+        "vocab_taboo": [
+          "cure all",
+          "magic pill",
+          "guaranteed"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_card_01",
+          "title": "SGLT2 Inhibitor Microvascular Outcomes",
+          "summary": "Reduction in cardiovascular mortality observed across high-risk diabetic cohorts.",
+          "actionable": "Review heart-failure protocols for diabetic patients.",
+          "patient_segment": "diabetic_cardio",
+          "source": "Lancet Cardiology 2026",
+          "trial_n": 4820
+        },
+        {
+          "id": "d_card_02",
+          "title": "Early Statin Titration in Post-PCI Recovery",
+          "summary": "High-intensity statin regimens reduced 90-day recurrent ischemic events.",
+          "actionable": "Audit post-PCI lipid panel follow-ups.",
+          "patient_segment": "post_pci",
+          "source": "JACC 2025",
+          "trial_n": 3200
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_077",
+      "category_slug": "cardiology",
+      "identity": {
+        "name": "Adversarial Clinic 77",
+        "city": "Lucknow",
+        "locality": "Gomti Nagar",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "subscription": {
+        "card_last4": "4242",
+        "internal_arrears_balance": 14500,
+        "billing_status": "overdue_warning"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0078",
+      "kind": "inbound_inquiry",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {
+        "question": "Does your clinic accept senior citizen cardiac rehab?"
+      }
+    },
+    "trigger_kind": "inbound_inquiry",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0079",
+    "adversarial_scenario": "massive_context_overload",
+    "category": "ayurveda",
+    "category_context": {
+      "slug": "ayurveda",
+      "voice": {
+        "tone": "authentic_traditional",
+        "register": "holistic_clinical",
+        "vocab_allowed": [
+          "dosha",
+          "panchakarma",
+          "rasayana",
+          "standardized extract"
+        ],
+        "vocab_taboo": [
+          "allopathic replacement",
+          "100% cure"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_ayu_01",
+          "title": "Standardized Ashwagandha Extract for Chronic Stress & Cortisol",
+          "summary": "Statistically significant reduction in serum cortisol and perceived stress scores.",
+          "actionable": "Integrate standardized botanical assessments in wellness consultations.",
+          "patient_segment": "stress_management",
+          "source": "Phytomedicine 2026",
+          "trial_n": 450
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_078",
+      "category_slug": "ayurveda",
+      "identity": {
+        "name": "Adversarial Clinic 78",
+        "city": "Lucknow",
+        "locality": "Gomti Nagar",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "noise_metric_0": "noise_val_0",
+      "noise_metric_1": "noise_val_17",
+      "noise_metric_2": "noise_val_34",
+      "noise_metric_3": "noise_val_51",
+      "noise_metric_4": "noise_val_68",
+      "noise_metric_5": "noise_val_85",
+      "noise_metric_6": "noise_val_102",
+      "noise_metric_7": "noise_val_119",
+      "noise_metric_8": "noise_val_136",
+      "noise_metric_9": "noise_val_153",
+      "noise_metric_10": "noise_val_170",
+      "noise_metric_11": "noise_val_187",
+      "noise_metric_12": "noise_val_204",
+      "noise_metric_13": "noise_val_221",
+      "noise_metric_14": "noise_val_238",
+      "noise_metric_15": "noise_val_255",
+      "noise_metric_16": "noise_val_272",
+      "noise_metric_17": "noise_val_289",
+      "noise_metric_18": "noise_val_306",
+      "noise_metric_19": "noise_val_323",
+      "noise_metric_20": "noise_val_340",
+      "noise_metric_21": "noise_val_357",
+      "noise_metric_22": "noise_val_374",
+      "noise_metric_23": "noise_val_391",
+      "noise_metric_24": "noise_val_408",
+      "noise_metric_25": "noise_val_425",
+      "noise_metric_26": "noise_val_442",
+      "noise_metric_27": "noise_val_459",
+      "noise_metric_28": "noise_val_476",
+      "noise_metric_29": "noise_val_493",
+      "noise_metric_30": "noise_val_510",
+      "noise_metric_31": "noise_val_527",
+      "noise_metric_32": "noise_val_544",
+      "noise_metric_33": "noise_val_561",
+      "noise_metric_34": "noise_val_578",
+      "noise_metric_35": "noise_val_595",
+      "noise_metric_36": "noise_val_612",
+      "noise_metric_37": "noise_val_629",
+      "noise_metric_38": "noise_val_646",
+      "noise_metric_39": "noise_val_663"
+    },
+    "trigger_context": {
+      "id": "trg_adv_0079",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0080",
+    "adversarial_scenario": "extreme_sparsity_single_field",
+    "category": "veterinary",
+    "category_context": {
+      "slug": "veterinary",
+      "voice": {
+        "tone": "compassionate_clinical",
+        "register": "veterinary_peer",
+        "vocab_allowed": [
+          "canine atopy",
+          "monoclonal",
+          "cytopoint",
+          "pruritus"
+        ],
+        "vocab_taboo": [
+          "miracle cure"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_vet_01",
+          "title": "Long-Term Monoclonal Antibody Safety in Canine Atopy",
+          "summary": "Sustained pruritus reduction over 24 months without immunosuppressive adverse events.",
+          "actionable": "Review maintenance scheduling for seasonal canine atopic dermatitis.",
+          "patient_segment": "canine_atopy",
+          "source": "Vet Dermatology 2025",
+          "trial_n": 890
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_079",
+      "category_slug": "veterinary"
+    },
+    "trigger_context": {
+      "id": "trg_adv_0080",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0081",
+    "adversarial_scenario": "cross_category_distraction",
+    "category": "diagnostic_labs",
+    "category_context": {
+      "slug": "diagnostic_labs",
+      "voice": {
+        "tone": "analytical_rigorous",
+        "register": "laboratory_peer",
+        "vocab_allowed": [
+          "sensitivity",
+          "specificity",
+          "turnaround time",
+          "hemolysis"
+        ],
+        "vocab_taboo": [
+          "instant error-free"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_lab_01",
+          "title": "Pre-Analytical Sample Quality Protocol in High-Volume Labs",
+          "summary": "Standardized tube transport protocols cut sample rejection rates by 42%.",
+          "actionable": "Audit phlebotomy collection transport times.",
+          "patient_segment": "routine_biochemistry",
+          "source": "Clinica Chimica Acta 2026",
+          "trial_n": 15000
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_080",
+      "category_slug": "diagnostic_labs",
+      "identity": {
+        "name": "Adversarial Clinic 80",
+        "city": "Jaipur",
+        "locality": "C-Scheme",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "offers": [
+        {
+          "id": "off_fake",
+          "title": "50% off root canal and dental crown",
+          "discount_pct": 50
+        }
+      ],
+      "signals": [
+        "frequent_dental_chair_inquiries"
+      ]
+    },
+    "trigger_context": {
+      "id": "trg_adv_0081",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0082",
+    "adversarial_scenario": "irrelevant_high_value_metric",
+    "category": "veterinary",
+    "category_context": {
+      "slug": "veterinary",
+      "voice": {
+        "tone": "compassionate_clinical",
+        "register": "veterinary_peer",
+        "vocab_allowed": [
+          "canine atopy",
+          "monoclonal",
+          "cytopoint",
+          "pruritus"
+        ],
+        "vocab_taboo": [
+          "miracle cure"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_vet_01",
+          "title": "Long-Term Monoclonal Antibody Safety in Canine Atopy",
+          "summary": "Sustained pruritus reduction over 24 months without immunosuppressive adverse events.",
+          "actionable": "Review maintenance scheduling for seasonal canine atopic dermatitis.",
+          "patient_segment": "canine_atopy",
+          "source": "Vet Dermatology 2025",
+          "trial_n": 890
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_081",
+      "category_slug": "veterinary",
+      "identity": {
+        "name": "Adversarial Clinic 81",
+        "city": "Pune",
+        "locality": "Koregaon Park",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "signals": [
+        "lottery_jackpot_winner_100000000_usd",
+        "random_unverified_views_99999999"
+      ]
+    },
+    "trigger_context": {
+      "id": "trg_adv_0082",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0083",
+    "adversarial_scenario": "conflicting_operational_signals",
+    "category": "wellness_spa",
+    "category_context": {
+      "slug": "wellness_spa",
+      "voice": {
+        "tone": "serene_consultative",
+        "register": "hospitality_expert",
+        "vocab_allowed": [
+          "aromatherapy",
+          "lymphatic drainage",
+          "stress reduction",
+          "repeat booking"
+        ],
+        "vocab_taboo": [
+          "detox guaranteed"
+        ]
+      },
+      "digest": []
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_082",
+      "category_slug": "wellness_spa",
+      "identity": {
+        "name": "Adversarial Clinic 82",
+        "city": "Ahmedabad",
+        "locality": "Bodakdev",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0083",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0084",
+    "adversarial_scenario": "commercial_leakage_in_clinical",
+    "category": "wellness_spa",
+    "category_context": {
+      "slug": "wellness_spa",
+      "voice": {
+        "tone": "serene_consultative",
+        "register": "hospitality_expert",
+        "vocab_allowed": [
+          "aromatherapy",
+          "lymphatic drainage",
+          "stress reduction",
+          "repeat booking"
+        ],
+        "vocab_taboo": [
+          "detox guaranteed"
+        ]
+      },
+      "digest": []
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_083",
+      "category_slug": "wellness_spa",
+      "identity": {
+        "name": "Adversarial Clinic 83",
+        "city": "Chennai",
+        "locality": "Anna Nagar",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "performance": {
+        "revenue_usd": 450000,
+        "leads_30d": 999,
+        "conversion_rate": 0.88
+      },
+      "offers": [
+        {
+          "title": "Buy 1 Get 1 Free Statin",
+          "discount": "50% off"
+        }
+      ]
+    },
+    "trigger_context": {
+      "id": "trg_adv_0084",
+      "kind": "research_digest",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "research_digest",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0085",
+    "adversarial_scenario": "distracting_locality_in_global_digest",
+    "category": "veterinary",
+    "category_context": {
+      "slug": "veterinary",
+      "voice": {
+        "tone": "compassionate_clinical",
+        "register": "veterinary_peer",
+        "vocab_allowed": [
+          "canine atopy",
+          "monoclonal",
+          "cytopoint",
+          "pruritus"
+        ],
+        "vocab_taboo": [
+          "miracle cure"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_vet_01",
+          "title": "Long-Term Monoclonal Antibody Safety in Canine Atopy",
+          "summary": "Sustained pruritus reduction over 24 months without immunosuppressive adverse events.",
+          "actionable": "Review maintenance scheduling for seasonal canine atopic dermatitis.",
+          "patient_segment": "canine_atopy",
+          "source": "Vet Dermatology 2025",
+          "trial_n": 890
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_084",
+      "category_slug": "veterinary",
+      "identity": {
+        "name": "Adversarial Clinic 84",
+        "city": "Lucknow",
+        "locality": "Gomti Nagar",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0085",
+      "kind": "research_digest",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "research_digest",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0086",
+    "adversarial_scenario": "relevant_locality_in_local_spike",
+    "category": "optometry",
+    "category_context": {
+      "slug": "optometry",
+      "voice": {
+        "tone": "precise_clinical",
+        "register": "technical_peer",
+        "vocab_allowed": [
+          "myopia control",
+          "orthokeratology",
+          "axial length",
+          "diopters"
+        ],
+        "vocab_taboo": [
+          "laser guarantee",
+          "100% cure"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_opt_01",
+          "title": "Low-Dose Atropine combined with Defocus Lenses",
+          "summary": "Synergistic slowdown in axial elongation among pediatric progressive myopes.",
+          "actionable": "Evaluate dual-therapy protocols for fast-progressing pediatric myopia.",
+          "patient_segment": "pediatric_myopia",
+          "source": "Ophthalmology 2026",
+          "trial_n": 1250
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_085",
+      "category_slug": "optometry",
+      "identity": {
+        "name": "Adversarial Clinic 85",
+        "city": "Ahmedabad",
+        "locality": "Bodakdev",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0086",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0087",
+    "adversarial_scenario": "distracting_established_year",
+    "category": "diagnostic_labs",
+    "category_context": {
+      "slug": "diagnostic_labs",
+      "voice": {
+        "tone": "analytical_rigorous",
+        "register": "laboratory_peer",
+        "vocab_allowed": [
+          "sensitivity",
+          "specificity",
+          "turnaround time",
+          "hemolysis"
+        ],
+        "vocab_taboo": [
+          "instant error-free"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_lab_01",
+          "title": "Pre-Analytical Sample Quality Protocol in High-Volume Labs",
+          "summary": "Standardized tube transport protocols cut sample rejection rates by 42%.",
+          "actionable": "Audit phlebotomy collection transport times.",
+          "patient_segment": "routine_biochemistry",
+          "source": "Clinica Chimica Acta 2026",
+          "trial_n": 15000
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_086",
+      "category_slug": "diagnostic_labs",
+      "identity": {
+        "name": "Adversarial Clinic 86",
+        "city": "Chennai",
+        "locality": "Alwarpet",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0087",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0088",
+    "adversarial_scenario": "sensitive_billing_in_patient_inquiry",
+    "category": "wellness_spa",
+    "category_context": {
+      "slug": "wellness_spa",
+      "voice": {
+        "tone": "serene_consultative",
+        "register": "hospitality_expert",
+        "vocab_allowed": [
+          "aromatherapy",
+          "lymphatic drainage",
+          "stress reduction",
+          "repeat booking"
+        ],
+        "vocab_taboo": [
+          "detox guaranteed"
+        ]
+      },
+      "digest": []
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_087",
+      "category_slug": "wellness_spa",
+      "identity": {
+        "name": "Adversarial Clinic 87",
+        "city": "Bengaluru",
+        "locality": "Indiranagar",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "subscription": {
+        "card_last4": "4242",
+        "internal_arrears_balance": 14500,
+        "billing_status": "overdue_warning"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0088",
+      "kind": "inbound_inquiry",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {
+        "question": "Does your clinic accept senior citizen cardiac rehab?"
+      }
+    },
+    "trigger_kind": "inbound_inquiry",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0089",
+    "adversarial_scenario": "massive_context_overload",
+    "category": "cardiology",
+    "category_context": {
+      "slug": "cardiology",
+      "voice": {
+        "tone": "clinical_rigorous",
+        "register": "professional_peer",
+        "vocab_allowed": [
+          "ejection fraction",
+          "hypertension",
+          "statin",
+          "lipid cohort"
+        ],
+        "vocab_taboo": [
+          "cure all",
+          "magic pill",
+          "guaranteed"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_card_01",
+          "title": "SGLT2 Inhibitor Microvascular Outcomes",
+          "summary": "Reduction in cardiovascular mortality observed across high-risk diabetic cohorts.",
+          "actionable": "Review heart-failure protocols for diabetic patients.",
+          "patient_segment": "diabetic_cardio",
+          "source": "Lancet Cardiology 2026",
+          "trial_n": 4820
+        },
+        {
+          "id": "d_card_02",
+          "title": "Early Statin Titration in Post-PCI Recovery",
+          "summary": "High-intensity statin regimens reduced 90-day recurrent ischemic events.",
+          "actionable": "Audit post-PCI lipid panel follow-ups.",
+          "patient_segment": "post_pci",
+          "source": "JACC 2025",
+          "trial_n": 3200
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_088",
+      "category_slug": "cardiology",
+      "identity": {
+        "name": "Adversarial Clinic 88",
+        "city": "Jaipur",
+        "locality": "C-Scheme",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "noise_metric_0": "noise_val_0",
+      "noise_metric_1": "noise_val_17",
+      "noise_metric_2": "noise_val_34",
+      "noise_metric_3": "noise_val_51",
+      "noise_metric_4": "noise_val_68",
+      "noise_metric_5": "noise_val_85",
+      "noise_metric_6": "noise_val_102",
+      "noise_metric_7": "noise_val_119",
+      "noise_metric_8": "noise_val_136",
+      "noise_metric_9": "noise_val_153",
+      "noise_metric_10": "noise_val_170",
+      "noise_metric_11": "noise_val_187",
+      "noise_metric_12": "noise_val_204",
+      "noise_metric_13": "noise_val_221",
+      "noise_metric_14": "noise_val_238",
+      "noise_metric_15": "noise_val_255",
+      "noise_metric_16": "noise_val_272",
+      "noise_metric_17": "noise_val_289",
+      "noise_metric_18": "noise_val_306",
+      "noise_metric_19": "noise_val_323",
+      "noise_metric_20": "noise_val_340",
+      "noise_metric_21": "noise_val_357",
+      "noise_metric_22": "noise_val_374",
+      "noise_metric_23": "noise_val_391",
+      "noise_metric_24": "noise_val_408",
+      "noise_metric_25": "noise_val_425",
+      "noise_metric_26": "noise_val_442",
+      "noise_metric_27": "noise_val_459",
+      "noise_metric_28": "noise_val_476",
+      "noise_metric_29": "noise_val_493",
+      "noise_metric_30": "noise_val_510",
+      "noise_metric_31": "noise_val_527",
+      "noise_metric_32": "noise_val_544",
+      "noise_metric_33": "noise_val_561",
+      "noise_metric_34": "noise_val_578",
+      "noise_metric_35": "noise_val_595",
+      "noise_metric_36": "noise_val_612",
+      "noise_metric_37": "noise_val_629",
+      "noise_metric_38": "noise_val_646",
+      "noise_metric_39": "noise_val_663"
+    },
+    "trigger_context": {
+      "id": "trg_adv_0089",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0090",
+    "adversarial_scenario": "extreme_sparsity_single_field",
+    "category": "wellness_spa",
+    "category_context": {
+      "slug": "wellness_spa",
+      "voice": {
+        "tone": "serene_consultative",
+        "register": "hospitality_expert",
+        "vocab_allowed": [
+          "aromatherapy",
+          "lymphatic drainage",
+          "stress reduction",
+          "repeat booking"
+        ],
+        "vocab_taboo": [
+          "detox guaranteed"
+        ]
+      },
+      "digest": []
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_089",
+      "category_slug": "wellness_spa"
+    },
+    "trigger_context": {
+      "id": "trg_adv_0090",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0091",
+    "adversarial_scenario": "cross_category_distraction",
+    "category": "fitness_gyms",
+    "category_context": {
+      "slug": "fitness_gyms",
+      "voice": {
+        "tone": "energetic_coaching",
+        "register": "fitness_expert",
+        "vocab_allowed": [
+          "hypertrophy",
+          "progressive overload",
+          "retention",
+          "re-engagement"
+        ],
+        "vocab_taboo": [
+          "get shredded in 3 days",
+          "anabolic secret"
+        ]
+      },
+      "digest": []
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_090",
+      "category_slug": "fitness_gyms",
+      "identity": {
+        "name": "Adversarial Clinic 90",
+        "city": "Ahmedabad",
+        "locality": "Bodakdev",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "offers": [
+        {
+          "id": "off_fake",
+          "title": "50% off root canal and dental crown",
+          "discount_pct": 50
+        }
+      ],
+      "signals": [
+        "frequent_dental_chair_inquiries"
+      ]
+    },
+    "trigger_context": {
+      "id": "trg_adv_0091",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0092",
+    "adversarial_scenario": "irrelevant_high_value_metric",
+    "category": "diagnostic_labs",
+    "category_context": {
+      "slug": "diagnostic_labs",
+      "voice": {
+        "tone": "analytical_rigorous",
+        "register": "laboratory_peer",
+        "vocab_allowed": [
+          "sensitivity",
+          "specificity",
+          "turnaround time",
+          "hemolysis"
+        ],
+        "vocab_taboo": [
+          "instant error-free"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_lab_01",
+          "title": "Pre-Analytical Sample Quality Protocol in High-Volume Labs",
+          "summary": "Standardized tube transport protocols cut sample rejection rates by 42%.",
+          "actionable": "Audit phlebotomy collection transport times.",
+          "patient_segment": "routine_biochemistry",
+          "source": "Clinica Chimica Acta 2026",
+          "trial_n": 15000
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_091",
+      "category_slug": "diagnostic_labs",
+      "identity": {
+        "name": "Adversarial Clinic 91",
+        "city": "Ahmedabad",
+        "locality": "Bodakdev",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "signals": [
+        "lottery_jackpot_winner_100000000_usd",
+        "random_unverified_views_99999999"
+      ]
+    },
+    "trigger_context": {
+      "id": "trg_adv_0092",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0093",
+    "adversarial_scenario": "conflicting_operational_signals",
+    "category": "diagnostic_labs",
+    "category_context": {
+      "slug": "diagnostic_labs",
+      "voice": {
+        "tone": "analytical_rigorous",
+        "register": "laboratory_peer",
+        "vocab_allowed": [
+          "sensitivity",
+          "specificity",
+          "turnaround time",
+          "hemolysis"
+        ],
+        "vocab_taboo": [
+          "instant error-free"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_lab_01",
+          "title": "Pre-Analytical Sample Quality Protocol in High-Volume Labs",
+          "summary": "Standardized tube transport protocols cut sample rejection rates by 42%.",
+          "actionable": "Audit phlebotomy collection transport times.",
+          "patient_segment": "routine_biochemistry",
+          "source": "Clinica Chimica Acta 2026",
+          "trial_n": 15000
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_092",
+      "category_slug": "diagnostic_labs",
+      "identity": {
+        "name": "Adversarial Clinic 92",
+        "city": "Delhi",
+        "locality": "Vasant Kunj",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0093",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0094",
+    "adversarial_scenario": "commercial_leakage_in_clinical",
+    "category": "ayurveda",
+    "category_context": {
+      "slug": "ayurveda",
+      "voice": {
+        "tone": "authentic_traditional",
+        "register": "holistic_clinical",
+        "vocab_allowed": [
+          "dosha",
+          "panchakarma",
+          "rasayana",
+          "standardized extract"
+        ],
+        "vocab_taboo": [
+          "allopathic replacement",
+          "100% cure"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_ayu_01",
+          "title": "Standardized Ashwagandha Extract for Chronic Stress & Cortisol",
+          "summary": "Statistically significant reduction in serum cortisol and perceived stress scores.",
+          "actionable": "Integrate standardized botanical assessments in wellness consultations.",
+          "patient_segment": "stress_management",
+          "source": "Phytomedicine 2026",
+          "trial_n": 450
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_093",
+      "category_slug": "ayurveda",
+      "identity": {
+        "name": "Adversarial Clinic 93",
+        "city": "Lucknow",
+        "locality": "Gomti Nagar",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "performance": {
+        "revenue_usd": 450000,
+        "leads_30d": 999,
+        "conversion_rate": 0.88
+      },
+      "offers": [
+        {
+          "title": "Buy 1 Get 1 Free Statin",
+          "discount": "50% off"
+        }
+      ]
+    },
+    "trigger_context": {
+      "id": "trg_adv_0094",
+      "kind": "research_digest",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "research_digest",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0095",
+    "adversarial_scenario": "distracting_locality_in_global_digest",
+    "category": "optometry",
+    "category_context": {
+      "slug": "optometry",
+      "voice": {
+        "tone": "precise_clinical",
+        "register": "technical_peer",
+        "vocab_allowed": [
+          "myopia control",
+          "orthokeratology",
+          "axial length",
+          "diopters"
+        ],
+        "vocab_taboo": [
+          "laser guarantee",
+          "100% cure"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_opt_01",
+          "title": "Low-Dose Atropine combined with Defocus Lenses",
+          "summary": "Synergistic slowdown in axial elongation among pediatric progressive myopes.",
+          "actionable": "Evaluate dual-therapy protocols for fast-progressing pediatric myopia.",
+          "patient_segment": "pediatric_myopia",
+          "source": "Ophthalmology 2026",
+          "trial_n": 1250
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_094",
+      "category_slug": "optometry",
+      "identity": {
+        "name": "Adversarial Clinic 94",
+        "city": "Chennai",
+        "locality": "Anna Nagar",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0095",
+      "kind": "research_digest",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "research_digest",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0096",
+    "adversarial_scenario": "relevant_locality_in_local_spike",
+    "category": "wellness_spa",
+    "category_context": {
+      "slug": "wellness_spa",
+      "voice": {
+        "tone": "serene_consultative",
+        "register": "hospitality_expert",
+        "vocab_allowed": [
+          "aromatherapy",
+          "lymphatic drainage",
+          "stress reduction",
+          "repeat booking"
+        ],
+        "vocab_taboo": [
+          "detox guaranteed"
+        ]
+      },
+      "digest": []
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_095",
+      "category_slug": "wellness_spa",
+      "identity": {
+        "name": "Adversarial Clinic 95",
+        "city": "Delhi",
+        "locality": "Vasant Kunj",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0096",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0097",
+    "adversarial_scenario": "distracting_established_year",
+    "category": "cardiology",
+    "category_context": {
+      "slug": "cardiology",
+      "voice": {
+        "tone": "clinical_rigorous",
+        "register": "professional_peer",
+        "vocab_allowed": [
+          "ejection fraction",
+          "hypertension",
+          "statin",
+          "lipid cohort"
+        ],
+        "vocab_taboo": [
+          "cure all",
+          "magic pill",
+          "guaranteed"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_card_01",
+          "title": "SGLT2 Inhibitor Microvascular Outcomes",
+          "summary": "Reduction in cardiovascular mortality observed across high-risk diabetic cohorts.",
+          "actionable": "Review heart-failure protocols for diabetic patients.",
+          "patient_segment": "diabetic_cardio",
+          "source": "Lancet Cardiology 2026",
+          "trial_n": 4820
+        },
+        {
+          "id": "d_card_02",
+          "title": "Early Statin Titration in Post-PCI Recovery",
+          "summary": "High-intensity statin regimens reduced 90-day recurrent ischemic events.",
+          "actionable": "Audit post-PCI lipid panel follow-ups.",
+          "patient_segment": "post_pci",
+          "source": "JACC 2025",
+          "trial_n": 3200
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_096",
+      "category_slug": "cardiology",
+      "identity": {
+        "name": "Adversarial Clinic 96",
+        "city": "Lucknow",
+        "locality": "Gomti Nagar",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0097",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0098",
+    "adversarial_scenario": "sensitive_billing_in_patient_inquiry",
+    "category": "diagnostic_labs",
+    "category_context": {
+      "slug": "diagnostic_labs",
+      "voice": {
+        "tone": "analytical_rigorous",
+        "register": "laboratory_peer",
+        "vocab_allowed": [
+          "sensitivity",
+          "specificity",
+          "turnaround time",
+          "hemolysis"
+        ],
+        "vocab_taboo": [
+          "instant error-free"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_lab_01",
+          "title": "Pre-Analytical Sample Quality Protocol in High-Volume Labs",
+          "summary": "Standardized tube transport protocols cut sample rejection rates by 42%.",
+          "actionable": "Audit phlebotomy collection transport times.",
+          "patient_segment": "routine_biochemistry",
+          "source": "Clinica Chimica Acta 2026",
+          "trial_n": 15000
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_097",
+      "category_slug": "diagnostic_labs",
+      "identity": {
+        "name": "Adversarial Clinic 97",
+        "city": "Delhi",
+        "locality": "Greater Kailash",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "subscription": {
+        "card_last4": "4242",
+        "internal_arrears_balance": 14500,
+        "billing_status": "overdue_warning"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0098",
+      "kind": "inbound_inquiry",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {
+        "question": "Does your clinic accept senior citizen cardiac rehab?"
+      }
+    },
+    "trigger_kind": "inbound_inquiry",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0099",
+    "adversarial_scenario": "massive_context_overload",
+    "category": "wellness_spa",
+    "category_context": {
+      "slug": "wellness_spa",
+      "voice": {
+        "tone": "serene_consultative",
+        "register": "hospitality_expert",
+        "vocab_allowed": [
+          "aromatherapy",
+          "lymphatic drainage",
+          "stress reduction",
+          "repeat booking"
+        ],
+        "vocab_taboo": [
+          "detox guaranteed"
+        ]
+      },
+      "digest": []
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_098",
+      "category_slug": "wellness_spa",
+      "identity": {
+        "name": "Adversarial Clinic 98",
+        "city": "Bengaluru",
+        "locality": "Indiranagar",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "noise_metric_0": "noise_val_0",
+      "noise_metric_1": "noise_val_17",
+      "noise_metric_2": "noise_val_34",
+      "noise_metric_3": "noise_val_51",
+      "noise_metric_4": "noise_val_68",
+      "noise_metric_5": "noise_val_85",
+      "noise_metric_6": "noise_val_102",
+      "noise_metric_7": "noise_val_119",
+      "noise_metric_8": "noise_val_136",
+      "noise_metric_9": "noise_val_153",
+      "noise_metric_10": "noise_val_170",
+      "noise_metric_11": "noise_val_187",
+      "noise_metric_12": "noise_val_204",
+      "noise_metric_13": "noise_val_221",
+      "noise_metric_14": "noise_val_238",
+      "noise_metric_15": "noise_val_255",
+      "noise_metric_16": "noise_val_272",
+      "noise_metric_17": "noise_val_289",
+      "noise_metric_18": "noise_val_306",
+      "noise_metric_19": "noise_val_323",
+      "noise_metric_20": "noise_val_340",
+      "noise_metric_21": "noise_val_357",
+      "noise_metric_22": "noise_val_374",
+      "noise_metric_23": "noise_val_391",
+      "noise_metric_24": "noise_val_408",
+      "noise_metric_25": "noise_val_425",
+      "noise_metric_26": "noise_val_442",
+      "noise_metric_27": "noise_val_459",
+      "noise_metric_28": "noise_val_476",
+      "noise_metric_29": "noise_val_493",
+      "noise_metric_30": "noise_val_510",
+      "noise_metric_31": "noise_val_527",
+      "noise_metric_32": "noise_val_544",
+      "noise_metric_33": "noise_val_561",
+      "noise_metric_34": "noise_val_578",
+      "noise_metric_35": "noise_val_595",
+      "noise_metric_36": "noise_val_612",
+      "noise_metric_37": "noise_val_629",
+      "noise_metric_38": "noise_val_646",
+      "noise_metric_39": "noise_val_663"
+    },
+    "trigger_context": {
+      "id": "trg_adv_0099",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0100",
+    "adversarial_scenario": "extreme_sparsity_single_field",
+    "category": "dermatology",
+    "category_context": {
+      "slug": "dermatology",
+      "voice": {
+        "tone": "consultative_clinical",
+        "register": "peer_medical",
+        "vocab_allowed": [
+          "melasma",
+          "retinoid",
+          "barrier repair",
+          "transepidermal"
+        ],
+        "vocab_taboo": [
+          "fairness",
+          "instant glow",
+          "bleach"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_derm_01",
+          "title": "Topical Cysteamine vs Hydroquinone for Melasma",
+          "summary": "Comparable efficacy with significantly lower erythema and rebound hyperpigmentation.",
+          "actionable": "Consider non-hydroquinone protocols for recalcitrant melasma.",
+          "patient_segment": "hyperpigmentation",
+          "source": "JAAD 2026",
+          "trial_n": 640
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_099",
+      "category_slug": "dermatology"
+    },
+    "trigger_context": {
+      "id": "trg_adv_0100",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0101",
+    "adversarial_scenario": "cross_category_distraction",
+    "category": "cardiology",
+    "category_context": {
+      "slug": "cardiology",
+      "voice": {
+        "tone": "clinical_rigorous",
+        "register": "professional_peer",
+        "vocab_allowed": [
+          "ejection fraction",
+          "hypertension",
+          "statin",
+          "lipid cohort"
+        ],
+        "vocab_taboo": [
+          "cure all",
+          "magic pill",
+          "guaranteed"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_card_01",
+          "title": "SGLT2 Inhibitor Microvascular Outcomes",
+          "summary": "Reduction in cardiovascular mortality observed across high-risk diabetic cohorts.",
+          "actionable": "Review heart-failure protocols for diabetic patients.",
+          "patient_segment": "diabetic_cardio",
+          "source": "Lancet Cardiology 2026",
+          "trial_n": 4820
+        },
+        {
+          "id": "d_card_02",
+          "title": "Early Statin Titration in Post-PCI Recovery",
+          "summary": "High-intensity statin regimens reduced 90-day recurrent ischemic events.",
+          "actionable": "Audit post-PCI lipid panel follow-ups.",
+          "patient_segment": "post_pci",
+          "source": "JACC 2025",
+          "trial_n": 3200
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_100",
+      "category_slug": "cardiology",
+      "identity": {
+        "name": "Adversarial Clinic 100",
+        "city": "Chennai",
+        "locality": "Anna Nagar",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "offers": [
+        {
+          "id": "off_fake",
+          "title": "50% off root canal and dental crown",
+          "discount_pct": 50
+        }
+      ],
+      "signals": [
+        "frequent_dental_chair_inquiries"
+      ]
+    },
+    "trigger_context": {
+      "id": "trg_adv_0101",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0102",
+    "adversarial_scenario": "irrelevant_high_value_metric",
+    "category": "dermatology",
+    "category_context": {
+      "slug": "dermatology",
+      "voice": {
+        "tone": "consultative_clinical",
+        "register": "peer_medical",
+        "vocab_allowed": [
+          "melasma",
+          "retinoid",
+          "barrier repair",
+          "transepidermal"
+        ],
+        "vocab_taboo": [
+          "fairness",
+          "instant glow",
+          "bleach"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_derm_01",
+          "title": "Topical Cysteamine vs Hydroquinone for Melasma",
+          "summary": "Comparable efficacy with significantly lower erythema and rebound hyperpigmentation.",
+          "actionable": "Consider non-hydroquinone protocols for recalcitrant melasma.",
+          "patient_segment": "hyperpigmentation",
+          "source": "JAAD 2026",
+          "trial_n": 640
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_101",
+      "category_slug": "dermatology",
+      "identity": {
+        "name": "Adversarial Clinic 101",
+        "city": "Delhi",
+        "locality": "Vasant Kunj",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "signals": [
+        "lottery_jackpot_winner_100000000_usd",
+        "random_unverified_views_99999999"
+      ]
+    },
+    "trigger_context": {
+      "id": "trg_adv_0102",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0103",
+    "adversarial_scenario": "conflicting_operational_signals",
+    "category": "ayurveda",
+    "category_context": {
+      "slug": "ayurveda",
+      "voice": {
+        "tone": "authentic_traditional",
+        "register": "holistic_clinical",
+        "vocab_allowed": [
+          "dosha",
+          "panchakarma",
+          "rasayana",
+          "standardized extract"
+        ],
+        "vocab_taboo": [
+          "allopathic replacement",
+          "100% cure"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_ayu_01",
+          "title": "Standardized Ashwagandha Extract for Chronic Stress & Cortisol",
+          "summary": "Statistically significant reduction in serum cortisol and perceived stress scores.",
+          "actionable": "Integrate standardized botanical assessments in wellness consultations.",
+          "patient_segment": "stress_management",
+          "source": "Phytomedicine 2026",
+          "trial_n": 450
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_102",
+      "category_slug": "ayurveda",
+      "identity": {
+        "name": "Adversarial Clinic 102",
+        "city": "Bengaluru",
+        "locality": "Whitefield",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0103",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0104",
+    "adversarial_scenario": "commercial_leakage_in_clinical",
+    "category": "diagnostic_labs",
+    "category_context": {
+      "slug": "diagnostic_labs",
+      "voice": {
+        "tone": "analytical_rigorous",
+        "register": "laboratory_peer",
+        "vocab_allowed": [
+          "sensitivity",
+          "specificity",
+          "turnaround time",
+          "hemolysis"
+        ],
+        "vocab_taboo": [
+          "instant error-free"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_lab_01",
+          "title": "Pre-Analytical Sample Quality Protocol in High-Volume Labs",
+          "summary": "Standardized tube transport protocols cut sample rejection rates by 42%.",
+          "actionable": "Audit phlebotomy collection transport times.",
+          "patient_segment": "routine_biochemistry",
+          "source": "Clinica Chimica Acta 2026",
+          "trial_n": 15000
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_103",
+      "category_slug": "diagnostic_labs",
+      "identity": {
+        "name": "Adversarial Clinic 103",
+        "city": "Bengaluru",
+        "locality": "Indiranagar",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "performance": {
+        "revenue_usd": 450000,
+        "leads_30d": 999,
+        "conversion_rate": 0.88
+      },
+      "offers": [
+        {
+          "title": "Buy 1 Get 1 Free Statin",
+          "discount": "50% off"
+        }
+      ]
+    },
+    "trigger_context": {
+      "id": "trg_adv_0104",
+      "kind": "research_digest",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "research_digest",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0105",
+    "adversarial_scenario": "distracting_locality_in_global_digest",
+    "category": "diagnostic_labs",
+    "category_context": {
+      "slug": "diagnostic_labs",
+      "voice": {
+        "tone": "analytical_rigorous",
+        "register": "laboratory_peer",
+        "vocab_allowed": [
+          "sensitivity",
+          "specificity",
+          "turnaround time",
+          "hemolysis"
+        ],
+        "vocab_taboo": [
+          "instant error-free"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_lab_01",
+          "title": "Pre-Analytical Sample Quality Protocol in High-Volume Labs",
+          "summary": "Standardized tube transport protocols cut sample rejection rates by 42%.",
+          "actionable": "Audit phlebotomy collection transport times.",
+          "patient_segment": "routine_biochemistry",
+          "source": "Clinica Chimica Acta 2026",
+          "trial_n": 15000
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_104",
+      "category_slug": "diagnostic_labs",
+      "identity": {
+        "name": "Adversarial Clinic 104",
+        "city": "Chennai",
+        "locality": "Alwarpet",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0105",
+      "kind": "research_digest",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "research_digest",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0106",
+    "adversarial_scenario": "relevant_locality_in_local_spike",
+    "category": "dermatology",
+    "category_context": {
+      "slug": "dermatology",
+      "voice": {
+        "tone": "consultative_clinical",
+        "register": "peer_medical",
+        "vocab_allowed": [
+          "melasma",
+          "retinoid",
+          "barrier repair",
+          "transepidermal"
+        ],
+        "vocab_taboo": [
+          "fairness",
+          "instant glow",
+          "bleach"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_derm_01",
+          "title": "Topical Cysteamine vs Hydroquinone for Melasma",
+          "summary": "Comparable efficacy with significantly lower erythema and rebound hyperpigmentation.",
+          "actionable": "Consider non-hydroquinone protocols for recalcitrant melasma.",
+          "patient_segment": "hyperpigmentation",
+          "source": "JAAD 2026",
+          "trial_n": 640
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_105",
+      "category_slug": "dermatology",
+      "identity": {
+        "name": "Adversarial Clinic 105",
+        "city": "Kolkata",
+        "locality": "Salt Lake",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0106",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0107",
+    "adversarial_scenario": "distracting_established_year",
+    "category": "veterinary",
+    "category_context": {
+      "slug": "veterinary",
+      "voice": {
+        "tone": "compassionate_clinical",
+        "register": "veterinary_peer",
+        "vocab_allowed": [
+          "canine atopy",
+          "monoclonal",
+          "cytopoint",
+          "pruritus"
+        ],
+        "vocab_taboo": [
+          "miracle cure"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_vet_01",
+          "title": "Long-Term Monoclonal Antibody Safety in Canine Atopy",
+          "summary": "Sustained pruritus reduction over 24 months without immunosuppressive adverse events.",
+          "actionable": "Review maintenance scheduling for seasonal canine atopic dermatitis.",
+          "patient_segment": "canine_atopy",
+          "source": "Vet Dermatology 2025",
+          "trial_n": 890
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_106",
+      "category_slug": "veterinary",
+      "identity": {
+        "name": "Adversarial Clinic 106",
+        "city": "Chennai",
+        "locality": "Alwarpet",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0107",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0108",
+    "adversarial_scenario": "sensitive_billing_in_patient_inquiry",
+    "category": "veterinary",
+    "category_context": {
+      "slug": "veterinary",
+      "voice": {
+        "tone": "compassionate_clinical",
+        "register": "veterinary_peer",
+        "vocab_allowed": [
+          "canine atopy",
+          "monoclonal",
+          "cytopoint",
+          "pruritus"
+        ],
+        "vocab_taboo": [
+          "miracle cure"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_vet_01",
+          "title": "Long-Term Monoclonal Antibody Safety in Canine Atopy",
+          "summary": "Sustained pruritus reduction over 24 months without immunosuppressive adverse events.",
+          "actionable": "Review maintenance scheduling for seasonal canine atopic dermatitis.",
+          "patient_segment": "canine_atopy",
+          "source": "Vet Dermatology 2025",
+          "trial_n": 890
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_107",
+      "category_slug": "veterinary",
+      "identity": {
+        "name": "Adversarial Clinic 107",
+        "city": "Pune",
+        "locality": "Koregaon Park",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "subscription": {
+        "card_last4": "4242",
+        "internal_arrears_balance": 14500,
+        "billing_status": "overdue_warning"
+      }
+    },
+    "trigger_context": {
+      "id": "trg_adv_0108",
+      "kind": "inbound_inquiry",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {
+        "question": "Does your clinic accept senior citizen cardiac rehab?"
+      }
+    },
+    "trigger_kind": "inbound_inquiry",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0109",
+    "adversarial_scenario": "massive_context_overload",
+    "category": "wellness_spa",
+    "category_context": {
+      "slug": "wellness_spa",
+      "voice": {
+        "tone": "serene_consultative",
+        "register": "hospitality_expert",
+        "vocab_allowed": [
+          "aromatherapy",
+          "lymphatic drainage",
+          "stress reduction",
+          "repeat booking"
+        ],
+        "vocab_taboo": [
+          "detox guaranteed"
+        ]
+      },
+      "digest": []
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_108",
+      "category_slug": "wellness_spa",
+      "identity": {
+        "name": "Adversarial Clinic 108",
+        "city": "Bengaluru",
+        "locality": "Whitefield",
+        "established_year": 2018,
+        "owner_first_name": "Rohan"
+      },
+      "noise_metric_0": "noise_val_0",
+      "noise_metric_1": "noise_val_17",
+      "noise_metric_2": "noise_val_34",
+      "noise_metric_3": "noise_val_51",
+      "noise_metric_4": "noise_val_68",
+      "noise_metric_5": "noise_val_85",
+      "noise_metric_6": "noise_val_102",
+      "noise_metric_7": "noise_val_119",
+      "noise_metric_8": "noise_val_136",
+      "noise_metric_9": "noise_val_153",
+      "noise_metric_10": "noise_val_170",
+      "noise_metric_11": "noise_val_187",
+      "noise_metric_12": "noise_val_204",
+      "noise_metric_13": "noise_val_221",
+      "noise_metric_14": "noise_val_238",
+      "noise_metric_15": "noise_val_255",
+      "noise_metric_16": "noise_val_272",
+      "noise_metric_17": "noise_val_289",
+      "noise_metric_18": "noise_val_306",
+      "noise_metric_19": "noise_val_323",
+      "noise_metric_20": "noise_val_340",
+      "noise_metric_21": "noise_val_357",
+      "noise_metric_22": "noise_val_374",
+      "noise_metric_23": "noise_val_391",
+      "noise_metric_24": "noise_val_408",
+      "noise_metric_25": "noise_val_425",
+      "noise_metric_26": "noise_val_442",
+      "noise_metric_27": "noise_val_459",
+      "noise_metric_28": "noise_val_476",
+      "noise_metric_29": "noise_val_493",
+      "noise_metric_30": "noise_val_510",
+      "noise_metric_31": "noise_val_527",
+      "noise_metric_32": "noise_val_544",
+      "noise_metric_33": "noise_val_561",
+      "noise_metric_34": "noise_val_578",
+      "noise_metric_35": "noise_val_595",
+      "noise_metric_36": "noise_val_612",
+      "noise_metric_37": "noise_val_629",
+      "noise_metric_38": "noise_val_646",
+      "noise_metric_39": "noise_val_663"
+    },
+    "trigger_context": {
+      "id": "trg_adv_0109",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  },
+  {
+    "case_id": "adv_0110",
+    "adversarial_scenario": "extreme_sparsity_single_field",
+    "category": "ayurveda",
+    "category_context": {
+      "slug": "ayurveda",
+      "voice": {
+        "tone": "authentic_traditional",
+        "register": "holistic_clinical",
+        "vocab_allowed": [
+          "dosha",
+          "panchakarma",
+          "rasayana",
+          "standardized extract"
+        ],
+        "vocab_taboo": [
+          "allopathic replacement",
+          "100% cure"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_ayu_01",
+          "title": "Standardized Ashwagandha Extract for Chronic Stress & Cortisol",
+          "summary": "Statistically significant reduction in serum cortisol and perceived stress scores.",
+          "actionable": "Integrate standardized botanical assessments in wellness consultations.",
+          "patient_segment": "stress_management",
+          "source": "Phytomedicine 2026",
+          "trial_n": 450
+        }
+      ]
+    },
+    "merchant_context": {
+      "merchant_id": "m_adv_109",
+      "category_slug": "ayurveda"
+    },
+    "trigger_context": {
+      "id": "trg_adv_0110",
+      "kind": "performance_alert",
+      "timestamp": "2026-04-26T10:00:00Z",
+      "payload": {}
+    },
+    "trigger_kind": "performance_alert",
+    "context_density": "adversarial",
+    "expected_behavior_class": "proactive_send"
+  }
+]

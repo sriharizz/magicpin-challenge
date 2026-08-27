@@ -1,0 +1,77 @@
+{
+  "evaluated_cases": 5,
+  "average_baseline": 33.6,
+  "average_cf_a": 34.2,
+  "average_gain_cf_a_upstream": 0.6,
+  "average_cf_b": 31.2,
+  "average_gain_cf_b_selection": -2.4,
+  "average_cf_c": 32.8,
+  "average_gain_cf_c_composition": -0.8,
+  "results": [
+    {
+      "case_id": "qc_0001",
+      "category": "dentists",
+      "density": "medium",
+      "baseline_score": 42,
+      "cf_a_score": 42,
+      "delta_a": 0,
+      "cf_b_score": 40,
+      "delta_b": -2,
+      "cf_c_score": 39,
+      "delta_c": -3,
+      "delta_e": 0
+    },
+    {
+      "case_id": "qc_0029",
+      "category": "salons",
+      "density": "missing_optional",
+      "baseline_score": 27,
+      "cf_a_score": 39,
+      "delta_a": 12,
+      "cf_b_score": 26,
+      "delta_b": -1,
+      "cf_c_score": 28,
+      "delta_c": 1,
+      "delta_e": 0
+    },
+    {
+      "case_id": "qc_0043",
+      "category": "pharmacies",
+      "density": "rich",
+      "baseline_score": 39,
+      "cf_a_score": 30,
+      "delta_a": -9,
+      "cf_b_score": 30,
+      "delta_b": -9,
+      "cf_c_score": 37,
+      "delta_c": -2,
+      "delta_e": 0
+    },
+    {
+      "case_id": "qc_0057",
+      "category": "dentists",
+      "density": "rich",
+      "baseline_score": 30,
+      "cf_a_score": 30,
+      "delta_a": 0,
+      "cf_b_score": 30,
+      "delta_b": 0,
+      "cf_c_score": 30,
+      "delta_c": 0,
+      "delta_e": 0
+    },
+    {
+      "case_id": "qc_0071",
+      "category": "physiotherapy",
+      "density": "missing_optional",
+      "baseline_score": 30,
+      "cf_a_score": 30,
+      "delta_a": 0,
+      "cf_b_score": 30,
+      "delta_b": 0,
+      "cf_c_score": 30,
+      "delta_c": 0,
+      "delta_e": 0
+    }
+  ]
+}

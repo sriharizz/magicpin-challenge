@@ -1,0 +1,778 @@
+{
+  "qc_0239": {
+    "case_id": "qc_0239",
+    "category": "physiotherapy",
+    "context_density": "medium",
+    "raw_merchant": {
+      "merchant_id": "m_phys_rajan_239",
+      "category_slug": "physiotherapy",
+      "identity": {
+        "name": "Rajan's Physiotherapy",
+        "owner_first_name": "Rajan",
+        "city": "Delhi",
+        "locality": "Indiranagar",
+        "verified": false,
+        "languages": [
+          "en"
+        ]
+      },
+      "subscription": {
+        "status": "active",
+        "plan": "Pro",
+        "days_remaining": 44
+      },
+      "performance": {
+        "window_days": 30,
+        "views": 922,
+        "calls": 9,
+        "ctr": 0.018
+      },
+      "signals": [
+        "stale_posts:18d"
+      ],
+      "customer_aggregate": {
+        "total_unique_ytd": 365
+      },
+      "offers": []
+    },
+    "raw_category": {
+      "slug": "physiotherapy",
+      "voice": {
+        "tone": "rehab_clinical",
+        "register": "evidence_based_care",
+        "code_mix": "hindi_english_natural",
+        "vocab_allowed": [
+          "biomechanics",
+          "dry needling",
+          "ROM",
+          "proprioception",
+          "lumbar radiculopathy",
+          "isokinetic"
+        ],
+        "vocab_taboo": [
+          "cure paralysis in 1 day",
+          "100% pain free forever",
+          "magic adjustment"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_phys_01",
+          "title": "Early eccentric loading in chronic patellar tendinopathy",
+          "source": "Journal of Orthopaedic & Sports Physical Therapy Jun 2026",
+          "trial_n": 480,
+          "patient_segment": "athletic_rehab",
+          "summary": "Decline board eccentric squats combined with heavy-slow resistance achieved 68% pain reduction at 12 weeks vs passive modalities.",
+          "actionable": "Update patellar tendinopathy exercise prescription"
+        }
+      ]
+    },
+    "raw_trigger": {
+      "id": "trg_qc_0239_research_digest",
+      "scope": "merchant",
+      "kind": "research_digest",
+      "merchant_id": "m_phys_rajan_239",
+      "payload": {
+        "category": "physiotherapy",
+        "top_item_id": "d_phys_01",
+        "urgency_score": 1
+      },
+      "urgency": 1,
+      "suppression_key": "research_digest:physiotherapy:239",
+      "expires_at": "2026-05-30T00:00:00Z"
+    },
+    "emitted_body": "Dr. Rajan, Journal of Orthopaedic & Sports Physical Therapy's Jun issue landed. One item relevant to athletic rehab patients \u2014 Decline board eccentric squats combined with heavy-slow resistance achieved 68% pain reduction at 12 weeks vs passive modalities (N=480). Worth a look (2-min abstract). Want me to pull the key takeaways for your team? Reply YES. \u2014 Journal of Orthopaedic & Sports Physical Therapy Jun 2026",
+    "score_total": 32,
+    "score_spec": 3,
+    "score_cat": 8,
+    "score_merch": 7,
+    "score_dec": 7,
+    "score_eng": 7,
+    "score_penalties": 0,
+    "score_hint": "Anchor claims to the trigger payload and avoid invented study details.",
+    "envelope": {
+      "merchant": {
+        "merchant_id": "m_phys_rajan_239",
+        "name": "Rajan's Physiotherapy",
+        "category_slug": "physiotherapy",
+        "tone_preference": "rehab_clinical"
+      },
+      "category": {
+        "slug": "physiotherapy",
+        "voice": {
+          "tone": "rehab_clinical",
+          "taboo_words": [
+            "cure paralysis in 1 day",
+            "100% pain free forever",
+            "magic adjustment"
+          ]
+        }
+      },
+      "active_digest_item": {
+        "item_id": "d_phys_01",
+        "title": "Early eccentric loading in chronic patellar tendinopathy",
+        "source": "Journal of Orthopaedic & Sports Physical Therapy Jun 2026",
+        "summary": "Decline board eccentric squats combined with heavy-slow resistance achieved 68% pain reduction at 12 weeks vs passive modalities.",
+        "trial_n": 480,
+        "key_takeaway": "Update patellar tendinopathy exercise prescription"
+      },
+      "supported_facts": [
+        {
+          "fact_id": "F1",
+          "key": "trial_n",
+          "value": "480",
+          "description": "Total sample size in clinical trial"
+        },
+        {
+          "fact_id": "F2",
+          "key": "source",
+          "value": "Journal of Orthopaedic & Sports Physical Therapy Jun 2026",
+          "description": "Published journal citation"
+        },
+        {
+          "fact_id": "F3",
+          "key": "summary",
+          "value": "Decline board eccentric squats combined with heavy-slow resistance achieved 68% pain reduction at 12 weeks vs passive modalities.",
+          "description": "Core study conclusion"
+        }
+      ],
+      "conversation_history": [
+        {
+          "turn": 1,
+          "role": "vera",
+          "message": "Dr. Rajan, Journal of Orthopaedic & Sports Physical Therapy's Jun issue landed. One item relevant to athletic rehab patients \u2014 Decline board eccentric squats combined with heavy-slow resistance achieved 68% pain reduction at 12 weeks vs passive modalities (N=480). Worth a look (2-min abstract). Want me to pull the key takeaways for your team? Reply YES. \u2014 Journal of Orthopaedic & Sports Physical Therapy Jun 2026"
+        },
+        {
+          "turn": 2,
+          "role": "merchant",
+          "message": "Can you share more details?"
+        }
+      ]
+    },
+    "user_prompt": "CONTEXT ENVELOPE:\n{\n  \"merchant\": {\n    \"merchant_id\": \"m_phys_rajan_239\",\n    \"name\": \"Rajan's Physiotherapy\",\n    \"category_slug\": \"physiotherapy\",\n    \"tone_preference\": \"rehab_clinical\"\n  },\n  \"category\": {\n    \"slug\": \"physiotherapy\",\n    \"voice\": {\n      \"tone\": \"rehab_clinical\",\n      \"taboo_words\": [\n        \"cure paralysis in 1 day\",\n        \"100% pain free forever\",\n        \"magic adjustment\"\n      ]\n    }\n  },\n  \"active_digest_item\": {\n    \"item_id\": \"d_phys_01\",\n    \"title\": \"Early eccentric loading in chronic patellar tendinopathy\",\n    \"source\": \"Journal of Orthopaedic & Sports Physical Therapy Jun 2026\",\n    \"summary\": \"Decline board eccentric squats combined with heavy-slow resistance achieved 68% pain reduction at 12 weeks vs passive modalities.\",\n    \"trial_n\": 480,\n    \"key_takeaway\": \"Update patellar tendinopathy exercise prescription\"\n  },\n  \"supported_facts\": [\n    {\n      \"fact_id\": \"F1\",\n      \"key\": \"trial_n\",\n      \"value\": \"480\",\n      \"description\": \"Total sample size in clinical trial\"\n    },\n    {\n      \"fact_id\": \"F2\",\n      \"key\": \"source\",\n      \"value\": \"Journal of Orthopaedic & Sports Physical Therapy Jun 2026\",\n      \"description\": \"Published journal citation\"\n    },\n    {\n      \"fact_id\": \"F3\",\n      \"key\": \"summary\",\n      \"value\": \"Decline board eccentric squats combined with heavy-slow resistance achieved 68% pain reduction at 12 weeks vs passive modalities.\",\n      \"description\": \"Core study conclusion\"\n    }\n  ],\n  \"conversation_history\": [\n    {\n      \"turn\": 1,\n      \"role\": \"vera\",\n      \"message\": \"Dr. Rajan, Journal of Orthopaedic & Sports Physical Therapy's Jun issue landed. One item relevant to athletic rehab patients \u2014 Decline board eccentric squats combined with heavy-slow resistance achieved 68% pain reduction at 12 weeks vs passive modalities (N=480). Worth a look (2-min abstract). Want me to pull the key takeaways for your team? Reply YES. \u2014 Journal of Orthopaedic & Sports Physical Therapy Jun 2026\"\n    },\n    {\n      \"turn\": 2,\n      \"role\": \"merchant\",\n      \"message\": \"Can you share more details?\"\n    }\n  ]\n}\n\nINCOMING MESSAGE (Turn 2):\nFrom: merchant\nMessage: \"Can you share more details?\"\n\nAnalyze this message and respond with the strict LLMDecisionSuggestion JSON."
+  },
+  "qc_0169": {
+    "case_id": "qc_0169",
+    "category": "dentists",
+    "context_density": "sparse",
+    "raw_merchant": {
+      "merchant_id": "m_dent_meera_169",
+      "category_slug": "dentists",
+      "identity": {
+        "name": "Dentists Center",
+        "owner_first_name": "Meera",
+        "city": "Bangalore"
+      },
+      "subscription": {
+        "status": "active",
+        "plan": "Pro",
+        "days_remaining": 71
+      },
+      "performance": {
+        "views": 447
+      },
+      "signals": [],
+      "customer_aggregate": {},
+      "offers": []
+    },
+    "raw_category": {
+      "slug": "dentists",
+      "voice": {
+        "tone": "peer_clinical",
+        "register": "respectful_collegial",
+        "code_mix": "hindi_english_natural",
+        "vocab_allowed": [
+          "caries",
+          "fluoride varnish",
+          "scaling",
+          "occlusion",
+          "IOPA",
+          "RCT",
+          "GIC"
+        ],
+        "vocab_taboo": [
+          "guaranteed",
+          "100% safe",
+          "completely cure",
+          "miracle",
+          "best in city"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_dent_01",
+          "title": "High-viscosity GIC in root caries",
+          "source": "JIDA Oct 2026, p.14",
+          "trial_n": 2100,
+          "patient_segment": "high_risk_adults",
+          "summary": "Multi-center Indian trial shows 38% lower caries recurrence with high-viscosity GIC vs composite in adults with active decay history.",
+          "actionable": "Reassess recall interval for adults flagged high-risk in your charting"
+        },
+        {
+          "id": "d_dent_02",
+          "title": "CBCT vs OPG in impacted third molar assessment",
+          "source": "Indian Journal of Dental Research Nov 2026",
+          "trial_n": 950,
+          "patient_segment": "surgical_cases",
+          "summary": "Pre-op CBCT reduced inferior alveolar nerve injury by 44% in high-difficulty impactions.",
+          "actionable": "Adopt 3D imaging protocols for deep impactions"
+        }
+      ]
+    },
+    "raw_trigger": {
+      "id": "trg_qc_0169_research_digest",
+      "scope": "merchant",
+      "kind": "research_digest",
+      "merchant_id": "m_dent_meera_169",
+      "payload": {
+        "category": "dentists",
+        "top_item_id": "d_dent_01",
+        "urgency_score": 1
+      },
+      "urgency": 1,
+      "suppression_key": "research_digest:dentists:169",
+      "expires_at": "2026-05-30T00:00:00Z"
+    },
+    "emitted_body": "Dr. Meera, JIDA's Oct issue landed. One item relevant to high risk adults patients \u2014 Multi-center Indian trial shows 38% lower caries recurrence with high-viscosity GIC vs composite in adults with active decay history (N=2,100). Worth a look (2-min abstract). Want me to pull the key takeaways for your team? Reply YES. \u2014 JIDA Oct 2026, p.14",
+    "score_total": 38,
+    "score_spec": 6,
+    "score_cat": 9,
+    "score_merch": 8,
+    "score_dec": 7,
+    "score_eng": 8,
+    "score_penalties": 0,
+    "score_hint": "Verify the study source and date before sending.",
+    "envelope": {
+      "merchant": {
+        "merchant_id": "m_dent_meera_169",
+        "name": "Dentists Center",
+        "category_slug": "dentists",
+        "tone_preference": "peer_clinical"
+      },
+      "category": {
+        "slug": "dentists",
+        "voice": {
+          "tone": "peer_clinical",
+          "taboo_words": [
+            "guaranteed",
+            "100% safe",
+            "completely cure",
+            "miracle",
+            "best in city"
+          ]
+        }
+      },
+      "active_digest_item": {
+        "item_id": "d_dent_01",
+        "title": "High-viscosity GIC in root caries",
+        "source": "JIDA Oct 2026, p.14",
+        "summary": "Multi-center Indian trial shows 38% lower caries recurrence with high-viscosity GIC vs composite in adults with active decay history.",
+        "trial_n": 2100,
+        "key_takeaway": "Reassess recall interval for adults flagged high-risk in your charting"
+      },
+      "supported_facts": [
+        {
+          "fact_id": "F1",
+          "key": "trial_n",
+          "value": "2100",
+          "description": "Total sample size in clinical trial"
+        },
+        {
+          "fact_id": "F2",
+          "key": "source",
+          "value": "JIDA Oct 2026, p.14",
+          "description": "Published journal citation"
+        },
+        {
+          "fact_id": "F3",
+          "key": "summary",
+          "value": "Multi-center Indian trial shows 38% lower caries recurrence with high-viscosity GIC vs composite in adults with active decay history.",
+          "description": "Core study conclusion"
+        }
+      ],
+      "conversation_history": [
+        {
+          "turn": 1,
+          "role": "vera",
+          "message": "Dr. Meera, JIDA's Oct issue landed. One item relevant to high risk adults patients \u2014 Multi-center Indian trial shows 38% lower caries recurrence with high-viscosity GIC vs composite in adults with active decay history (N=2,100). Worth a look (2-min abstract). Want me to pull the key takeaways for your team? Reply YES. \u2014 JIDA Oct 2026, p.14"
+        },
+        {
+          "turn": 2,
+          "role": "merchant",
+          "message": "Can you share more details?"
+        }
+      ]
+    },
+    "user_prompt": "CONTEXT ENVELOPE:\n{\n  \"merchant\": {\n    \"merchant_id\": \"m_dent_meera_169\",\n    \"name\": \"Dentists Center\",\n    \"category_slug\": \"dentists\",\n    \"tone_preference\": \"peer_clinical\"\n  },\n  \"category\": {\n    \"slug\": \"dentists\",\n    \"voice\": {\n      \"tone\": \"peer_clinical\",\n      \"taboo_words\": [\n        \"guaranteed\",\n        \"100% safe\",\n        \"completely cure\",\n        \"miracle\",\n        \"best in city\"\n      ]\n    }\n  },\n  \"active_digest_item\": {\n    \"item_id\": \"d_dent_01\",\n    \"title\": \"High-viscosity GIC in root caries\",\n    \"source\": \"JIDA Oct 2026, p.14\",\n    \"summary\": \"Multi-center Indian trial shows 38% lower caries recurrence with high-viscosity GIC vs composite in adults with active decay history.\",\n    \"trial_n\": 2100,\n    \"key_takeaway\": \"Reassess recall interval for adults flagged high-risk in your charting\"\n  },\n  \"supported_facts\": [\n    {\n      \"fact_id\": \"F1\",\n      \"key\": \"trial_n\",\n      \"value\": \"2100\",\n      \"description\": \"Total sample size in clinical trial\"\n    },\n    {\n      \"fact_id\": \"F2\",\n      \"key\": \"source\",\n      \"value\": \"JIDA Oct 2026, p.14\",\n      \"description\": \"Published journal citation\"\n    },\n    {\n      \"fact_id\": \"F3\",\n      \"key\": \"summary\",\n      \"value\": \"Multi-center Indian trial shows 38% lower caries recurrence with high-viscosity GIC vs composite in adults with active decay history.\",\n      \"description\": \"Core study conclusion\"\n    }\n  ],\n  \"conversation_history\": [\n    {\n      \"turn\": 1,\n      \"role\": \"vera\",\n      \"message\": \"Dr. Meera, JIDA's Oct issue landed. One item relevant to high risk adults patients \u2014 Multi-center Indian trial shows 38% lower caries recurrence with high-viscosity GIC vs composite in adults with active decay history (N=2,100). Worth a look (2-min abstract). Want me to pull the key takeaways for your team? Reply YES. \u2014 JIDA Oct 2026, p.14\"\n    },\n    {\n      \"turn\": 2,\n      \"role\": \"merchant\",\n      \"message\": \"Can you share more details?\"\n    }\n  ]\n}\n\nINCOMING MESSAGE (Turn 2):\nFrom: merchant\nMessage: \"Can you share more details?\"\n\nAnalyze this message and respond with the strict LLMDecisionSuggestion JSON."
+  },
+  "qc_0337": {
+    "case_id": "qc_0337",
+    "category": "dentists",
+    "context_density": "missing_optional",
+    "raw_merchant": {
+      "merchant_id": "m_dent_priya_337",
+      "category_slug": "dentists",
+      "identity": {
+        "name": null,
+        "owner_first_name": null
+      },
+      "subscription": {
+        "status": "active",
+        "plan": "Pro",
+        "days_remaining": 38
+      },
+      "performance": {},
+      "signals": [],
+      "customer_aggregate": {},
+      "offers": []
+    },
+    "raw_category": {
+      "slug": "dentists",
+      "voice": {
+        "tone": "peer_clinical",
+        "register": "respectful_collegial",
+        "code_mix": "hindi_english_natural",
+        "vocab_allowed": [
+          "caries",
+          "fluoride varnish",
+          "scaling",
+          "occlusion",
+          "IOPA",
+          "RCT",
+          "GIC"
+        ],
+        "vocab_taboo": [
+          "guaranteed",
+          "100% safe",
+          "completely cure",
+          "miracle",
+          "best in city"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_dent_01",
+          "title": "High-viscosity GIC in root caries",
+          "source": "JIDA Oct 2026, p.14",
+          "trial_n": 2100,
+          "patient_segment": "high_risk_adults",
+          "summary": "Multi-center Indian trial shows 38% lower caries recurrence with high-viscosity GIC vs composite in adults with active decay history.",
+          "actionable": "Reassess recall interval for adults flagged high-risk in your charting"
+        },
+        {
+          "id": "d_dent_02",
+          "title": "CBCT vs OPG in impacted third molar assessment",
+          "source": "Indian Journal of Dental Research Nov 2026",
+          "trial_n": 950,
+          "patient_segment": "surgical_cases",
+          "summary": "Pre-op CBCT reduced inferior alveolar nerve injury by 44% in high-difficulty impactions.",
+          "actionable": "Adopt 3D imaging protocols for deep impactions"
+        }
+      ]
+    },
+    "raw_trigger": {
+      "id": "trg_qc_0337_research_digest",
+      "scope": "merchant",
+      "kind": "research_digest",
+      "merchant_id": "m_dent_priya_337",
+      "payload": {
+        "category": "dentists",
+        "top_item_id": "d_dent_01",
+        "urgency_score": 5
+      },
+      "urgency": 5,
+      "suppression_key": "research_digest:dentists:337",
+      "expires_at": "2026-05-30T00:00:00Z"
+    },
+    "emitted_body": "Doctor, JIDA's Oct issue landed. One item relevant to high risk adults patients \u2014 Multi-center Indian trial shows 38% lower caries recurrence with high-viscosity GIC vs composite in adults with active decay history (N=2,100). Worth a look (2-min abstract). Want me to pull the key takeaways for your team? Reply YES. \u2014 JIDA Oct 2026, p.14",
+    "score_total": 33,
+    "score_spec": 9,
+    "score_cat": 9,
+    "score_merch": 0,
+    "score_dec": 7,
+    "score_eng": 8,
+    "score_penalties": 0,
+    "score_hint": "Add a merchant\u2011specific hook to lift the score.",
+    "envelope": {
+      "merchant": {
+        "merchant_id": "m_dent_priya_337",
+        "name": null,
+        "category_slug": "dentists",
+        "tone_preference": "peer_clinical"
+      },
+      "category": {
+        "slug": "dentists",
+        "voice": {
+          "tone": "peer_clinical",
+          "taboo_words": [
+            "guaranteed",
+            "100% safe",
+            "completely cure",
+            "miracle",
+            "best in city"
+          ]
+        }
+      },
+      "active_digest_item": {
+        "item_id": "d_dent_01",
+        "title": "High-viscosity GIC in root caries",
+        "source": "JIDA Oct 2026, p.14",
+        "summary": "Multi-center Indian trial shows 38% lower caries recurrence with high-viscosity GIC vs composite in adults with active decay history.",
+        "trial_n": 2100,
+        "key_takeaway": "Reassess recall interval for adults flagged high-risk in your charting"
+      },
+      "supported_facts": [
+        {
+          "fact_id": "F1",
+          "key": "trial_n",
+          "value": "2100",
+          "description": "Total sample size in clinical trial"
+        },
+        {
+          "fact_id": "F2",
+          "key": "source",
+          "value": "JIDA Oct 2026, p.14",
+          "description": "Published journal citation"
+        },
+        {
+          "fact_id": "F3",
+          "key": "summary",
+          "value": "Multi-center Indian trial shows 38% lower caries recurrence with high-viscosity GIC vs composite in adults with active decay history.",
+          "description": "Core study conclusion"
+        }
+      ],
+      "conversation_history": [
+        {
+          "turn": 1,
+          "role": "vera",
+          "message": "Doctor, JIDA's Oct issue landed. One item relevant to high risk adults patients \u2014 Multi-center Indian trial shows 38% lower caries recurrence with high-viscosity GIC vs composite in adults with active decay history (N=2,100). Worth a look (2-min abstract). Want me to pull the key takeaways for your team? Reply YES. \u2014 JIDA Oct 2026, p.14"
+        },
+        {
+          "turn": 2,
+          "role": "merchant",
+          "message": "Can you share more details?"
+        }
+      ]
+    },
+    "user_prompt": "CONTEXT ENVELOPE:\n{\n  \"merchant\": {\n    \"merchant_id\": \"m_dent_priya_337\",\n    \"name\": null,\n    \"category_slug\": \"dentists\",\n    \"tone_preference\": \"peer_clinical\"\n  },\n  \"category\": {\n    \"slug\": \"dentists\",\n    \"voice\": {\n      \"tone\": \"peer_clinical\",\n      \"taboo_words\": [\n        \"guaranteed\",\n        \"100% safe\",\n        \"completely cure\",\n        \"miracle\",\n        \"best in city\"\n      ]\n    }\n  },\n  \"active_digest_item\": {\n    \"item_id\": \"d_dent_01\",\n    \"title\": \"High-viscosity GIC in root caries\",\n    \"source\": \"JIDA Oct 2026, p.14\",\n    \"summary\": \"Multi-center Indian trial shows 38% lower caries recurrence with high-viscosity GIC vs composite in adults with active decay history.\",\n    \"trial_n\": 2100,\n    \"key_takeaway\": \"Reassess recall interval for adults flagged high-risk in your charting\"\n  },\n  \"supported_facts\": [\n    {\n      \"fact_id\": \"F1\",\n      \"key\": \"trial_n\",\n      \"value\": \"2100\",\n      \"description\": \"Total sample size in clinical trial\"\n    },\n    {\n      \"fact_id\": \"F2\",\n      \"key\": \"source\",\n      \"value\": \"JIDA Oct 2026, p.14\",\n      \"description\": \"Published journal citation\"\n    },\n    {\n      \"fact_id\": \"F3\",\n      \"key\": \"summary\",\n      \"value\": \"Multi-center Indian trial shows 38% lower caries recurrence with high-viscosity GIC vs composite in adults with active decay history.\",\n      \"description\": \"Core study conclusion\"\n    }\n  ],\n  \"conversation_history\": [\n    {\n      \"turn\": 1,\n      \"role\": \"vera\",\n      \"message\": \"Doctor, JIDA's Oct issue landed. One item relevant to high risk adults patients \u2014 Multi-center Indian trial shows 38% lower caries recurrence with high-viscosity GIC vs composite in adults with active decay history (N=2,100). Worth a look (2-min abstract). Want me to pull the key takeaways for your team? Reply YES. \u2014 JIDA Oct 2026, p.14\"\n    },\n    {\n      \"turn\": 2,\n      \"role\": \"merchant\",\n      \"message\": \"Can you share more details?\"\n    }\n  ]\n}\n\nINCOMING MESSAGE (Turn 2):\nFrom: merchant\nMessage: \"Can you share more details?\"\n\nAnalyze this message and respond with the strict LLMDecisionSuggestion JSON."
+  },
+  "qc_0057": {
+    "case_id": "qc_0057",
+    "category": "dentists",
+    "context_density": "rich",
+    "raw_merchant": {
+      "merchant_id": "m_dent_ananya_057",
+      "category_slug": "dentists",
+      "identity": {
+        "name": "Dr. Ananya's Clinic",
+        "owner_first_name": "Ananya",
+        "city": "Jaipur",
+        "locality": "Anna Nagar",
+        "verified": true,
+        "languages": [
+          "en",
+          "hi"
+        ],
+        "established_year": 2017
+      },
+      "subscription": {
+        "status": "active",
+        "plan": "Pro",
+        "days_remaining": 25
+      },
+      "performance": {
+        "window_days": 30,
+        "views": 4317,
+        "calls": 63,
+        "directions": 65,
+        "ctr": 0.038,
+        "leads": 34
+      },
+      "signals": [
+        "high_risk_cohort",
+        "engaged_in_last_48h",
+        "ctr_above_median"
+      ],
+      "customer_aggregate": {
+        "total_unique_ytd": 831,
+        "high_risk_adult_count": 124
+      },
+      "offers": [
+        {
+          "id": "o_57_01",
+          "title": "Special Consultation @ \u20b9299",
+          "status": "active"
+        }
+      ]
+    },
+    "raw_category": {
+      "slug": "dentists",
+      "voice": {
+        "tone": "peer_clinical",
+        "register": "respectful_collegial",
+        "code_mix": "hindi_english_natural",
+        "vocab_allowed": [
+          "caries",
+          "fluoride varnish",
+          "scaling",
+          "occlusion",
+          "IOPA",
+          "RCT",
+          "GIC"
+        ],
+        "vocab_taboo": [
+          "guaranteed",
+          "100% safe",
+          "completely cure",
+          "miracle",
+          "best in city"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_dent_01",
+          "title": "High-viscosity GIC in root caries",
+          "source": "JIDA Oct 2026, p.14",
+          "trial_n": 2100,
+          "patient_segment": "high_risk_adults",
+          "summary": "Multi-center Indian trial shows 38% lower caries recurrence with high-viscosity GIC vs composite in adults with active decay history.",
+          "actionable": "Reassess recall interval for adults flagged high-risk in your charting"
+        },
+        {
+          "id": "d_dent_02",
+          "title": "CBCT vs OPG in impacted third molar assessment",
+          "source": "Indian Journal of Dental Research Nov 2026",
+          "trial_n": 950,
+          "patient_segment": "surgical_cases",
+          "summary": "Pre-op CBCT reduced inferior alveolar nerve injury by 44% in high-difficulty impactions.",
+          "actionable": "Adopt 3D imaging protocols for deep impactions"
+        }
+      ]
+    },
+    "raw_trigger": {
+      "id": "trg_qc_0057_research_digest",
+      "scope": "merchant",
+      "kind": "research_digest",
+      "merchant_id": "m_dent_ananya_057",
+      "payload": {
+        "category": "dentists",
+        "top_item_id": "d_dent_01",
+        "urgency_score": 4
+      },
+      "urgency": 4,
+      "suppression_key": "research_digest:dentists:57",
+      "expires_at": "2026-05-30T00:00:00Z"
+    },
+    "emitted_body": "Dr. Ananya, JIDA's Oct issue landed. One item relevant to your 124 high-risk adult patients \u2014 Multi-center Indian trial shows 38% lower caries recurrence with high-viscosity GIC vs composite in adults with active decay history (N=2,100). Worth a look (2-min abstract). Want me to pull the key takeaways for your team? Reply YES. \u2014 JIDA Oct 2026, p.14",
+    "score_total": 39,
+    "score_spec": 9,
+    "score_cat": 9,
+    "score_merch": 6,
+    "score_dec": 7,
+    "score_eng": 8,
+    "score_penalties": 0,
+    "score_hint": "Confirm merchant data before citing specific numbers.",
+    "envelope": {
+      "merchant": {
+        "merchant_id": "m_dent_ananya_057",
+        "name": "Dr. Ananya's Clinic",
+        "category_slug": "dentists",
+        "tone_preference": "peer_clinical"
+      },
+      "category": {
+        "slug": "dentists",
+        "voice": {
+          "tone": "peer_clinical",
+          "taboo_words": [
+            "guaranteed",
+            "100% safe",
+            "completely cure",
+            "miracle",
+            "best in city"
+          ]
+        }
+      },
+      "active_digest_item": {
+        "item_id": "d_dent_01",
+        "title": "High-viscosity GIC in root caries",
+        "source": "JIDA Oct 2026, p.14",
+        "summary": "Multi-center Indian trial shows 38% lower caries recurrence with high-viscosity GIC vs composite in adults with active decay history.",
+        "trial_n": 2100,
+        "key_takeaway": "Reassess recall interval for adults flagged high-risk in your charting"
+      },
+      "supported_facts": [
+        {
+          "fact_id": "F1",
+          "key": "trial_n",
+          "value": "2100",
+          "description": "Total sample size in clinical trial"
+        },
+        {
+          "fact_id": "F2",
+          "key": "source",
+          "value": "JIDA Oct 2026, p.14",
+          "description": "Published journal citation"
+        },
+        {
+          "fact_id": "F3",
+          "key": "summary",
+          "value": "Multi-center Indian trial shows 38% lower caries recurrence with high-viscosity GIC vs composite in adults with active decay history.",
+          "description": "Core study conclusion"
+        }
+      ],
+      "conversation_history": [
+        {
+          "turn": 1,
+          "role": "vera",
+          "message": "Dr. Ananya, JIDA's Oct issue landed. One item relevant to your 124 high-risk adult patients \u2014 Multi-center Indian trial shows 38% lower caries recurrence with high-viscosity GIC vs composite in adults with active decay history (N=2,100). Worth a look (2-min abstract). Want me to pull the key takeaways for your team? Reply YES. \u2014 JIDA Oct 2026, p.14"
+        },
+        {
+          "turn": 2,
+          "role": "merchant",
+          "message": "Can you share more details?"
+        }
+      ]
+    },
+    "user_prompt": "CONTEXT ENVELOPE:\n{\n  \"merchant\": {\n    \"merchant_id\": \"m_dent_ananya_057\",\n    \"name\": \"Dr. Ananya's Clinic\",\n    \"category_slug\": \"dentists\",\n    \"tone_preference\": \"peer_clinical\"\n  },\n  \"category\": {\n    \"slug\": \"dentists\",\n    \"voice\": {\n      \"tone\": \"peer_clinical\",\n      \"taboo_words\": [\n        \"guaranteed\",\n        \"100% safe\",\n        \"completely cure\",\n        \"miracle\",\n        \"best in city\"\n      ]\n    }\n  },\n  \"active_digest_item\": {\n    \"item_id\": \"d_dent_01\",\n    \"title\": \"High-viscosity GIC in root caries\",\n    \"source\": \"JIDA Oct 2026, p.14\",\n    \"summary\": \"Multi-center Indian trial shows 38% lower caries recurrence with high-viscosity GIC vs composite in adults with active decay history.\",\n    \"trial_n\": 2100,\n    \"key_takeaway\": \"Reassess recall interval for adults flagged high-risk in your charting\"\n  },\n  \"supported_facts\": [\n    {\n      \"fact_id\": \"F1\",\n      \"key\": \"trial_n\",\n      \"value\": \"2100\",\n      \"description\": \"Total sample size in clinical trial\"\n    },\n    {\n      \"fact_id\": \"F2\",\n      \"key\": \"source\",\n      \"value\": \"JIDA Oct 2026, p.14\",\n      \"description\": \"Published journal citation\"\n    },\n    {\n      \"fact_id\": \"F3\",\n      \"key\": \"summary\",\n      \"value\": \"Multi-center Indian trial shows 38% lower caries recurrence with high-viscosity GIC vs composite in adults with active decay history.\",\n      \"description\": \"Core study conclusion\"\n    }\n  ],\n  \"conversation_history\": [\n    {\n      \"turn\": 1,\n      \"role\": \"vera\",\n      \"message\": \"Dr. Ananya, JIDA's Oct issue landed. One item relevant to your 124 high-risk adult patients \u2014 Multi-center Indian trial shows 38% lower caries recurrence with high-viscosity GIC vs composite in adults with active decay history (N=2,100). Worth a look (2-min abstract). Want me to pull the key takeaways for your team? Reply YES. \u2014 JIDA Oct 2026, p.14\"\n    },\n    {\n      \"turn\": 2,\n      \"role\": \"merchant\",\n      \"message\": \"Can you share more details?\"\n    }\n  ]\n}\n\nINCOMING MESSAGE (Turn 2):\nFrom: merchant\nMessage: \"Can you share more details?\"\n\nAnalyze this message and respond with the strict LLMDecisionSuggestion JSON."
+  },
+  "qc_0183": {
+    "case_id": "qc_0183",
+    "category": "physiotherapy",
+    "context_density": "sparse",
+    "raw_merchant": {
+      "merchant_id": "m_phys_arjun_183",
+      "category_slug": "physiotherapy",
+      "identity": {
+        "name": "Physiotherapy Center",
+        "owner_first_name": "Arjun",
+        "city": "Jaipur"
+      },
+      "subscription": {
+        "status": "active",
+        "plan": "Pro",
+        "days_remaining": 22
+      },
+      "performance": {
+        "views": 452
+      },
+      "signals": [],
+      "customer_aggregate": {},
+      "offers": []
+    },
+    "raw_category": {
+      "slug": "physiotherapy",
+      "voice": {
+        "tone": "rehab_clinical",
+        "register": "evidence_based_care",
+        "code_mix": "hindi_english_natural",
+        "vocab_allowed": [
+          "biomechanics",
+          "dry needling",
+          "ROM",
+          "proprioception",
+          "lumbar radiculopathy",
+          "isokinetic"
+        ],
+        "vocab_taboo": [
+          "cure paralysis in 1 day",
+          "100% pain free forever",
+          "magic adjustment"
+        ]
+      },
+      "digest": [
+        {
+          "id": "d_phys_01",
+          "title": "Early eccentric loading in chronic patellar tendinopathy",
+          "source": "Journal of Orthopaedic & Sports Physical Therapy Jun 2026",
+          "trial_n": 480,
+          "patient_segment": "athletic_rehab",
+          "summary": "Decline board eccentric squats combined with heavy-slow resistance achieved 68% pain reduction at 12 weeks vs passive modalities.",
+          "actionable": "Update patellar tendinopathy exercise prescription"
+        }
+      ]
+    },
+    "raw_trigger": {
+      "id": "trg_qc_0183_research_digest",
+      "scope": "merchant",
+      "kind": "research_digest",
+      "merchant_id": "m_phys_arjun_183",
+      "payload": {
+        "category": "physiotherapy",
+        "top_item_id": "d_phys_01",
+        "urgency_score": 2
+      },
+      "urgency": 2,
+      "suppression_key": "research_digest:physiotherapy:183",
+      "expires_at": "2026-05-30T00:00:00Z"
+    },
+    "emitted_body": "Dr. Arjun, Journal of Orthopaedic & Sports Physical Therapy's Jun issue landed. One item relevant to athletic rehab patients \u2014 Decline board eccentric squats combined with heavy-slow resistance achieved 68% pain reduction at 12 weeks vs passive modalities (N=480). Worth a look (2-min abstract). Want me to pull the key takeaways for your team? Reply YES. \u2014 Journal of Orthopaedic & Sports Physical Therapy Jun 2026",
+    "score_total": 41,
+    "score_spec": 8,
+    "score_cat": 9,
+    "score_merch": 8,
+    "score_dec": 8,
+    "score_eng": 8,
+    "score_penalties": 0,
+    "score_hint": "Anchor the message in the clinic's identity.",
+    "envelope": {
+      "merchant": {
+        "merchant_id": "m_phys_arjun_183",
+        "name": "Physiotherapy Center",
+        "category_slug": "physiotherapy",
+        "tone_preference": "rehab_clinical"
+      },
+      "category": {
+        "slug": "physiotherapy",
+        "voice": {
+          "tone": "rehab_clinical",
+          "taboo_words": [
+            "cure paralysis in 1 day",
+            "100% pain free forever",
+            "magic adjustment"
+          ]
+        }
+      },
+      "active_digest_item": {
+        "item_id": "d_phys_01",
+        "title": "Early eccentric loading in chronic patellar tendinopathy",
+        "source": "Journal of Orthopaedic & Sports Physical Therapy Jun 2026",
+        "summary": "Decline board eccentric squats combined with heavy-slow resistance achieved 68% pain reduction at 12 weeks vs passive modalities.",
+        "trial_n": 480,
+        "key_takeaway": "Update patellar tendinopathy exercise prescription"
+      },
+      "supported_facts": [
+        {
+          "fact_id": "F1",
+          "key": "trial_n",
+          "value": "480",
+          "description": "Total sample size in clinical trial"
+        },
+        {
+          "fact_id": "F2",
+          "key": "source",
+          "value": "Journal of Orthopaedic & Sports Physical Therapy Jun 2026",
+          "description": "Published journal citation"
+        },
+        {
+          "fact_id": "F3",
+          "key": "summary",
+          "value": "Decline board eccentric squats combined with heavy-slow resistance achieved 68% pain reduction at 12 weeks vs passive modalities.",
+          "description": "Core study conclusion"
+        }
+      ],
+      "conversation_history": [
+        {
+          "turn": 1,
+          "role": "vera",
+          "message": "Dr. Arjun, Journal of Orthopaedic & Sports Physical Therapy's Jun issue landed. One item relevant to athletic rehab patients \u2014 Decline board eccentric squats combined with heavy-slow resistance achieved 68% pain reduction at 12 weeks vs passive modalities (N=480). Worth a look (2-min abstract). Want me to pull the key takeaways for your team? Reply YES. \u2014 Journal of Orthopaedic & Sports Physical Therapy Jun 2026"
+        },
+        {
+          "turn": 2,
+          "role": "merchant",
+          "message": "Can you share more details?"
+        }
+      ]
+    },
+    "user_prompt": "CONTEXT ENVELOPE:\n{\n  \"merchant\": {\n    \"merchant_id\": \"m_phys_arjun_183\",\n    \"name\": \"Physiotherapy Center\",\n    \"category_slug\": \"physiotherapy\",\n    \"tone_preference\": \"rehab_clinical\"\n  },\n  \"category\": {\n    \"slug\": \"physiotherapy\",\n    \"voice\": {\n      \"tone\": \"rehab_clinical\",\n      \"taboo_words\": [\n        \"cure paralysis in 1 day\",\n        \"100% pain free forever\",\n        \"magic adjustment\"\n      ]\n    }\n  },\n  \"active_digest_item\": {\n    \"item_id\": \"d_phys_01\",\n    \"title\": \"Early eccentric loading in chronic patellar tendinopathy\",\n    \"source\": \"Journal of Orthopaedic & Sports Physical Therapy Jun 2026\",\n    \"summary\": \"Decline board eccentric squats combined with heavy-slow resistance achieved 68% pain reduction at 12 weeks vs passive modalities.\",\n    \"trial_n\": 480,\n    \"key_takeaway\": \"Update patellar tendinopathy exercise prescription\"\n  },\n  \"supported_facts\": [\n    {\n      \"fact_id\": \"F1\",\n      \"key\": \"trial_n\",\n      \"value\": \"480\",\n      \"description\": \"Total sample size in clinical trial\"\n    },\n    {\n      \"fact_id\": \"F2\",\n      \"key\": \"source\",\n      \"value\": \"Journal of Orthopaedic & Sports Physical Therapy Jun 2026\",\n      \"description\": \"Published journal citation\"\n    },\n    {\n      \"fact_id\": \"F3\",\n      \"key\": \"summary\",\n      \"value\": \"Decline board eccentric squats combined with heavy-slow resistance achieved 68% pain reduction at 12 weeks vs passive modalities.\",\n      \"description\": \"Core study conclusion\"\n    }\n  ],\n  \"conversation_history\": [\n    {\n      \"turn\": 1,\n      \"role\": \"vera\",\n      \"message\": \"Dr. Arjun, Journal of Orthopaedic & Sports Physical Therapy's Jun issue landed. One item relevant to athletic rehab patients \u2014 Decline board eccentric squats combined with heavy-slow resistance achieved 68% pain reduction at 12 weeks vs passive modalities (N=480). Worth a look (2-min abstract). Want me to pull the key takeaways for your team? Reply YES. \u2014 Journal of Orthopaedic & Sports Physical Therapy Jun 2026\"\n    },\n    {\n      \"turn\": 2,\n      \"role\": \"merchant\",\n      \"message\": \"Can you share more details?\"\n    }\n  ]\n}\n\nINCOMING MESSAGE (Turn 2):\nFrom: merchant\nMessage: \"Can you share more details?\"\n\nAnalyze this message and respond with the strict LLMDecisionSuggestion JSON."
+  }
+}

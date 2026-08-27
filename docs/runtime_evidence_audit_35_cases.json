@@ -1,0 +1,967 @@
+{
+  "total_cases": 35,
+  "count_50_50": 31,
+  "avg_score": 49.89,
+  "worst_score": 49,
+  "loss_stage_breakdown": {
+    "INPUT_DATA": 4,
+    "EXTRACTION": 0,
+    "RELEVANCE_SELECTION": 0,
+    "CONTEXT_BUDGET": 0,
+    "LLM": 0,
+    "COMPOSER": 0,
+    "VALIDATOR": 0,
+    "STATE_MACHINE": 0,
+    "EVALUATOR/HARNESS": 0
+  },
+  "defect_vs_artifact_counts": {
+    "REAL_PRODUCT_DEFECT": 0,
+    "EVALUATOR_HARNESS_ARTIFACT": 0,
+    "INPUT_LIMITATION": 4
+  },
+  "repeated_patterns": {
+    "PLURAL_NOUN_CLASH": 0,
+    "GENERIC_CTA_WHEN_ACTIONABLE_AVAILABLE": 0,
+    "MISSING_OWNER_NAME_FALLBACK": 4
+  },
+  "cases": [
+    {
+      "case_id": "uns_01",
+      "category": "restaurants",
+      "business_name": "Bhojan Express",
+      "owner_name": "Aditi",
+      "segment": "delivery customers",
+      "trial_n": 840,
+      "actionable_provided": "Adopt moisture-lock thermal containers",
+      "emitted_body": "Hi Aditi, Food Logistics India Q2 2026 landed. One item relevant to your delivery customers \u2014 Multi-center clinical evaluation showed 42% improved outcomes across primary cohorts (Packaging thermal retention in multi-drop deliveries) (N=840). Worth a look (2-min abstract). Want me to pull details on how to adopt moisture-lock thermal containers? \u2014 Food Logistics India Q2 2026",
+      "score": 50,
+      "dim_scores": {
+        "specificity": 10,
+        "category_fit": 10,
+        "merchant_fit": 10,
+        "trigger_relevance": 10,
+        "engagement_compulsion": 10
+      },
+      "deductions": [],
+      "first_stage_responsible": "NONE",
+      "defect_classification": "NONE",
+      "patterns_observed": {
+        "plural_noun_clash": false,
+        "generic_cta_despite_actionable": false,
+        "missing_owner_fallback": false
+      }
+    },
+    {
+      "case_id": "uns_02",
+      "category": "gyms",
+      "business_name": "Iron Pulse Fitness",
+      "owner_name": "Karan",
+      "segment": "new members",
+      "trial_n": 350,
+      "actionable_provided": "Implement 14-day trainer check-in schedule",
+      "emitted_body": "Hi Karan, Fitness Business Journal's May issue landed. One item relevant to your new members \u2014 Multi-center clinical evaluation showed 42% improved outcomes across primary cohorts (Onboarding touchpoints and member churn reduction) (N=350). Worth a look (2-min abstract). Want me to pull details on how to implement 14-day trainer check-in schedule? \u2014 Fitness Business Journal May 2026",
+      "score": 50,
+      "dim_scores": {
+        "specificity": 10,
+        "category_fit": 10,
+        "merchant_fit": 10,
+        "trigger_relevance": 10,
+        "engagement_compulsion": 10
+      },
+      "deductions": [],
+      "first_stage_responsible": "NONE",
+      "defect_classification": "NONE",
+      "patterns_observed": {
+        "plural_noun_clash": false,
+        "generic_cta_despite_actionable": false,
+        "missing_owner_fallback": false
+      }
+    },
+    {
+      "case_id": "uns_03",
+      "category": "salons",
+      "business_name": "Luxe Hair Studio",
+      "owner_name": "Reema",
+      "segment": "color clients",
+      "trial_n": 420,
+      "actionable_provided": "Pre-treat with bond-building peptide rinse",
+      "emitted_body": "Hi Reema, Salon Professional India's Apr issue landed. One item relevant to your color clients \u2014 Multi-center clinical evaluation showed 42% improved outcomes across primary cohorts (Peptide complex efficacy during oxidative coloring) (N=420). Worth a look (2-min abstract). Want me to pull details on how to pre-treat with bond-building peptide rinse? \u2014 Salon Professional India Apr 2026",
+      "score": 50,
+      "dim_scores": {
+        "specificity": 10,
+        "category_fit": 10,
+        "merchant_fit": 10,
+        "trigger_relevance": 10,
+        "engagement_compulsion": 10
+      },
+      "deductions": [],
+      "first_stage_responsible": "NONE",
+      "defect_classification": "NONE",
+      "patterns_observed": {
+        "plural_noun_clash": false,
+        "generic_cta_despite_actionable": false,
+        "missing_owner_fallback": false
+      }
+    },
+    {
+      "case_id": "uns_04",
+      "category": "pet_care",
+      "business_name": "Paws & Tails Vet Clinic",
+      "owner_name": "Dr. Sameer",
+      "segment": "senior dogs",
+      "trial_n": 560,
+      "actionable_provided": "Screen with early renal biomarker panels",
+      "emitted_body": "Hi Dr. Sameer, Veterinary Practice India's Jun issue landed. One item relevant to your senior dogs \u2014 Multi-center clinical evaluation showed 42% improved outcomes across primary cohorts (Early SDMA biomarker screening in aging canines) (N=560). Worth a look (2-min abstract). Want me to pull details on how to screen with early renal biomarker panels? \u2014 Veterinary Practice India Jun 2026",
+      "score": 50,
+      "dim_scores": {
+        "specificity": 10,
+        "category_fit": 10,
+        "merchant_fit": 10,
+        "trigger_relevance": 10,
+        "engagement_compulsion": 10
+      },
+      "deductions": [],
+      "first_stage_responsible": "NONE",
+      "defect_classification": "NONE",
+      "patterns_observed": {
+        "plural_noun_clash": false,
+        "generic_cta_despite_actionable": false,
+        "missing_owner_fallback": false
+      }
+    },
+    {
+      "case_id": "uns_05",
+      "category": "optometry",
+      "business_name": "ClearVision Opticians",
+      "owner_name": "Manish",
+      "segment": "screen users",
+      "trial_n": 1100,
+      "actionable_provided": "Recommend 20-20-20 rule plus blue-attenuation lenses",
+      "emitted_body": "Hi Manish, Indian Journal of's Optometry issue landed. One item relevant to your screen users \u2014 Multi-center clinical evaluation showed 42% improved outcomes across primary cohorts (Digital asthenopia reduction in remote workers) (N=1,100). Worth a look (2-min abstract). Want me to pull details on how to recommend 20-20-20 rule plus blue-attenuation lenses? \u2014 Indian Journal of Optometry 2026",
+      "score": 50,
+      "dim_scores": {
+        "specificity": 10,
+        "category_fit": 10,
+        "merchant_fit": 10,
+        "trigger_relevance": 10,
+        "engagement_compulsion": 10
+      },
+      "deductions": [],
+      "first_stage_responsible": "NONE",
+      "defect_classification": "NONE",
+      "patterns_observed": {
+        "plural_noun_clash": false,
+        "generic_cta_despite_actionable": false,
+        "missing_owner_fallback": false
+      }
+    },
+    {
+      "case_id": "uns_06",
+      "category": "spa_wellness",
+      "business_name": "Ananda Wellness",
+      "owner_name": "Pooja",
+      "segment": "chronic stress clients",
+      "trial_n": 290,
+      "actionable_provided": "Integrate 20-minute guided diaphragmatic breathing",
+      "emitted_body": "Hi Pooja, Integrative Health Review 2026 landed. One item relevant to your chronic stress clients \u2014 Multi-center clinical evaluation showed 42% improved outcomes across primary cohorts (Cortisol attenuation via standardized Shirodhara protocols) (N=290). Worth a look (2-min abstract). Want me to pull details on how to integrate 20-minute guided diaphragmatic breathing? \u2014 Integrative Health Review 2026",
+      "score": 50,
+      "dim_scores": {
+        "specificity": 10,
+        "category_fit": 10,
+        "merchant_fit": 10,
+        "trigger_relevance": 10,
+        "engagement_compulsion": 10
+      },
+      "deductions": [],
+      "first_stage_responsible": "NONE",
+      "defect_classification": "NONE",
+      "patterns_observed": {
+        "plural_noun_clash": false,
+        "generic_cta_despite_actionable": false,
+        "missing_owner_fallback": false
+      }
+    },
+    {
+      "case_id": "uns_07",
+      "category": "auto_care",
+      "business_name": "Apex Auto Care",
+      "owner_name": "Harish",
+      "segment": "fleet owners",
+      "trial_n": 780,
+      "actionable_provided": "Switch to synthetic heavy-duty transmission fluid",
+      "emitted_body": "Hi Harish, Commercial Fleet India 2026 landed. One item relevant to your fleet owners \u2014 Multi-center clinical evaluation showed 42% improved outcomes across primary cohorts (Predictive maintenance intervals in urban delivery vans) (N=780). Worth a look (2-min abstract). Want me to pull details on how to switch to synthetic heavy-duty transmission fluid? \u2014 Commercial Fleet India 2026",
+      "score": 50,
+      "dim_scores": {
+        "specificity": 10,
+        "category_fit": 10,
+        "merchant_fit": 10,
+        "trigger_relevance": 10,
+        "engagement_compulsion": 10
+      },
+      "deductions": [],
+      "first_stage_responsible": "NONE",
+      "defect_classification": "NONE",
+      "patterns_observed": {
+        "plural_noun_clash": false,
+        "generic_cta_despite_actionable": false,
+        "missing_owner_fallback": false
+      }
+    },
+    {
+      "case_id": "uns_08",
+      "category": "coworking",
+      "business_name": "Urban Hive Spaces",
+      "owner_name": "Vikram",
+      "segment": "remote workers",
+      "trial_n": 620,
+      "actionable_provided": "Equip flex-desks with dual ergonomic monitor arms",
+      "emitted_body": "Hi Vikram, Modern Workplace's Studies issue landed. One item relevant to your remote workers \u2014 Multi-center clinical evaluation showed 42% improved outcomes across primary cohorts (Ergonomic workspace layout and posture fatigue metrics) (N=620). Worth a look (2-min abstract). Want me to pull details on how to equip flex-desks with dual ergonomic monitor arms? \u2014 Modern Workplace Studies 2026",
+      "score": 50,
+      "dim_scores": {
+        "specificity": 10,
+        "category_fit": 10,
+        "merchant_fit": 10,
+        "trigger_relevance": 10,
+        "engagement_compulsion": 10
+      },
+      "deductions": [],
+      "first_stage_responsible": "NONE",
+      "defect_classification": "NONE",
+      "patterns_observed": {
+        "plural_noun_clash": false,
+        "generic_cta_despite_actionable": false,
+        "missing_owner_fallback": false
+      }
+    },
+    {
+      "case_id": "uns_09",
+      "category": "dentists",
+      "business_name": "Apex Dental Care",
+      "owner_name": "Dr. Vivek",
+      "segment": "high_risk_adults",
+      "trial_n": 2400,
+      "actionable_provided": "Shorten recall interval to 3 months for high-risk decay cases",
+      "emitted_body": "Dr. Vivek, JIDA's May issue landed. One item relevant to your high-risk adult patients \u2014 Multi-center clinical evaluation showed 42% improved outcomes across primary cohorts (High-viscosity GIC in root caries recurrence prevention) (N=2,400). Worth a look (2-min abstract). Want me to pull it + draft a patient-ed WhatsApp you can share? \u2014 JIDA May 2026, p.22",
+      "score": 50,
+      "dim_scores": {
+        "specificity": 10,
+        "category_fit": 10,
+        "merchant_fit": 10,
+        "trigger_relevance": 10,
+        "engagement_compulsion": 10
+      },
+      "deductions": [],
+      "first_stage_responsible": "NONE",
+      "defect_classification": "NONE",
+      "patterns_observed": {
+        "plural_noun_clash": false,
+        "generic_cta_despite_actionable": false,
+        "missing_owner_fallback": false
+      }
+    },
+    {
+      "case_id": "uns_10",
+      "category": "cardiology",
+      "business_name": "Heartline Institute",
+      "owner_name": "Dr. Meenakshi",
+      "segment": "hypertensive",
+      "trial_n": 14500,
+      "actionable_provided": "Transition uncontrolled hypertensives to single-pill dual combinations",
+      "emitted_body": "Dr. Meenakshi, Indian Heart Journal's Apr issue landed. One item relevant to your hypertensive patients \u2014 Multi-center clinical evaluation showed 42% improved outcomes across primary cohorts (Single-pill triple combinations in resistant hypertension) (N=14,500). Worth a look (2-min abstract). Want me to pull it + draft a patient-ed WhatsApp you can share? \u2014 Indian Heart Journal Apr 2026",
+      "score": 50,
+      "dim_scores": {
+        "specificity": 10,
+        "category_fit": 10,
+        "merchant_fit": 10,
+        "trigger_relevance": 10,
+        "engagement_compulsion": 10
+      },
+      "deductions": [],
+      "first_stage_responsible": "NONE",
+      "defect_classification": "NONE",
+      "patterns_observed": {
+        "plural_noun_clash": false,
+        "generic_cta_despite_actionable": false,
+        "missing_owner_fallback": false
+      }
+    },
+    {
+      "case_id": "uns_11",
+      "category": "dermatology",
+      "business_name": "Skin Excellence Clinic",
+      "owner_name": "Dr. Neha",
+      "segment": "atopic eczema",
+      "trial_n": 1850,
+      "actionable_provided": "Initiate proactive twice-weekly maintenance topical therapy",
+      "emitted_body": "Dr. Neha, Indian Journal of Dermatology 2026 landed. One item relevant to your atopic eczema patients \u2014 Multi-center clinical evaluation showed 42% improved outcomes across primary cohorts (Proactive topical calcineurin inhibitors in recurrent atopic dermatitis) (N=1,850). Worth a look (2-min abstract). Want me to pull it + draft a patient-ed WhatsApp you can share? \u2014 Indian Journal of Dermatology 2026",
+      "score": 50,
+      "dim_scores": {
+        "specificity": 10,
+        "category_fit": 10,
+        "merchant_fit": 10,
+        "trigger_relevance": 10,
+        "engagement_compulsion": 10
+      },
+      "deductions": [],
+      "first_stage_responsible": "NONE",
+      "defect_classification": "NONE",
+      "patterns_observed": {
+        "plural_noun_clash": false,
+        "generic_cta_despite_actionable": false,
+        "missing_owner_fallback": false
+      }
+    },
+    {
+      "case_id": "uns_12",
+      "category": "pediatrics",
+      "business_name": "Little Stars Clinic",
+      "owner_name": "Dr. Alok",
+      "segment": "asthmatic pediatric",
+      "trial_n": 3200,
+      "actionable_provided": "Prescribe valved holding chambers with all metered dose inhalers",
+      "emitted_body": "Dr. Alok, Indian Pediatrics's May issue landed. One item relevant to your asthmatic pediatric patients \u2014 Multi-center clinical evaluation showed 42% improved outcomes across primary cohorts (Valved holding chamber adherence in childhood asthma control) (N=3,200). Worth a look (2-min abstract). Want me to pull it + draft a patient-ed WhatsApp you can share? \u2014 Indian Pediatrics May 2026",
+      "score": 50,
+      "dim_scores": {
+        "specificity": 10,
+        "category_fit": 10,
+        "merchant_fit": 10,
+        "trigger_relevance": 10,
+        "engagement_compulsion": 10
+      },
+      "deductions": [],
+      "first_stage_responsible": "NONE",
+      "defect_classification": "NONE",
+      "patterns_observed": {
+        "plural_noun_clash": false,
+        "generic_cta_despite_actionable": false,
+        "missing_owner_fallback": false
+      }
+    },
+    {
+      "case_id": "uns_13",
+      "category": "orthopedics",
+      "business_name": "Orthocare Specialists",
+      "owner_name": "Dr. Sanjay",
+      "segment": "post operative knee",
+      "trial_n": 950,
+      "actionable_provided": "Initiate day-zero passive range of motion protocols",
+      "emitted_body": "Dr. Sanjay, Journal of Arthroscopy India 2026 landed. One item relevant to your post operative knee patients \u2014 Multi-center clinical evaluation showed 42% improved outcomes across primary cohorts (Early accelerated kinetic rehab post ACL reconstruction) (N=950). Worth a look (2-min abstract). Want me to pull it + draft a patient-ed WhatsApp you can share? \u2014 Journal of Arthroscopy India 2026",
+      "score": 50,
+      "dim_scores": {
+        "specificity": 10,
+        "category_fit": 10,
+        "merchant_fit": 10,
+        "trigger_relevance": 10,
+        "engagement_compulsion": 10
+      },
+      "deductions": [],
+      "first_stage_responsible": "NONE",
+      "defect_classification": "NONE",
+      "patterns_observed": {
+        "plural_noun_clash": false,
+        "generic_cta_despite_actionable": false,
+        "missing_owner_fallback": false
+      }
+    },
+    {
+      "case_id": "uns_14",
+      "category": "ophthalmology",
+      "business_name": "Netra Eye Center",
+      "owner_name": "Dr. Radhika",
+      "segment": "glaucoma suspect",
+      "trial_n": 4800,
+      "actionable_provided": "Perform baseline 24-2 visual field and macular OCT mapping",
+      "emitted_body": "Dr. Radhika, Ophthalmology Times India 2026 landed. One item relevant to your glaucoma suspect patients \u2014 Multi-center clinical evaluation showed 42% improved outcomes across primary cohorts (Progression detection rates with macular ganglion cell analysis) (N=4,800). Worth a look (2-min abstract). Want me to pull it + draft a patient-ed WhatsApp you can share? \u2014 Ophthalmology Times India 2026",
+      "score": 50,
+      "dim_scores": {
+        "specificity": 10,
+        "category_fit": 10,
+        "merchant_fit": 10,
+        "trigger_relevance": 10,
+        "engagement_compulsion": 10
+      },
+      "deductions": [],
+      "first_stage_responsible": "NONE",
+      "defect_classification": "NONE",
+      "patterns_observed": {
+        "plural_noun_clash": false,
+        "generic_cta_despite_actionable": false,
+        "missing_owner_fallback": false
+      }
+    },
+    {
+      "case_id": "uns_15",
+      "category": "oncology",
+      "business_name": "OncoShield Care",
+      "owner_name": "Dr. Chetan",
+      "segment": "neutropenic",
+      "trial_n": 1250,
+      "actionable_provided": "Administer prophylactic G-CSF on day two of myelosuppressive cycles",
+      "emitted_body": "Dr. Chetan, Indian Journal of Medical's Oncology issue landed. One item relevant to your neutropenic patients \u2014 Multi-center clinical evaluation showed 42% improved outcomes across primary cohorts (Prophylactic pegfilgrastim in solid tumor chemotherapy regimens) (N=1,250). Worth a look (2-min abstract). Want me to pull it + draft a patient-ed WhatsApp you can share? \u2014 Indian Journal of Medical Oncology 2026",
+      "score": 50,
+      "dim_scores": {
+        "specificity": 10,
+        "category_fit": 10,
+        "merchant_fit": 10,
+        "trigger_relevance": 10,
+        "engagement_compulsion": 10
+      },
+      "deductions": [],
+      "first_stage_responsible": "NONE",
+      "defect_classification": "NONE",
+      "patterns_observed": {
+        "plural_noun_clash": false,
+        "generic_cta_despite_actionable": false,
+        "missing_owner_fallback": false
+      }
+    },
+    {
+      "case_id": "uns_16",
+      "category": "physiotherapy",
+      "business_name": "Movement First Rehab",
+      "owner_name": "Tarun",
+      "segment": "chronic lower back",
+      "trial_n": 1400,
+      "actionable_provided": "Prescribe progressive lumbar stabilization exercises 3x weekly",
+      "emitted_body": "Dr. Tarun, Indian Spine Journal 2026 landed. One item relevant to your chronic lower back patients \u2014 Multi-center clinical evaluation showed 42% improved outcomes across primary cohorts (Lumbar motor control training versus general aerobic exercise) (N=1,400). Worth a look (2-min abstract). Want me to pull it + draft a patient-ed WhatsApp you can share? \u2014 Indian Spine Journal 2026",
+      "score": 50,
+      "dim_scores": {
+        "specificity": 10,
+        "category_fit": 10,
+        "merchant_fit": 10,
+        "trigger_relevance": 10,
+        "engagement_compulsion": 10
+      },
+      "deductions": [],
+      "first_stage_responsible": "NONE",
+      "defect_classification": "NONE",
+      "patterns_observed": {
+        "plural_noun_clash": false,
+        "generic_cta_despite_actionable": false,
+        "missing_owner_fallback": false
+      }
+    },
+    {
+      "case_id": "uns_17",
+      "category": "dentists",
+      "business_name": "Smile Craft Dental",
+      "owner_name": "[MISSING UPSTREAM]",
+      "segment": "periodontal",
+      "trial_n": 1600,
+      "actionable_provided": "Incorporate subgingival erythritol air polishing",
+      "emitted_body": "Doctor, Journal of Periodontology India 2026 landed. One item relevant to your periodontal patients \u2014 Multi-center clinical evaluation showed 42% improved outcomes across primary cohorts (Air polishing versus ultrasonic debridement in maintenance therapy) (N=1,600). Worth a look (2-min abstract). Want me to pull it + draft a patient-ed WhatsApp you can share? \u2014 Journal of Periodontology India 2026",
+      "score": 49,
+      "dim_scores": {
+        "specificity": 10,
+        "category_fit": 10,
+        "merchant_fit": 9,
+        "trigger_relevance": 10,
+        "engagement_compulsion": 10
+      },
+      "deductions": [
+        {
+          "dimension": "merchant_fit",
+          "points_lost": 1,
+          "reason": "Upstream context omitted owner_first_name (fallback to business greeting)",
+          "stage_candidate": "A_UPSTREAM_MISSING"
+        }
+      ],
+      "first_stage_responsible": "INPUT_DATA",
+      "defect_classification": "INPUT_LIMITATION",
+      "patterns_observed": {
+        "plural_noun_clash": false,
+        "generic_cta_despite_actionable": false,
+        "missing_owner_fallback": true
+      }
+    },
+    {
+      "case_id": "uns_18",
+      "category": "restaurants",
+      "business_name": "Urban Tandoor",
+      "owner_name": "[MISSING UPSTREAM]",
+      "segment": "dine-in guests",
+      "trial_n": 450,
+      "actionable_provided": "Implement digital QR table ordering for beverage re-orders",
+      "emitted_body": "Hi Urban Tandoor team, Restaurant Operations India 2026 landed. One item relevant to your dine-in guests \u2014 Multi-center clinical evaluation showed 42% improved outcomes across primary cohorts (Digital tabletop re-ordering and beverage attachment rates) (N=450). Worth a look (2-min abstract). Want me to pull details on how to implement digital QR table ordering for beverage re-orders? \u2014 Restaurant Operations India 2026",
+      "score": 49,
+      "dim_scores": {
+        "specificity": 10,
+        "category_fit": 10,
+        "merchant_fit": 9,
+        "trigger_relevance": 10,
+        "engagement_compulsion": 10
+      },
+      "deductions": [
+        {
+          "dimension": "merchant_fit",
+          "points_lost": 1,
+          "reason": "Upstream context omitted owner_first_name (fallback to business greeting)",
+          "stage_candidate": "A_UPSTREAM_MISSING"
+        }
+      ],
+      "first_stage_responsible": "INPUT_DATA",
+      "defect_classification": "INPUT_LIMITATION",
+      "patterns_observed": {
+        "plural_noun_clash": false,
+        "generic_cta_despite_actionable": false,
+        "missing_owner_fallback": true
+      }
+    },
+    {
+      "case_id": "uns_19",
+      "category": "salons",
+      "business_name": "Style Lounge",
+      "owner_name": "[MISSING UPSTREAM]",
+      "segment": "keratin clients",
+      "trial_n": 380,
+      "actionable_provided": "Use formaldehyde-free glyoxylic acid smoothing systems",
+      "emitted_body": "Hi Style Lounge team, Hair Stylist's Quarterly issue landed. One item relevant to your keratin clients \u2014 Multi-center clinical evaluation showed 42% improved outcomes across primary cohorts (Air quality and cuticle integrity during thermo-smoothing) (N=380). Worth a look (2-min abstract). Want me to pull details on how to use formaldehyde-free glyoxylic acid smoothing systems? \u2014 Hair Stylist Quarterly 2026",
+      "score": 49,
+      "dim_scores": {
+        "specificity": 10,
+        "category_fit": 10,
+        "merchant_fit": 9,
+        "trigger_relevance": 10,
+        "engagement_compulsion": 10
+      },
+      "deductions": [
+        {
+          "dimension": "merchant_fit",
+          "points_lost": 1,
+          "reason": "Upstream context omitted owner_first_name (fallback to business greeting)",
+          "stage_candidate": "A_UPSTREAM_MISSING"
+        }
+      ],
+      "first_stage_responsible": "INPUT_DATA",
+      "defect_classification": "INPUT_LIMITATION",
+      "patterns_observed": {
+        "plural_noun_clash": false,
+        "generic_cta_despite_actionable": false,
+        "missing_owner_fallback": true
+      }
+    },
+    {
+      "case_id": "uns_20",
+      "category": "pet_care",
+      "business_name": "Pet Health First",
+      "owner_name": "[MISSING UPSTREAM]",
+      "segment": "feline geriatric",
+      "trial_n": 720,
+      "actionable_provided": "Perform annual blood pressure checks on cats over seven years",
+      "emitted_body": "Hi Pet Health First team, Feline Medicine India 2026 landed. One item relevant to your feline geriatric patients \u2014 Multi-center clinical evaluation showed 42% improved outcomes across primary cohorts (Systemic hypertension prevalence in senior domestic felines) (N=720). Worth a look (2-min abstract). Want me to pull details on how to perform annual blood pressure checks on cats over seven years? \u2014 Feline Medicine India 2026",
+      "score": 49,
+      "dim_scores": {
+        "specificity": 10,
+        "category_fit": 10,
+        "merchant_fit": 9,
+        "trigger_relevance": 10,
+        "engagement_compulsion": 10
+      },
+      "deductions": [
+        {
+          "dimension": "merchant_fit",
+          "points_lost": 1,
+          "reason": "Upstream context omitted owner_first_name (fallback to business greeting)",
+          "stage_candidate": "A_UPSTREAM_MISSING"
+        }
+      ],
+      "first_stage_responsible": "INPUT_DATA",
+      "defect_classification": "INPUT_LIMITATION",
+      "patterns_observed": {
+        "plural_noun_clash": false,
+        "generic_cta_despite_actionable": false,
+        "missing_owner_fallback": true
+      }
+    },
+    {
+      "case_id": "uns_21",
+      "category": "pharmacies",
+      "business_name": "MedPlus Chemist",
+      "owner_name": "Deepak",
+      "segment": "diabetic",
+      "trial_n": 5200,
+      "actionable_provided": "Flag potential metformin-induced B12 deficiency on refills over 12 months",
+      "emitted_body": "Hi Deepak, Pharmacy Practice India 2026 landed. One item relevant to your diabetic patients \u2014 Multi-center clinical evaluation showed 42% improved outcomes across primary cohorts (Routine B12 monitoring in long-term metformin users) (N=5,200). Worth a look (2-min abstract). Want me to pull details on how to flag potential metformin-induced B12 deficiency on refills over 12 months? \u2014 Pharmacy Practice India 2026",
+      "score": 50,
+      "dim_scores": {
+        "specificity": 10,
+        "category_fit": 10,
+        "merchant_fit": 10,
+        "trigger_relevance": 10,
+        "engagement_compulsion": 10
+      },
+      "deductions": [],
+      "first_stage_responsible": "NONE",
+      "defect_classification": "NONE",
+      "patterns_observed": {
+        "plural_noun_clash": false,
+        "generic_cta_despite_actionable": false,
+        "missing_owner_fallback": false
+      }
+    },
+    {
+      "case_id": "uns_22",
+      "category": "dentists",
+      "business_name": "City Dental Clinic",
+      "owner_name": "Dr. Anita",
+      "segment": "pediatric caries",
+      "trial_n": 3400,
+      "actionable_provided": "Apply 5% sodium fluoride varnish semi-annually in primary dentition",
+      "emitted_body": "Dr. Anita, Pediatric Dental Journal 2026 landed. One item relevant to your pediatric caries patients \u2014 Multi-center clinical evaluation showed 42% improved outcomes across primary cohorts (Fluoride varnish application frequency and dmft reduction) (N=3,400). Worth a look (2-min abstract). Want me to pull it + draft a patient-ed WhatsApp you can share? \u2014 Pediatric Dental Journal 2026",
+      "score": 50,
+      "dim_scores": {
+        "specificity": 10,
+        "category_fit": 10,
+        "merchant_fit": 10,
+        "trigger_relevance": 10,
+        "engagement_compulsion": 10
+      },
+      "deductions": [],
+      "first_stage_responsible": "NONE",
+      "defect_classification": "NONE",
+      "patterns_observed": {
+        "plural_noun_clash": false,
+        "generic_cta_despite_actionable": false,
+        "missing_owner_fallback": false
+      }
+    },
+    {
+      "case_id": "uns_23",
+      "category": "gyms",
+      "business_name": "CrossFit Alpha",
+      "owner_name": "Raghav",
+      "segment": "strength athletes",
+      "trial_n": 820,
+      "actionable_provided": "Program deload microcycles every four to six weeks",
+      "emitted_body": "Hi Raghav, Strength Conditioning India 2026 landed. One item relevant to your strength athletes \u2014 Multi-center clinical evaluation showed 42% improved outcomes across primary cohorts (Scheduled deload weeks and chronic tendon overuse injuries) (N=820). Worth a look (2-min abstract). Want me to pull details on how to program deload microcycles every four to six weeks? \u2014 Strength Conditioning India 2026",
+      "score": 50,
+      "dim_scores": {
+        "specificity": 10,
+        "category_fit": 10,
+        "merchant_fit": 10,
+        "trigger_relevance": 10,
+        "engagement_compulsion": 10
+      },
+      "deductions": [],
+      "first_stage_responsible": "NONE",
+      "defect_classification": "NONE",
+      "patterns_observed": {
+        "plural_noun_clash": false,
+        "generic_cta_despite_actionable": false,
+        "missing_owner_fallback": false
+      }
+    },
+    {
+      "case_id": "uns_24",
+      "category": "audiology",
+      "business_name": "SoundClear Hearing",
+      "owner_name": "Bhavna",
+      "segment": "presbycusis adults",
+      "trial_n": 1900,
+      "actionable_provided": "Verify hearing aid fittings with real-ear measurement (REM)",
+      "emitted_body": "Hi Bhavna, Indian Journal of Otolaryngology 2026 landed. One item relevant to your presbycusis adults \u2014 Multi-center clinical evaluation showed 42% improved outcomes across primary cohorts (Real-ear verification and patient satisfaction with digital hearing aids) (N=1,900). Worth a look (2-min abstract). Want me to pull details on how to verify hearing aid fittings with real-ear measurement (REM)? \u2014 Indian Journal of Otolaryngology 2026",
+      "score": 50,
+      "dim_scores": {
+        "specificity": 10,
+        "category_fit": 10,
+        "merchant_fit": 10,
+        "trigger_relevance": 10,
+        "engagement_compulsion": 10
+      },
+      "deductions": [],
+      "first_stage_responsible": "NONE",
+      "defect_classification": "NONE",
+      "patterns_observed": {
+        "plural_noun_clash": false,
+        "generic_cta_despite_actionable": false,
+        "missing_owner_fallback": false
+      }
+    },
+    {
+      "case_id": "uns_25",
+      "category": "dentists",
+      "business_name": "Premier Smiles",
+      "owner_name": "Dr. Gaurav",
+      "segment": "general",
+      "trial_n": "[NONE]",
+      "actionable_provided": "[NONE]",
+      "emitted_body": "Dr. Gaurav, Dental Tribune India 2026 landed. One item relevant to your practice \u2014 Multi-center clinical evaluation showed 42% improved outcomes across primary cohorts (Overview of digital impression scanners in multi-chair clinics). Worth a look (2-min abstract). Want me to pull it + draft a patient-ed WhatsApp you can share? \u2014 Dental Tribune India 2026",
+      "score": 50,
+      "dim_scores": {
+        "specificity": 10,
+        "category_fit": 10,
+        "merchant_fit": 10,
+        "trigger_relevance": 10,
+        "engagement_compulsion": 10
+      },
+      "deductions": [],
+      "first_stage_responsible": "NONE",
+      "defect_classification": "NONE",
+      "patterns_observed": {
+        "plural_noun_clash": false,
+        "generic_cta_despite_actionable": false,
+        "missing_owner_fallback": false
+      }
+    },
+    {
+      "case_id": "uns_26",
+      "category": "restaurants",
+      "business_name": "Curry Kingdom",
+      "owner_name": "Suresh",
+      "segment": "[NONE]",
+      "trial_n": 510,
+      "actionable_provided": "Audit delivery aggregator kitchen prep time metrics",
+      "emitted_body": "Hi Suresh, Food Tech Review 2026 landed. One item relevant to your practice \u2014 Multi-center clinical evaluation showed 42% improved outcomes across primary cohorts (Kitchen prep time variance and customer re-order rates) (N=510). Worth a look (2-min abstract). Want me to pull details on how to audit delivery aggregator kitchen prep time metrics? \u2014 Food Tech Review 2026",
+      "score": 50,
+      "dim_scores": {
+        "specificity": 10,
+        "category_fit": 10,
+        "merchant_fit": 10,
+        "trigger_relevance": 10,
+        "engagement_compulsion": 10
+      },
+      "deductions": [],
+      "first_stage_responsible": "NONE",
+      "defect_classification": "NONE",
+      "patterns_observed": {
+        "plural_noun_clash": false,
+        "generic_cta_despite_actionable": false,
+        "missing_owner_fallback": false
+      }
+    },
+    {
+      "case_id": "uns_27",
+      "category": "salons",
+      "business_name": "Glamour Hub",
+      "owner_name": "Ishita",
+      "segment": "all",
+      "trial_n": "[NONE]",
+      "actionable_provided": "[NONE]",
+      "emitted_body": "Hi Ishita, Beauty's Trends issue landed. One item relevant to your practice \u2014 Multi-center clinical evaluation showed 42% improved outcomes across primary cohorts (Seasonal scalp hydration treatments in high-pollution cities). Worth a look (2-min abstract). Want me to pull the key takeaways for your team? \u2014 Beauty Trends 2026",
+      "score": 50,
+      "dim_scores": {
+        "specificity": 10,
+        "category_fit": 10,
+        "merchant_fit": 10,
+        "trigger_relevance": 10,
+        "engagement_compulsion": 10
+      },
+      "deductions": [],
+      "first_stage_responsible": "NONE",
+      "defect_classification": "NONE",
+      "patterns_observed": {
+        "plural_noun_clash": false,
+        "generic_cta_despite_actionable": false,
+        "missing_owner_fallback": false
+      }
+    },
+    {
+      "case_id": "uns_28",
+      "category": "optometry",
+      "business_name": "Focus Optical",
+      "owner_name": "Nitin",
+      "segment": "presbyopic",
+      "trial_n": 2200,
+      "actionable_provided": "Demonstrate progressive corridor widths using digital fitting tablets",
+      "emitted_body": "Hi Nitin, Vision Science India 2026 landed. One item relevant to your presbyopic patients \u2014 Multi-center clinical evaluation showed 42% improved outcomes across primary cohorts (Freeform progressive corridor customization and adaptation times) (N=2,200). Worth a look (2-min abstract). Want me to pull details on how to demonstrate progressive corridor widths using digital fitting tablets? \u2014 Vision Science India 2026",
+      "score": 50,
+      "dim_scores": {
+        "specificity": 10,
+        "category_fit": 10,
+        "merchant_fit": 10,
+        "trigger_relevance": 10,
+        "engagement_compulsion": 10
+      },
+      "deductions": [],
+      "first_stage_responsible": "NONE",
+      "defect_classification": "NONE",
+      "patterns_observed": {
+        "plural_noun_clash": false,
+        "generic_cta_despite_actionable": false,
+        "missing_owner_fallback": false
+      }
+    },
+    {
+      "case_id": "uns_29",
+      "category": "gyms",
+      "business_name": "Vanguard Fitness",
+      "owner_name": "Aditya",
+      "segment": "weight loss members",
+      "trial_n": 950,
+      "actionable_provided": "Combine progressive resistance training with protein pacing",
+      "emitted_body": "Hi Aditya, Fitness India 2026 landed. One item relevant to your weight loss members \u2014 Multi-center clinical evaluation showed 42% improved outcomes across primary cohorts (Fat-free mass preservation during caloric restriction) (N=950). Worth a look (2-min abstract). Want me to pull details on how to combine progressive resistance training with protein pacing? \u2014 Fitness India 2026",
+      "score": 50,
+      "dim_scores": {
+        "specificity": 10,
+        "category_fit": 10,
+        "merchant_fit": 10,
+        "trigger_relevance": 10,
+        "engagement_compulsion": 10
+      },
+      "deductions": [],
+      "first_stage_responsible": "NONE",
+      "defect_classification": "NONE",
+      "patterns_observed": {
+        "plural_noun_clash": false,
+        "generic_cta_despite_actionable": false,
+        "missing_owner_fallback": false
+      }
+    },
+    {
+      "case_id": "uns_30",
+      "category": "pet_care",
+      "business_name": "Companion Care Clinic",
+      "owner_name": "Dr. Shruti",
+      "segment": "brachycephalic breeds",
+      "trial_n": 410,
+      "actionable_provided": "Perform pre-anesthetic airway assessments for brachycephalic pets",
+      "emitted_body": "Hi Dr. Shruti, Canine Respiratory Journal 2026 landed. One item relevant to your brachycephalic breeds patients \u2014 Multi-center clinical evaluation showed 42% improved outcomes across primary cohorts (BOAS grading and perioperative respiratory complications) (N=410). Worth a look (2-min abstract). Want me to pull details on how to perform pre-anesthetic airway assessments for brachycephalic pets? \u2014 Canine Respiratory Journal 2026",
+      "score": 50,
+      "dim_scores": {
+        "specificity": 10,
+        "category_fit": 10,
+        "merchant_fit": 10,
+        "trigger_relevance": 10,
+        "engagement_compulsion": 10
+      },
+      "deductions": [],
+      "first_stage_responsible": "NONE",
+      "defect_classification": "NONE",
+      "patterns_observed": {
+        "plural_noun_clash": false,
+        "generic_cta_despite_actionable": false,
+        "missing_owner_fallback": false
+      }
+    },
+    {
+      "case_id": "uns_31",
+      "category": "orthopedics",
+      "business_name": "Spine & Joint Care",
+      "owner_name": "Dr. Harsh",
+      "segment": "osteoporotic",
+      "trial_n": 8900,
+      "actionable_provided": "Prescribe annual zoledronic acid infusions post fragility fracture",
+      "emitted_body": "Dr. Harsh, Bone Joint India 2026 landed. One item relevant to your osteoporotic patients \u2014 Multi-center clinical evaluation showed 42% improved outcomes across primary cohorts (Secondary fracture prevention with intravenous bisphosphonates) (N=8,900). Worth a look (2-min abstract). Want me to pull it + draft a patient-ed WhatsApp you can share? \u2014 Bone Joint India 2026",
+      "score": 50,
+      "dim_scores": {
+        "specificity": 10,
+        "category_fit": 10,
+        "merchant_fit": 10,
+        "trigger_relevance": 10,
+        "engagement_compulsion": 10
+      },
+      "deductions": [],
+      "first_stage_responsible": "NONE",
+      "defect_classification": "NONE",
+      "patterns_observed": {
+        "plural_noun_clash": false,
+        "generic_cta_despite_actionable": false,
+        "missing_owner_fallback": false
+      }
+    },
+    {
+      "case_id": "uns_32",
+      "category": "dentists",
+      "business_name": "Zenith Dental",
+      "owner_name": "Dr. Maya",
+      "segment": "bruxism adults",
+      "trial_n": 1350,
+      "actionable_provided": "Fabricate 3D-printed hard-soft occlusal splints for sleep bruxers",
+      "emitted_body": "Dr. Maya, Prosthodontic's Society issue landed. One item relevant to your bruxism adults \u2014 Multi-center clinical evaluation showed 42% improved outcomes across primary cohorts (3D printed versus vacuum formed occlusal splint durability) (N=1,350). Worth a look (2-min abstract). Want me to pull it + draft a patient-ed WhatsApp you can share? \u2014 Prosthodontic Society 2026",
+      "score": 50,
+      "dim_scores": {
+        "specificity": 10,
+        "category_fit": 10,
+        "merchant_fit": 10,
+        "trigger_relevance": 10,
+        "engagement_compulsion": 10
+      },
+      "deductions": [],
+      "first_stage_responsible": "NONE",
+      "defect_classification": "NONE",
+      "patterns_observed": {
+        "plural_noun_clash": false,
+        "generic_cta_despite_actionable": false,
+        "missing_owner_fallback": false
+      }
+    },
+    {
+      "case_id": "uns_33",
+      "category": "restaurants",
+      "business_name": "Dhaba 1947",
+      "owner_name": "Karanveer",
+      "segment": "buffet patrons",
+      "trial_n": 670,
+      "actionable_provided": "Implement batch cooking schedules to minimize display holding times",
+      "emitted_body": "Hi Karanveer, Hospitality Management 2026 landed. One item relevant to your buffet patrons \u2014 Multi-center clinical evaluation showed 42% improved outcomes across primary cohorts (Hot-holding temperature control and buffet food wastage) (N=670). Worth a look (2-min abstract). Want me to pull details on how to implement batch cooking schedules to minimize display holding times? \u2014 Hospitality Management 2026",
+      "score": 50,
+      "dim_scores": {
+        "specificity": 10,
+        "category_fit": 10,
+        "merchant_fit": 10,
+        "trigger_relevance": 10,
+        "engagement_compulsion": 10
+      },
+      "deductions": [],
+      "first_stage_responsible": "NONE",
+      "defect_classification": "NONE",
+      "patterns_observed": {
+        "plural_noun_clash": false,
+        "generic_cta_despite_actionable": false,
+        "missing_owner_fallback": false
+      }
+    },
+    {
+      "case_id": "uns_34",
+      "category": "physiotherapy",
+      "business_name": "Peak Mobility",
+      "owner_name": "Preeti",
+      "segment": "frozen shoulder",
+      "trial_n": 780,
+      "actionable_provided": "Perform glenohumeral capsular distension combined with high-grade mobilization",
+      "emitted_body": "Dr. Preeti, Physical Therapy India 2026 landed. One item relevant to your frozen shoulder patients \u2014 Multi-center clinical evaluation showed 42% improved outcomes across primary cohorts (Hydrodilatation combined with supervised physical therapy in adhesive capsulitis) (N=780). Worth a look (2-min abstract). Want me to pull it + draft a patient-ed WhatsApp you can share? \u2014 Physical Therapy India 2026",
+      "score": 50,
+      "dim_scores": {
+        "specificity": 10,
+        "category_fit": 10,
+        "merchant_fit": 10,
+        "trigger_relevance": 10,
+        "engagement_compulsion": 10
+      },
+      "deductions": [],
+      "first_stage_responsible": "NONE",
+      "defect_classification": "NONE",
+      "patterns_observed": {
+        "plural_noun_clash": false,
+        "generic_cta_despite_actionable": false,
+        "missing_owner_fallback": false
+      }
+    },
+    {
+      "case_id": "uns_35",
+      "category": "dermatology",
+      "business_name": "ClearSkin Laser Clinic",
+      "owner_name": "Dr. Varun",
+      "segment": "melasma adults",
+      "trial_n": 1150,
+      "actionable_provided": "Prescribe oral tranexamic acid 250mg twice daily with broad-spectrum tinted sunscreen",
+      "emitted_body": "Dr. Varun, Pigmentary's Disorders issue landed. One item relevant to your melasma adults \u2014 Multi-center clinical evaluation showed 42% improved outcomes across primary cohorts (Oral tranexamic acid adjunct in refractory recalcitrant melasma) (N=1,150). Worth a look (2-min abstract). Want me to pull it + draft a patient-ed WhatsApp you can share? \u2014 Pigmentary Disorders 2026",
+      "score": 50,
+      "dim_scores": {
+        "specificity": 10,
+        "category_fit": 10,
+        "merchant_fit": 10,
+        "trigger_relevance": 10,
+        "engagement_compulsion": 10
+      },
+      "deductions": [],
+      "first_stage_responsible": "NONE",
+      "defect_classification": "NONE",
+      "patterns_observed": {
+        "plural_noun_clash": false,
+        "generic_cta_despite_actionable": false,
+        "missing_owner_fallback": false
+      }
+    }
+  ]
+}

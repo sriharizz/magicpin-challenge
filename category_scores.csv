@@ -1,0 +1,5 @@
+Category,N,Average,Median,Min,Max
+dentists,10,34.3,34.5,28,38
+pharmacies,9,30.0,31.0,26,33
+physiotherapy,9,33.0,35.0,26,39
+salons,9,32.0,32.0,25,39

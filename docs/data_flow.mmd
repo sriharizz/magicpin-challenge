@@ -1,0 +1,460 @@
+%% =============================================================================
+%% VERA MASTER DATA FLOW & ARCHITECTURAL STATE MACHINE (Mermaid Diagram Suite)
+%% =============================================================================
+
+%% -----------------------------------------------------------------------------
+%% 1. OVERALL SYSTEM ARCHITECTURE & DATA FLOW
+%% -----------------------------------------------------------------------------
+flowchart TD
+    classDef clientStyle fill:#1e293b,stroke:#3b82f6,stroke-width:2px,color:#f8fafc;
+    classDef apiStyle fill:#0f172a,stroke:#6366f1,stroke-width:2px,color:#f8fafc;
+    classDef storageStyle fill:#14532d,stroke:#22c55e,stroke-width:2px,color:#f0fdf4;
+    classDef engineStyle fill:#312e81,stroke:#818cf8,stroke-width:2px,color:#e0e7ff;
+    classDef llmStyle fill:#581c87,stroke:#c084fc,stroke-width:2px,color:#faf5ff;
+    classDef gateStyle fill:#7f1d1d,stroke:#ef4444,stroke-width:2px,color:#fef2f2;
+
+    subgraph INBOUND ["1. Inbound Layer (Judge / Client)"]
+        JudgeReq["HTTP Client / Judge Simulator\n(REST Inbound POST)"]:::clientStyle
+    end
+
+    subgraph API_GATE ["2. FastAPI Routing & Input Validation Layer"]
+        RouterCtx["app/routes/context.py:push_context()\n- ContextPushRequest Schema"]:::apiStyle
+        RouterTick["app/routes/interaction.py:handle_tick()\n- TickRequest Schema"]:::apiStyle
+        RouterReply["app/routes/interaction.py:handle_reply()\n- ReplyRequest Schema"]:::apiStyle
+    end
+
+    subgraph ACID_STORE ["3. SQLite ACID State & Context Store (WAL Mode)"]
+        DB_Contexts[("contexts\n(scope, context_id, version, payload)")]:::storageStyle
+        DB_Suppressions[("suppressions\n(suppression_key, merchant_id)")]:::storageStyle
+        DB_Conversations[("conversations\n(conversation_id, current_state, turn)")]:::storageStyle
+        DB_Turns[("conversation_turns\n(conversation_id, turn_number, message, action)")]:::storageStyle
+    end
+
+    subgraph DETERMINISTIC_ENGINE ["4. Hard Deterministic Decision Layer"]
+        Ranker["app/engine/composer.py:compose_research_digest()\n- Urgency Ranking\n- Voice Salutation\n- Taboo Word Boundary Filtering\n- 20-Action Cap"]:::engineStyle
+        IntentClassifier["app/engine/intents.py:classify_intent()\n- 10-Tier Regex Hierarchy\n- Questioning Affirmation Safeguard\n- Opt-Out Safeguard"]:::engineStyle
+        DetComposer["app/engine/reply_composer.py:compose_reply()\n- Pure Deterministic Fallback Composer\n- Non-qualifying Action Composer"]:::engineStyle
+        PreGate{"app/engine/intents.py\nshould_use_llm()?"}:::gateStyle
+    end
+
+    subgraph LLM_SANDBOX ["5. Sandboxed LLM Language Assistant Layer"]
+        Builder["app/llm/prompts.py:build_context_envelope()\n- Minimal Envelope Builder\n- Supported Facts Extraction"]:::llmStyle
+        Client["app/llm/client.py:LLMClient\n- 1500ms Timeout Budget\n- 3-State Circuit Breaker"]:::llmStyle
+        Provider["app/llm/provider.py\n(MockProvider / GeminiProvider / OpenAIProvider)"]:::llmStyle
+        Suggestion["app/llm/schemas.py:LLMDecisionSuggestion\n(Structured JSON Object)"]:::llmStyle
+    end
+
+    subgraph POST_GATE ["6. Post-Generation Verification Layer"]
+        Validator{"app/llm/validator.py\nLLMOutputValidator.validate()\n(11-Point Verification)"}:::gateStyle
+        DoubleLock["app/routes/interaction.py:handle_reply()\n- Terminal State Double Lock\n- Replay Mutation Check (409 Conflict)\n- Multi-Tenant Suppression Lock"]:::gateStyle
+    end
+
+    subgraph OUTBOUND ["7. HTTP Response Output Layer"]
+        RespCtx["200 OK / 409 Conflict\nContextPushResponse"]:::apiStyle
+        RespTick["200 OK\nTickResponse (Max 20 Actions)"]:::apiStyle
+        RespReply["200 OK\nReplyResponse (action, body, cta, wait_seconds)"]:::apiStyle
+    end
+
+    %% Flow Connections
+    JudgeReq -->|POST /v1/context| RouterCtx
+    JudgeReq -->|POST /v1/tick| RouterTick
+    JudgeReq -->|POST /v1/reply| RouterReply
+
+    RouterCtx --> DB_Contexts
+    DB_Contexts --> RespCtx
+
+    RouterTick --> DB_Contexts
+    RouterTick --> DB_Suppressions
+    RouterTick --> Ranker
+    Ranker --> DB_Conversations
+    Ranker --> DB_Turns
+    Ranker --> DB_Suppressions
+    Ranker --> RespTick
+
+    RouterReply --> DB_Conversations
+    RouterReply --> DB_Turns
+    RouterReply --> IntentClassifier
+    IntentClassifier --> DetComposer
+    IntentClassifier --> PreGate
+
+    PreGate -->|NO: Direct Affirm, Reject, Opt-Out, Auto-Reply| DetComposer
+    PreGate -->|YES: Clinical Question, Ambiguous Query| Builder
+    
+    Builder --> DB_Contexts
+    Builder --> Client
+    Client --> Provider
+    Provider --> Suggestion
+    Suggestion --> Validator
+    
+    Validator -->|VALID| DoubleLock
+    Validator -->|INVALID / TIMEOUT / 5xx| DetComposer
+    DetComposer --> DoubleLock
+
+    DoubleLock --> DB_Conversations
+    DoubleLock --> DB_Turns
+    DoubleLock --> DB_Suppressions
+    DoubleLock --> RespReply
+
+%% -----------------------------------------------------------------------------
+%% 2. /v1/context DATA INGESTION FLOW
+%% -----------------------------------------------------------------------------
+%% Ingestion Sequence and Version Conflict Handling
+%% -----------------------------------------------------------------------------
+sequenceDiagram
+    autonumber
+    actor Judge as Judge / Client
+    participant API as app/routes/context.py
+    participant Store as app/store/context_store.py
+    participant DB as SQLite DB (contexts)
+
+    Judge->>API: POST /v1/context {scope, context_id, version, payload}
+    Note over API: Pydantic Validation (ContextPushRequest)
+    API->>Store: save_context(scope, context_id, version, payload, delivered_at)
+    Store->>DB: SELECT version, payload FROM contexts WHERE scope=? AND context_id=?
+    
+    alt Existing Context Found & Incoming Version < Stored Version
+        DB-->>Store: Stored version = 3, Incoming = 2
+        Store-->>API: Conflict: Stale version rejected
+        API-->>Judge: HTTP 409 Conflict {detail: "stale_version"}
+    else Existing Context Found & Incoming Version == Stored Version
+        alt Payload Matches Exactly
+            DB-->>Store: Identical payload
+            Store-->>API: Idempotent duplicate
+            API-->>Judge: HTTP 200 OK {status: "duplicate_ignored", stored_version: 3}
+        else Payload Mutated
+            DB-->>Store: Mutated payload on same version
+            Store-->>API: Conflict: Version payload mutation
+            API-->>Judge: HTTP 409 Conflict {detail: "version_conflict"}
+        end
+    else New Context OR Incoming Version > Stored Version
+        Store->>DB: INSERT OR REPLACE INTO contexts (scope, context_id, version, payload, delivered_at)
+        DB-->>Store: SQLite row committed (WAL sync)
+        Store-->>API: Context Saved
+        API-->>Judge: HTTP 200 OK {status: "created" | "updated", stored_version: version}
+    end
+
+%% -----------------------------------------------------------------------------
+%% 3. /v1/tick PERIODIC TRIGGER FLOW & MULTI-TENANT SUPPRESSION
+%% -----------------------------------------------------------------------------
+flowchart TD
+    StartTick["POST /v1/tick\n(available_triggers, now)"] --> LoadTrg["1. For each trigger in available_triggers\nFetch trigger payload from SQLite"]
+    LoadTrg --> CheckExpiry{"2. Is trigger expired?\n(now > expires_at)"}
+    CheckExpiry -- YES --> SkipExpired["Drop Trigger\n(Expired)"]
+    CheckExpiry -- NO --> ScopeCheck{"3. Trigger Scope Check"}
+
+    ScopeCheck -- merchant --> MerchantLoop["Target Specific Merchant\n(from trigger.merchant_id)"]
+    ScopeCheck -- category --> CategoryLoop["Fan out to ALL Merchants\nmatching trigger.category_slug"]
+
+    MerchantLoop --> CheckSupp{"4. Is Suppressed?\nis_suppressed(suppression_key, merchant_id)"}
+    CategoryLoop --> CheckSupp
+
+    CheckSupp -- YES: Suppressed --> SkipSupp["Drop Opportunity\n(Suppressed)"]
+    CheckSupp -- NO: Active --> GenAction["5. app/engine/composer.py:compose_research_digest()\n- Salutation Voice Fit\n- Word-Boundary Taboo Scrubbing\n- Grounded Digest Formatting"]
+
+    GenAction --> RankQueue["6. Rank Actions by Urgency (High -> Low)\nTie-break: Deterministic ID Order"]
+    RankQueue --> Cap20["7. Slice Top 20 Actions (MAX_ACTIONS_PER_TICK)"]
+    
+    Cap20 --> RecordDB["8. For each emitted action:\n- Record suppression(suppression_key, merchant_id)\n- Initialize conversation(conversation_id, state='AWAITING_REPLY', turn=1)\n- Record turn(turn_number=1, role='bot', message=body)"]
+    RecordDB --> EmitTickResp["9. Return TickResponse(actions=[...])"]
+
+%% -----------------------------------------------------------------------------
+%% 4. /v1/reply COMPLETE SANDBOXED SANDWICH FLOW
+%% -----------------------------------------------------------------------------
+flowchart TD
+    InboundReply["POST /v1/reply\n{conversation_id, merchant_id, message, turn_number}"] --> ContractVal{"1. Pydantic & Contract Validation\n- Valid conversation_id?\n- from_role in ('merchant', 'customer')?\n- turn_number >= 1?\n- non-empty message?"}
+    
+    ContractVal -- INVALID --> Http400["HTTP 400 Bad Request"]
+    ContractVal -- VALID --> LoadConv["2. Retrieve Conversation Record\napp/store/context_store.py:get_conversation()"]
+
+    LoadConv --> TerminalGate1{"3. Terminal State Lockout (Barrier 1)\nIs state in (TERMINATED_OPT_OUT,\nTERMINATED_DECLINED, TERMINATED_AUTOREPLY, COMPLETED)?"}
+    
+    TerminalGate1 -- YES: Concluded --> EndFastExit["Return 200 OK\n{action: 'end', body: null, rationale: 'Concluded thread'}\n(0ms latency, 0 LLM calls)"]
+    
+    TerminalGate1 -- NO: Active --> TurnCheck{"4. Turn Order & Replay Verification"}
+    
+    TurnCheck -- turn == stored_turn & same msg --> ReplayCache["Return Cached 200 OK\n(Idempotent replay, 0ms)"]
+    TurnCheck -- turn == stored_turn & mutated msg --> Http409["HTTP 409 Conflict\n(Turn payload conflict)"]
+    TurnCheck -- turn < stored_turn --> Stale400["HTTP 400 Bad Request\n(Stale turn number)"]
+    TurnCheck -- turn > stored_turn + 1 --> Skipped400["HTTP 400 Bad Request\n(Skipped turn number)"]
+    
+    TurnCheck -- VALID NEXT TURN --> ClassifyIntent["5. Intent Classification\napp/engine/intents.py:classify_intent()\n(10-Tier Safety Hierarchy)"]
+
+    ClassifyIntent --> BaselineComp["6. Compute Deterministic Baseline Response\napp/engine/reply_composer.py:compose_reply()"]
+
+    BaselineComp --> PreGateCheck{"7. app/engine/intents.py:should_use_llm()\nIs message nuanced / clinical question?"}
+
+    PreGateCheck -- NO: Fast Exit\n(OPT_OUT, REJECT, AUTO_REPLY, Simple Affirm, Out-of-Scope) --> CommitBarrier
+    
+    PreGateCheck -- YES: Nuanced Question\n(INTENT_QUESTION, INTENT_UNKNOWN, Complex Affirm) --> BuildEnv["8. Build Minimal Context Envelope\napp/llm/prompts.py:build_context_envelope()"]
+
+    BuildEnv --> CircuitCheck{"9. app/llm/client.py:CircuitBreaker\nCan attempt outbound call?"}
+
+    CircuitCheck -- NO: State is OPEN --> FallbackDet1["Skip LLM -> Adopt Deterministic Baseline\n(0ms latency fail-fast)"]
+    
+    CircuitCheck -- YES: CLOSED / HALF_OPEN --> CallLLM["10. Execute LLMProvider.generate()\nStrict 1500ms Timeout"]
+
+    CallLLM --> LLMOutcome{"11. LLM Outcome Check"}
+    
+    LLMOutcome -- Timeout (>1500ms) / 5xx / 429 / Net Error --> RecordFail["Record Circuit Breaker Failure\nAdopt Deterministic Baseline"]
+    LLMOutcome -- Valid JSON Returned --> ValidatorGate["12. 11-Point Output Validator\napp/llm/validator.py:LLMOutputValidator.validate()"]
+
+    ValidatorGate -- INVALID (11 checks fail) --> LogValFail["Log Validator Rejection\nAdopt Deterministic Baseline"]
+    ValidatorGate -- VALID (All 11 pass) --> AdoptLLM["Adopt Sanitized LLM Suggestion\n(action, body, cta, rationale)"]
+
+    FallbackDet1 --> CommitBarrier
+    RecordFail --> CommitBarrier
+    LogValFail --> CommitBarrier
+    AdoptLLM --> CommitBarrier
+
+    CommitBarrier["13. Terminal State Double Lock (Barrier 2)\nIf state became terminal, force action='end'"] --> SuppressGate{"14. Is Opt-Out or Hostile?"}
+
+    SuppressGate -- YES --> WriteSupp["Record Suppression\n('merchant_opt_out', merchant_id)"]
+    SuppressGate -- NO --> SaveDB["15. Commit State to SQLite (WAL ACID)\n- save_conversation(next_state, turn)\n- record_turn(turn_number, action, body)"]
+
+    WriteSupp --> SaveDB
+    SaveDB --> Return200["16. Return ReplyResponse (200 OK)"]
+
+%% -----------------------------------------------------------------------------
+%% 5. LLM DATA PRIVACY & CONTEXT BOUNDARY
+%% -----------------------------------------------------------------------------
+flowchart LR
+    subgraph PRIVATE_DB ["SQLite Database (Strictly Isolated - NEVER Passed to LLM)"]
+        FullDB[("Full Database File\n- All Contexts\n- All Unrelated Merchants\n- All Customers PII\n- Suppressions History\n- Internal Session Schema\n- API Keys & Config Secrets")]
+    end
+
+    subgraph EXTRACTOR ["app/llm/prompts.py:build_context_envelope()"]
+        Filter["Read-Only Context Filter\nExtracts ONLY current conversation assets"]
+    end
+
+    subgraph ENVELOPE ["LLMContextEnvelope (Strictly Bounded Inbound Payload)"]
+        EnvMerchant["merchant:\n{merchant_id, name, category_slug, tone_preference}"]
+        EnvCategory["category:\n{slug, voice: {tone, taboo_words}}"]
+        EnvDigest["active_digest_item:\n{item_id, title, source, summary, trial_n, key_takeaway}"]
+        EnvFacts["supported_facts:\n[ {fact_id: 'F1', key: 'trial_n', value: '2,100'},\n  {fact_id: 'F2', key: 'caries_reduction', value: '38%'},\n  {fact_id: 'F3', key: 'duration', value: '24 months'},\n  {fact_id: 'F4', key: 'source', value: 'JIDA Oct 2026'} ]"]
+        EnvHistory["conversation_history:\n[last 3 turns only]"]
+    end
+
+    subgraph LLM_SERVICE ["Configured LLM Provider (Gemini / OpenAI / Mock)"]
+        LLM_Model["LLM Model\n(Receives ONLY Envelope + User Message)"]
+    end
+
+    FullDB -.->|Isolated / Excluded| Filter
+    Filter --> EnvMerchant
+    Filter --> EnvCategory
+    Filter --> EnvDigest
+    Filter --> EnvFacts
+    Filter --> EnvHistory
+    
+    EnvMerchant --> LLM_Model
+    EnvCategory --> LLM_Model
+    EnvDigest --> LLM_Model
+    EnvFacts --> LLM_Model
+    EnvHistory --> LLM_Model
+
+%% -----------------------------------------------------------------------------
+%% 6. 11-POINT DETERMINISTIC POST-VALIDATOR GATES
+%% -----------------------------------------------------------------------------
+flowchart TD
+    InSugg["Inbound LLMDecisionSuggestion"] --> G1{"Gate 1: Pydantic Schema\nValid JSON & Structure?"}
+    G1 -- FAIL --> Rej["DISCARD SUGGESTION\nTrigger Deterministic Baseline Fallback"]
+    G1 -- PASS --> G2{"Gate 2: Terminal Lockout\nIf conversation concluded, is action == 'end'?"}
+    
+    G2 -- FAIL --> Rej
+    G2 -- PASS --> G3{"Gate 3: Action Sanity\nIs proposed_action in ('send', 'wait', 'end')?"}
+    
+    G3 -- FAIL --> Rej
+    G3 -- PASS --> G4{"Gate 4: Factual Grounding\nAre ALL cited_fact_ids present in envelope.supported_facts?"}
+    
+    G4 -- FAIL --> Rej
+    G4 -- PASS --> G5{"Gate 5: Taboo Word Scrubbing\nWord-boundary regex scrub of category.voice.taboo_words"}
+    
+    G5 -- PASS --> G6{"Gate 6: External Action Prohibition\nNo claims of 'published/scheduled/sent to patients'?"}
+    
+    G6 -- FAIL --> Rej
+    G6 -- PASS --> G7{"Gate 7: Non-Qualifying Phrasing\nIf action=='send', no qualifying hesitation ('would you', 'do you')?"}
+    
+    G7 -- FAIL --> Rej
+    G7 -- PASS --> G8{"Gate 8: CTA Compliance\nIs proposed_cta in allowed CTA set?"}
+    
+    G8 -- FAIL --> Rej
+    G8 -- PASS --> G9{"Gate 9: Length Sanity\n10 <= len(draft_body) <= 1200 chars?"}
+    
+    G9 -- FAIL --> Rej
+    G9 -- PASS --> G10{"Gate 10: State Leakage\nZero internal tokens ('INTENT_', 'ACTION_MODE', etc.)?"}
+    
+    G10 -- FAIL --> Rej
+    G10 -- PASS --> G11{"Gate 11: Non-Empty Send Body\nIf action=='send', is sanitized_body non-empty?"}
+    
+    G11 -- FAIL --> Rej
+    G11 -- PASS --> Accept["APPROVE SUGGESTION\nReturn ValidationResult(is_valid=True,\nsanitized_action, sanitized_body, sanitized_cta)"]
+
+%% -----------------------------------------------------------------------------
+%% 7. RESILIENT CIRCUIT BREAKER STATE MACHINE
+%% -----------------------------------------------------------------------------
+stateDiagram-v2
+    [*] --> CLOSED: Initial Startup
+
+    state CLOSED {
+        [*] --> NormalOperation
+        NormalOperation --> Success: Provider Call <= 1500ms
+        Success --> NormalOperation: Reset failure_count = 0
+        NormalOperation --> Failure: Timeout (>1500ms), 5xx, 429, Net Error
+        Failure --> IncrementCount: failure_count += 1
+        IncrementCount --> NormalOperation: failure_count < 3
+    }
+
+    CLOSED --> OPEN: failure_count >= 3 (Tripped)
+
+    state OPEN {
+        [*] --> FailFast
+        FailFast --> FastFallback: Incoming Request
+        FastFallback --> FailFast: Instant Fallback (0ms, 0 Provider Calls)
+    }
+
+    OPEN --> HALF_OPEN: Cooldown Expired (>= 10.0 seconds)
+
+    state HALF_OPEN {
+        [*] --> SingleProbe
+        SingleProbe --> ProbeCall: Allow exactly 1 test request to provider
+    }
+
+    HALF_OPEN --> CLOSED: Probe Succeeded (Reset failure_count = 0)
+    HALF_OPEN --> OPEN: Probe Failed (Reset cooldown timer)
+
+%% -----------------------------------------------------------------------------
+%% 8. COMPREHENSIVE FAILURE CONVERGENCE TO DETERMINISTIC FALLBACK
+%% -----------------------------------------------------------------------------
+flowchart TD
+    subgraph PRE_LLM_FAILURES ["Pre-Invocation Failures"]
+        F_NoKey["Missing API Key / No Provider Configured"]
+        F_CircuitOpen["Circuit Breaker is OPEN (Fail-Fast)"]
+        F_ContextMissing["Context Missing or Empty"]
+    end
+
+    subgraph LLM_NETWORK_FAILURES ["Network & Provider Runtime Failures"]
+        F_Timeout["Client-side Timeout Exceeded (> 1500ms)"]
+        F_ConnErr["Network Drop / ConnectError"]
+        F_Http429["HTTP 429 Too Many Requests (Rate Limit)"]
+        F_Http5xx["HTTP 500 / 503 Service Unavailable"]
+        F_BadJson["Malformed / Truncated JSON Output"]
+    end
+
+    subgraph POST_LLM_FAILURES ["Post-Generation Verification Failures"]
+        F_Schema["Pydantic ValidationError"]
+        F_Hallucination["Unsupported Fact Citation (Fake trial numbers)"]
+        F_ExtAction["Forbidden Action Claim ('published campaign')"]
+        F_Qualifying["Qualifying Hesitation in Action Mode"]
+        F_TerminalRevive["Attempt to send on Concluded Thread"]
+        F_Taboo["Unscrubbable Taboo Violation"]
+    end
+
+    subgraph CONVERGENCE ["Safe Deterministic Convergence"]
+        DetFallback["app/engine/reply_composer.py:compose_reply()\n- Deterministic Baseline Active\n- Context Grounded\n- Zero Runtime Exception\n- Zero Judge Downtime"]
+    end
+
+    subgraph PERSISTENCE ["ACID State Persistence"]
+        Commit["Save State & Turn to SQLite -> Return 200 OK"]
+    end
+
+    PRE_LLM_FAILURES --> DetFallback
+    LLM_NETWORK_FAILURES --> DetFallback
+    POST_LLM_FAILURES --> DetFallback
+    DetFallback --> Commit
+
+%% -----------------------------------------------------------------------------
+%% 9. CONVERSATION STATE MACHINE TRANSITIONS
+%% -----------------------------------------------------------------------------
+stateDiagram-v2
+    [*] --> AWAITING_REPLY: Initial Tick Emission (Turn 1)
+
+    AWAITING_REPLY --> ACTION_MODE: Affirmation ("yes", "ok", "do it", "interested")
+    AWAITING_REPLY --> CLARIFYING: Question / Nuanced / Unknown Intent
+    AWAITING_REPLY --> AWAITING_REPLY: Turn 2 Auto-Reply (action: 'wait', 14400s)
+    AWAITING_REPLY --> TERMINATED_AUTOREPLY: Turn 3+ Auto-Reply (action: 'end')
+    AWAITING_REPLY --> TERMINATED_OPT_OUT: Hostile / Opt-Out ("STOP", "unsubscribe")
+    AWAITING_REPLY --> TERMINATED_DECLINED: Direct Rejection ("no", "not interested")
+
+    CLARIFYING --> ACTION_MODE: Affirmation ("yes send it")
+    CLARIFYING --> CLARIFYING: Follow-up Question
+    CLARIFYING --> TERMINATED_OPT_OUT: Opt-Out ("stop messaging")
+    CLARIFYING --> TERMINATED_DECLINED: Rejection ("not now")
+
+    ACTION_MODE --> COMPLETED: Follow-up Delivery Concluded
+    ACTION_MODE --> TERMINATED_OPT_OUT: Opt-Out
+    ACTION_MODE --> TERMINATED_DECLINED: Rejection
+
+    state TerminalLockout {
+        TERMINATED_OPT_OUT
+        TERMINATED_DECLINED
+        TERMINATED_AUTOREPLY
+        COMPLETED
+    }
+
+    TerminalLockout --> TerminalLockout: Future Turns (action: 'end', body: null, 0ms)
+
+%% -----------------------------------------------------------------------------
+%% 10. COMPLETE END-TO-END RESEARCH DIGEST SEQUENCE
+%% -----------------------------------------------------------------------------
+sequenceDiagram
+    autonumber
+    actor Judge as Judge Simulator / Merchant
+    participant Route as app/routes/interaction.py
+    participant Store as app/store/context_store.py
+    participant Intent as app/engine/intents.py
+    participant Comp as app/engine/reply_composer.py
+    participant Prompt as app/llm/prompts.py
+    participant Client as app/llm/client.py
+    participant Model as GeminiProvider / MockProvider
+    participant Val as app/llm/validator.py
+    participant DB as SQLite DB
+
+    Note over Judge,DB: Turn 1: Proactive Wake-up (/v1/tick)
+    Judge->>Route: POST /v1/tick {now, available_triggers: [trg_digest_001]}
+    Route->>Store: get_context("trigger", "trg_digest_001")
+    Route->>Store: get_context("merchant", "m_001_drmeera")
+    Route->>Store: get_context("category", "dentists")
+    Route->>Store: is_suppressed("research:dentists:2026-W17", "m_001_drmeera")
+    Store-->>Route: Not suppressed (False)
+    Route->>Store: record_suppression("research:dentists:2026-W17", "m_001_drmeera")
+    Route->>Store: save_conversation(conv_id="conv_m001_w17", state="AWAITING_REPLY", turn=1)
+    Route-->>Judge: TickResponse(actions=[{conversation_id: "conv_m001_w17", action: "send", body: "Dr. Meera, JIDA clinical trial..."}])
+
+    Note over Judge,DB: Turn 2: Inbound Nuanced Merchant Reply (/v1/reply)
+    Judge->>Route: POST /v1/reply {conversation_id: "conv_m001_w17", turn_number: 2, message: "Yes, tell me more about the trial and draft a message for older root caries patients."}
+    Route->>Store: get_conversation("conv_m001_w17")
+    Store-->>Route: conv_record (current_state="AWAITING_REPLY", current_turn=1)
+    
+    Note over Route: Terminal Lockout Barrier 1: Active (Pass)
+    Note over Route: Turn Sequencing & Replay Check: Valid Next Turn 2 (Pass)
+
+    Route->>Intent: classify_intent(message)
+    Intent-->>Route: (ReplyIntent.INTENT_AFFIRM, normalized_message)
+    
+    Route->>Comp: compose_reply(intent=AFFIRM, raw_message, conv_state)
+    Comp-->>Route: (det_response, det_next_state=ACTION_MODE)
+
+    Route->>Intent: should_use_llm(intent=AFFIRM, message)
+    Note over Intent: Message length > 15 chars with custom geriatric instruction -> True
+    Intent-->>Route: True (Use LLM Assistance)
+
+    Route->>Prompt: build_context_envelope(store, conv_id, "m_001_drmeera", "dentists")
+    Store-->>Prompt: Read merchant, category voice/taboos, digest, supported_facts (F1..F5)
+    Prompt-->>Route: envelope (LLMContextEnvelope)
+
+    Route->>Client: get_decision_suggestion(envelope, message, turn_number=2)
+    Note over Client: CircuitBreaker.can_attempt() == True (CLOSED)
+    Client->>Model: generate(envelope, message, timeout_seconds=1.5)
+    Model-->>Client: LLMDecisionSuggestion(intent=AFFIRM, action='send', draft_body="...", cited_facts=['F1','F2','F3'])
+    Client-->>Route: suggestion
+
+    Route->>Val: validate(suggestion, envelope, current_state="AWAITING_REPLY")
+    Note over Val: Checks 1..11: Grounding, Taboos, External Claims, CTA, Length (All Passed)
+    Val-->>Route: ValidationResult(is_valid=True, sanitized_action='send', sanitized_body="...")
+
+    Note over Route: Terminal Lockout Barrier 2: State Valid (Pass)
+
+    Route->>Store: save_conversation(conv_id, current_state="ACTION_MODE", current_turn=2, last_action="send")
+    Route->>Store: record_turn(conv_id, turn_number=2, role="merchant", action="send", body="...")
+    Store->>DB: ACID SQLite Commit (WAL journal sync)
+
+    Route-->>Judge: HTTP 200 OK ReplyResponse(action="send", body="Sending the abstract summary now. Here is the patient draft tailored for geriatric root caries...", cta="binary_yes_no")

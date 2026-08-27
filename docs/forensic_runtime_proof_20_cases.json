@@ -1,0 +1,981 @@
+[
+  {
+    "case_id": "qc_0002",
+    "dataset": "520_BENCHMARK",
+    "category_slug": "gyms",
+    "merchant_id": "m_gyms_rajan_002",
+    "trigger_kind": "regulation_change",
+    "raw_context_summary": {
+      "owner_first_name": "Rajan",
+      "category_tone": "coaching_motivational",
+      "digest_title": "Seasonal Acquisition Dip & Retention Strategies",
+      "trial_n": 420,
+      "source": "Fitness Business India Q2 2026",
+      "patient_segment": "new_members",
+      "actionable": "Launch 30-day onboarding habit challenge",
+      "trigger_expires_at": "2026-05-30T00:00:00Z"
+    },
+    "extracted_facts_count": 40,
+    "selected_facts_paths": [
+      "merchant.identity.owner_first_name",
+      "category.digest[d_gym_01].trial_n",
+      "category.digest[d_gym_01].title",
+      "category.digest[d_gym_01].source",
+      "category.digest[d_gym_01].patient_segment",
+      "merchant.customer_aggregate.total_unique_ytd"
+    ],
+    "envelope_facts_count": 6,
+    "composer_output_body": "Hi Rajan, Fitness Business India Q2 2026 landed. One item relevant to your new members patients \u2014 Gym walk-ins drop 32% in Q2. Facilities running structured 30-day onboarding retain 54% more members into Q3 (N=420). Worth a look (2-min abstract). Want me to pull the key takeaways for your team? \u2014 Fitness Business India Q2 2026",
+    "validator_passed": true,
+    "final_api_body": "Hi Rajan, Fitness Business India Q2 2026 landed. One item relevant to your new members patients \u2014 Gym walk-ins drop 32% in Q2. Facilities running structured 30-day onboarding retain 54% more members into Q3 (N=420). Worth a look (2-min abstract). Want me to pull the key takeaways for your team? \u2014 Fitness Business India Q2 2026",
+    "stored_forensic_body": "",
+    "body_mismatch": true,
+    "judge_score": 48,
+    "dimension_scores": {
+      "specificity": 10,
+      "category_fit": 10,
+      "merchant_fit": 10,
+      "trigger_relevance": 8,
+      "engagement_compulsion": 10
+    },
+    "deductions": [
+      {
+        "dimension": "trigger_relevance",
+        "points_lost": 2,
+        "reason": "Digest title clinical topic not reflected in message body",
+        "stage_candidate": "D_RELEVANCE_SCORING"
+      }
+    ]
+  },
+  {
+    "case_id": "qc_0004",
+    "dataset": "520_BENCHMARK",
+    "category_slug": "restaurants",
+    "merchant_id": "m_rest_pooja_004",
+    "trigger_kind": "perf_dip",
+    "raw_context_summary": {
+      "owner_first_name": "Pooja",
+      "category_tone": "operator_to_operator",
+      "digest_title": "Pre-monsoon Delivery Packaging & AOV",
+      "trial_n": 680,
+      "source": "NRAI Quarterly Brief May 2026",
+      "patient_segment": "delivery_customers",
+      "actionable": "Upgrade delivery packaging before monsoon",
+      "trigger_expires_at": "2026-05-30T00:00:00Z"
+    },
+    "extracted_facts_count": 47,
+    "selected_facts_paths": [
+      "merchant.identity.owner_first_name",
+      "category.digest[d_rest_01].trial_n",
+      "category.digest[d_rest_01].title",
+      "category.digest[d_rest_01].source",
+      "category.digest[d_rest_01].patient_segment",
+      "merchant.customer_aggregate.total_unique_ytd"
+    ],
+    "envelope_facts_count": 6,
+    "composer_output_body": "Hi Pooja, NRAI Quarterly Brief's May issue landed. One item relevant to your delivery customers patients \u2014 Vented tamper-proof boxes improved crispy item delivery ratings by 0.6 stars and cut refund requests by 41% (N=680). Worth a look (2-min abstract). Want me to pull the key takeaways for your team? \u2014 NRAI Quarterly Brief May 2026",
+    "validator_passed": true,
+    "final_api_body": "Hi Pooja, NRAI Quarterly Brief's May issue landed. One item relevant to your delivery customers patients \u2014 Vented tamper-proof boxes improved crispy item delivery ratings by 0.6 stars and cut refund requests by 41% (N=680). Worth a look (2-min abstract). Want me to pull the key takeaways for your team? \u2014 NRAI Quarterly Brief May 2026",
+    "stored_forensic_body": "",
+    "body_mismatch": true,
+    "judge_score": 50,
+    "dimension_scores": {
+      "specificity": 10,
+      "category_fit": 10,
+      "merchant_fit": 10,
+      "trigger_relevance": 10,
+      "engagement_compulsion": 10
+    },
+    "deductions": []
+  },
+  {
+    "case_id": "qc_0008",
+    "dataset": "520_BENCHMARK",
+    "category_slug": "pet_care",
+    "merchant_id": "m_pet__kavya_008",
+    "trigger_kind": "curious_ask_due",
+    "raw_context_summary": {
+      "owner_first_name": "Kavya",
+      "category_tone": "compassionate_expert",
+      "digest_title": "Monoclonal antibody therapy in canine atopic dermatitis",
+      "trial_n": 650,
+      "source": "Veterinary Dermatology India May 2026",
+      "patient_segment": "allergic_canines",
+      "actionable": "Offer steroid-sparing biological options for atopic pets",
+      "trigger_expires_at": "2026-05-30T00:00:00Z"
+    },
+    "extracted_facts_count": 47,
+    "selected_facts_paths": [
+      "merchant.identity.owner_first_name",
+      "category.digest[d_pet_01].trial_n",
+      "category.digest[d_pet_01].title",
+      "category.digest[d_pet_01].source",
+      "category.digest[d_pet_01].patient_segment",
+      "merchant.customer_aggregate.total_unique_ytd"
+    ],
+    "envelope_facts_count": 6,
+    "composer_output_body": "Hi Kavya, Veterinary Dermatology India's May issue landed. One item relevant to your allergic canines patients \u2014 Monthly lokivetmab injections achieved 76% pruritus reduction with zero steroid-induced liver enzyme elevation in chronic atopic dogs (N=650). Worth a look (2-min abstract). Want me to pull the key takeaways for your team? \u2014 Veterinary Dermatology India May 2026",
+    "validator_passed": true,
+    "final_api_body": "Hi Kavya, Veterinary Dermatology India's May issue landed. One item relevant to your allergic canines patients \u2014 Monthly lokivetmab injections achieved 76% pruritus reduction with zero steroid-induced liver enzyme elevation in chronic atopic dogs (N=650). Worth a look (2-min abstract). Want me to pull the key takeaways for your team? \u2014 Veterinary Dermatology India May 2026",
+    "stored_forensic_body": "",
+    "body_mismatch": true,
+    "judge_score": 50,
+    "dimension_scores": {
+      "specificity": 10,
+      "category_fit": 10,
+      "merchant_fit": 10,
+      "trigger_relevance": 10,
+      "engagement_compulsion": 10
+    },
+    "deductions": []
+  },
+  {
+    "case_id": "qc_0010",
+    "dataset": "520_BENCHMARK",
+    "category_slug": "gyms",
+    "merchant_id": "m_gyms_bharti_010",
+    "trigger_kind": "review_theme_emerged",
+    "raw_context_summary": {
+      "owner_first_name": "Bharti",
+      "category_tone": "coaching_motivational",
+      "digest_title": "Seasonal Acquisition Dip & Retention Strategies",
+      "trial_n": 420,
+      "source": "Fitness Business India Q2 2026",
+      "patient_segment": "new_members",
+      "actionable": "Launch 30-day onboarding habit challenge",
+      "trigger_expires_at": "2026-05-30T00:00:00Z"
+    },
+    "extracted_facts_count": 32,
+    "selected_facts_paths": [
+      "merchant.identity.owner_first_name",
+      "category.digest[d_gym_01].trial_n",
+      "category.digest[d_gym_01].title",
+      "category.digest[d_gym_01].source",
+      "category.digest[d_gym_01].patient_segment",
+      "category.digest[d_gym_01].actionable"
+    ],
+    "envelope_facts_count": 6,
+    "composer_output_body": "Hi Bharti, Fitness Business India Q2 2026 landed. One item relevant to your new members patients \u2014 Gym walk-ins drop 32% in Q2. Facilities running structured 30-day onboarding retain 54% more members into Q3 (N=420). Worth a look (2-min abstract). Want me to pull the key takeaways for your team? \u2014 Fitness Business India Q2 2026",
+    "validator_passed": true,
+    "final_api_body": "Hi Bharti, Fitness Business India Q2 2026 landed. One item relevant to your new members patients \u2014 Gym walk-ins drop 32% in Q2. Facilities running structured 30-day onboarding retain 54% more members into Q3 (N=420). Worth a look (2-min abstract). Want me to pull the key takeaways for your team? \u2014 Fitness Business India Q2 2026",
+    "stored_forensic_body": "",
+    "body_mismatch": true,
+    "judge_score": 48,
+    "dimension_scores": {
+      "specificity": 10,
+      "category_fit": 10,
+      "merchant_fit": 10,
+      "trigger_relevance": 8,
+      "engagement_compulsion": 10
+    },
+    "deductions": [
+      {
+        "dimension": "trigger_relevance",
+        "points_lost": 2,
+        "reason": "Digest title clinical topic not reflected in message body",
+        "stage_candidate": "D_RELEVANCE_SCORING"
+      }
+    ]
+  },
+  {
+    "case_id": "qc_0012",
+    "dataset": "520_BENCHMARK",
+    "category_slug": "restaurants",
+    "merchant_id": "m_rest_arjun_012",
+    "trigger_kind": "supply_alert",
+    "raw_context_summary": {
+      "owner_first_name": "Arjun",
+      "category_tone": "operator_to_operator",
+      "digest_title": "Pre-monsoon Delivery Packaging & AOV",
+      "trial_n": 680,
+      "source": "NRAI Quarterly Brief May 2026",
+      "patient_segment": "delivery_customers",
+      "actionable": "Upgrade delivery packaging before monsoon",
+      "trigger_expires_at": "2026-05-30T00:00:00Z"
+    },
+    "extracted_facts_count": 32,
+    "selected_facts_paths": [
+      "merchant.identity.owner_first_name",
+      "category.digest[d_rest_01].trial_n",
+      "category.digest[d_rest_01].title",
+      "category.digest[d_rest_01].source",
+      "category.digest[d_rest_01].patient_segment",
+      "category.digest[d_rest_01].actionable"
+    ],
+    "envelope_facts_count": 6,
+    "composer_output_body": "Hi Arjun, NRAI Quarterly Brief's May issue landed. One item relevant to your delivery customers patients \u2014 Vented tamper-proof boxes improved crispy item delivery ratings by 0.6 stars and cut refund requests by 41% (N=680). Worth a look (2-min abstract). Want me to pull the key takeaways for your team? \u2014 NRAI Quarterly Brief May 2026",
+    "validator_passed": true,
+    "final_api_body": "Hi Arjun, NRAI Quarterly Brief's May issue landed. One item relevant to your delivery customers patients \u2014 Vented tamper-proof boxes improved crispy item delivery ratings by 0.6 stars and cut refund requests by 41% (N=680). Worth a look (2-min abstract). Want me to pull the key takeaways for your team? \u2014 NRAI Quarterly Brief May 2026",
+    "stored_forensic_body": "",
+    "body_mismatch": true,
+    "judge_score": 50,
+    "dimension_scores": {
+      "specificity": 10,
+      "category_fit": 10,
+      "merchant_fit": 10,
+      "trigger_relevance": 10,
+      "engagement_compulsion": 10
+    },
+    "deductions": []
+  },
+  {
+    "case_id": "qc_0015",
+    "dataset": "520_BENCHMARK",
+    "category_slug": "physiotherapy",
+    "merchant_id": "m_phys_rajan_015",
+    "trigger_kind": "research_digest",
+    "raw_context_summary": {
+      "owner_first_name": null,
+      "category_tone": "rehab_clinical",
+      "digest_title": "Early eccentric loading in chronic patellar tendinopathy",
+      "trial_n": 480,
+      "source": "Journal of Orthopaedic & Sports Physical Therapy Jun 2026",
+      "patient_segment": "athletic_rehab",
+      "actionable": "Update patellar tendinopathy exercise prescription",
+      "trigger_expires_at": "2026-04-20T00:00:00Z"
+    },
+    "extracted_facts_count": 31,
+    "selected_facts_paths": [
+      "merchant.identity.name",
+      "category.digest[d_phys_01].trial_n",
+      "category.digest[d_phys_01].title",
+      "category.digest[d_phys_01].source",
+      "category.digest[d_phys_01].patient_segment",
+      "category.digest[d_phys_01].actionable"
+    ],
+    "envelope_facts_count": 6,
+    "composer_output_body": "",
+    "validator_passed": true,
+    "final_api_body": "",
+    "stored_forensic_body": "",
+    "body_mismatch": false,
+    "judge_score": 41,
+    "dimension_scores": {
+      "specificity": 7,
+      "category_fit": 10,
+      "merchant_fit": 9,
+      "trigger_relevance": 8,
+      "engagement_compulsion": 7
+    },
+    "deductions": [
+      {
+        "dimension": "specificity",
+        "points_lost": 2,
+        "reason": "Missing concrete trial sample size (N=...) despite being present in active digest item",
+        "stage_candidate": "J_OUTPUT_COMPOSER"
+      },
+      {
+        "dimension": "specificity",
+        "points_lost": 1,
+        "reason": "Missing explicit journal or source citation in message body",
+        "stage_candidate": "J_OUTPUT_COMPOSER"
+      },
+      {
+        "dimension": "merchant_fit",
+        "points_lost": 1,
+        "reason": "Upstream context omitted owner_first_name (fallback to business greeting)",
+        "stage_candidate": "A_UPSTREAM_MISSING"
+      },
+      {
+        "dimension": "trigger_relevance",
+        "points_lost": 2,
+        "reason": "Digest title clinical topic not reflected in message body",
+        "stage_candidate": "D_RELEVANCE_SCORING"
+      },
+      {
+        "dimension": "engagement_compulsion",
+        "points_lost": 2,
+        "reason": "Missing structured CTA (open_ended or binary_yes_no)",
+        "stage_candidate": "J_OUTPUT_COMPOSER"
+      },
+      {
+        "dimension": "engagement_compulsion",
+        "points_lost": 1,
+        "reason": "No low-friction question or conversational ask in body text",
+        "stage_candidate": "J_OUTPUT_COMPOSER"
+      }
+    ]
+  },
+  {
+    "case_id": "qc_0016",
+    "dataset": "520_BENCHMARK",
+    "category_slug": "pet_care",
+    "merchant_id": "m_pet__tanvi_016",
+    "trigger_kind": "regulation_change",
+    "raw_context_summary": {
+      "owner_first_name": "Tanvi",
+      "category_tone": "compassionate_expert",
+      "digest_title": "Monoclonal antibody therapy in canine atopic dermatitis",
+      "trial_n": 650,
+      "source": "Veterinary Dermatology India May 2026",
+      "patient_segment": "allergic_canines",
+      "actionable": "Offer steroid-sparing biological options for atopic pets",
+      "trigger_expires_at": "2026-05-30T00:00:00Z"
+    },
+    "extracted_facts_count": 47,
+    "selected_facts_paths": [
+      "merchant.identity.owner_first_name",
+      "category.digest[d_pet_01].trial_n",
+      "category.digest[d_pet_01].title",
+      "category.digest[d_pet_01].source",
+      "category.digest[d_pet_01].patient_segment",
+      "merchant.customer_aggregate.total_unique_ytd"
+    ],
+    "envelope_facts_count": 6,
+    "composer_output_body": "Hi Tanvi, Veterinary Dermatology India's May issue landed. One item relevant to your allergic canines patients \u2014 Monthly lokivetmab injections achieved 76% pruritus reduction with zero steroid-induced liver enzyme elevation in chronic atopic dogs (N=650). Worth a look (2-min abstract). Want me to pull the key takeaways for your team? \u2014 Veterinary Dermatology India May 2026",
+    "validator_passed": true,
+    "final_api_body": "Hi Tanvi, Veterinary Dermatology India's May issue landed. One item relevant to your allergic canines patients \u2014 Monthly lokivetmab injections achieved 76% pruritus reduction with zero steroid-induced liver enzyme elevation in chronic atopic dogs (N=650). Worth a look (2-min abstract). Want me to pull the key takeaways for your team? \u2014 Veterinary Dermatology India May 2026",
+    "stored_forensic_body": "",
+    "body_mismatch": true,
+    "judge_score": 50,
+    "dimension_scores": {
+      "specificity": 10,
+      "category_fit": 10,
+      "merchant_fit": 10,
+      "trigger_relevance": 10,
+      "engagement_compulsion": 10
+    },
+    "deductions": []
+  },
+  {
+    "case_id": "qc_0018",
+    "dataset": "520_BENCHMARK",
+    "category_slug": "gyms",
+    "merchant_id": "m_gyms_siddharth_018",
+    "trigger_kind": "perf_dip",
+    "raw_context_summary": {
+      "owner_first_name": "Siddharth",
+      "category_tone": "coaching_motivational",
+      "digest_title": "Seasonal Acquisition Dip & Retention Strategies",
+      "trial_n": 420,
+      "source": "Fitness Business India Q2 2026",
+      "patient_segment": "new_members",
+      "actionable": "Launch 30-day onboarding habit challenge",
+      "trigger_expires_at": "2026-05-30T00:00:00Z"
+    },
+    "extracted_facts_count": 47,
+    "selected_facts_paths": [
+      "merchant.identity.owner_first_name",
+      "category.digest[d_gym_01].trial_n",
+      "category.digest[d_gym_01].title",
+      "category.digest[d_gym_01].source",
+      "category.digest[d_gym_01].patient_segment",
+      "merchant.customer_aggregate.total_unique_ytd"
+    ],
+    "envelope_facts_count": 6,
+    "composer_output_body": "Hi Siddharth, Fitness Business India Q2 2026 landed. One item relevant to your new members patients \u2014 Gym walk-ins drop 32% in Q2. Facilities running structured 30-day onboarding retain 54% more members into Q3 (N=420). Worth a look (2-min abstract). Want me to pull the key takeaways for your team? \u2014 Fitness Business India Q2 2026",
+    "validator_passed": true,
+    "final_api_body": "Hi Siddharth, Fitness Business India Q2 2026 landed. One item relevant to your new members patients \u2014 Gym walk-ins drop 32% in Q2. Facilities running structured 30-day onboarding retain 54% more members into Q3 (N=420). Worth a look (2-min abstract). Want me to pull the key takeaways for your team? \u2014 Fitness Business India Q2 2026",
+    "stored_forensic_body": "",
+    "body_mismatch": true,
+    "judge_score": 48,
+    "dimension_scores": {
+      "specificity": 10,
+      "category_fit": 10,
+      "merchant_fit": 10,
+      "trigger_relevance": 8,
+      "engagement_compulsion": 10
+    },
+    "deductions": [
+      {
+        "dimension": "trigger_relevance",
+        "points_lost": 2,
+        "reason": "Digest title clinical topic not reflected in message body",
+        "stage_candidate": "D_RELEVANCE_SCORING"
+      }
+    ]
+  },
+  {
+    "case_id": "qc_0020",
+    "dataset": "520_BENCHMARK",
+    "category_slug": "restaurants",
+    "merchant_id": "m_rest_sunil_020",
+    "trigger_kind": "festival_upcoming",
+    "raw_context_summary": {
+      "owner_first_name": "Sunil",
+      "category_tone": "operator_to_operator",
+      "digest_title": "Pre-monsoon Delivery Packaging & AOV",
+      "trial_n": 680,
+      "source": "NRAI Quarterly Brief May 2026",
+      "patient_segment": "delivery_customers",
+      "actionable": "Upgrade delivery packaging before monsoon",
+      "trigger_expires_at": "2026-05-30T00:00:00Z"
+    },
+    "extracted_facts_count": 40,
+    "selected_facts_paths": [
+      "merchant.identity.owner_first_name",
+      "category.digest[d_rest_01].trial_n",
+      "category.digest[d_rest_01].title",
+      "category.digest[d_rest_01].source",
+      "category.digest[d_rest_01].patient_segment",
+      "merchant.customer_aggregate.total_unique_ytd"
+    ],
+    "envelope_facts_count": 6,
+    "composer_output_body": "Hi Sunil, NRAI Quarterly Brief's May issue landed. One item relevant to your delivery customers patients \u2014 Vented tamper-proof boxes improved crispy item delivery ratings by 0.6 stars and cut refund requests by 41% (N=680). Worth a look (2-min abstract). Want me to pull the key takeaways for your team? \u2014 NRAI Quarterly Brief May 2026",
+    "validator_passed": true,
+    "final_api_body": "Hi Sunil, NRAI Quarterly Brief's May issue landed. One item relevant to your delivery customers patients \u2014 Vented tamper-proof boxes improved crispy item delivery ratings by 0.6 stars and cut refund requests by 41% (N=680). Worth a look (2-min abstract). Want me to pull the key takeaways for your team? \u2014 NRAI Quarterly Brief May 2026",
+    "stored_forensic_body": "",
+    "body_mismatch": true,
+    "judge_score": 50,
+    "dimension_scores": {
+      "specificity": 10,
+      "category_fit": 10,
+      "merchant_fit": 10,
+      "trigger_relevance": 10,
+      "engagement_compulsion": 10
+    },
+    "deductions": []
+  },
+  {
+    "case_id": "qc_0024",
+    "dataset": "520_BENCHMARK",
+    "category_slug": "pet_care",
+    "merchant_id": "m_pet__tanvi_024",
+    "trigger_kind": "review_theme_emerged",
+    "raw_context_summary": {
+      "owner_first_name": "Tanvi",
+      "category_tone": "compassionate_expert",
+      "digest_title": "Monoclonal antibody therapy in canine atopic dermatitis",
+      "trial_n": 650,
+      "source": "Veterinary Dermatology India May 2026",
+      "patient_segment": "allergic_canines",
+      "actionable": "Offer steroid-sparing biological options for atopic pets",
+      "trigger_expires_at": "2026-04-20T00:00:00Z"
+    },
+    "extracted_facts_count": 40,
+    "selected_facts_paths": [
+      "merchant.identity.owner_first_name",
+      "category.digest[d_pet_01].trial_n",
+      "category.digest[d_pet_01].title",
+      "category.digest[d_pet_01].source",
+      "category.digest[d_pet_01].patient_segment",
+      "merchant.customer_aggregate.total_unique_ytd"
+    ],
+    "envelope_facts_count": 6,
+    "composer_output_body": "",
+    "validator_passed": true,
+    "final_api_body": "",
+    "stored_forensic_body": "",
+    "body_mismatch": false,
+    "judge_score": 40,
+    "dimension_scores": {
+      "specificity": 7,
+      "category_fit": 10,
+      "merchant_fit": 8,
+      "trigger_relevance": 8,
+      "engagement_compulsion": 7
+    },
+    "deductions": [
+      {
+        "dimension": "specificity",
+        "points_lost": 2,
+        "reason": "Missing concrete trial sample size (N=...) despite being present in active digest item",
+        "stage_candidate": "J_OUTPUT_COMPOSER"
+      },
+      {
+        "dimension": "specificity",
+        "points_lost": 1,
+        "reason": "Missing explicit journal or source citation in message body",
+        "stage_candidate": "J_OUTPUT_COMPOSER"
+      },
+      {
+        "dimension": "merchant_fit",
+        "points_lost": 2,
+        "reason": "Owner first name provided upstream but not included in salutation",
+        "stage_candidate": "J_OUTPUT_COMPOSER"
+      },
+      {
+        "dimension": "trigger_relevance",
+        "points_lost": 2,
+        "reason": "Digest title clinical topic not reflected in message body",
+        "stage_candidate": "D_RELEVANCE_SCORING"
+      },
+      {
+        "dimension": "engagement_compulsion",
+        "points_lost": 2,
+        "reason": "Missing structured CTA (open_ended or binary_yes_no)",
+        "stage_candidate": "J_OUTPUT_COMPOSER"
+      },
+      {
+        "dimension": "engagement_compulsion",
+        "points_lost": 1,
+        "reason": "No low-friction question or conversational ask in body text",
+        "stage_candidate": "J_OUTPUT_COMPOSER"
+      }
+    ]
+  },
+  {
+    "case_id": "qc_0028",
+    "dataset": "520_BENCHMARK",
+    "category_slug": "restaurants",
+    "merchant_id": "m_rest_siddharth_028",
+    "trigger_kind": "competitor_opened",
+    "raw_context_summary": {
+      "owner_first_name": "Siddharth",
+      "category_tone": "operator_to_operator",
+      "digest_title": "Pre-monsoon Delivery Packaging & AOV",
+      "trial_n": 680,
+      "source": "NRAI Quarterly Brief May 2026",
+      "patient_segment": "delivery_customers",
+      "actionable": "Upgrade delivery packaging before monsoon",
+      "trigger_expires_at": "2026-05-30T00:00:00Z"
+    },
+    "extracted_facts_count": 47,
+    "selected_facts_paths": [
+      "merchant.identity.owner_first_name",
+      "category.digest[d_rest_01].trial_n",
+      "category.digest[d_rest_01].title",
+      "category.digest[d_rest_01].source",
+      "category.digest[d_rest_01].patient_segment",
+      "merchant.customer_aggregate.total_unique_ytd"
+    ],
+    "envelope_facts_count": 6,
+    "composer_output_body": "Hi Siddharth, NRAI Quarterly Brief's May issue landed. One item relevant to your delivery customers patients \u2014 Vented tamper-proof boxes improved crispy item delivery ratings by 0.6 stars and cut refund requests by 41% (N=680). Worth a look (2-min abstract). Want me to pull the key takeaways for your team? \u2014 NRAI Quarterly Brief May 2026",
+    "validator_passed": true,
+    "final_api_body": "Hi Siddharth, NRAI Quarterly Brief's May issue landed. One item relevant to your delivery customers patients \u2014 Vented tamper-proof boxes improved crispy item delivery ratings by 0.6 stars and cut refund requests by 41% (N=680). Worth a look (2-min abstract). Want me to pull the key takeaways for your team? \u2014 NRAI Quarterly Brief May 2026",
+    "stored_forensic_body": "",
+    "body_mismatch": true,
+    "judge_score": 50,
+    "dimension_scores": {
+      "specificity": 10,
+      "category_fit": 10,
+      "merchant_fit": 10,
+      "trigger_relevance": 10,
+      "engagement_compulsion": 10
+    },
+    "deductions": []
+  },
+  {
+    "case_id": "qc_0032",
+    "dataset": "520_BENCHMARK",
+    "category_slug": "pet_care",
+    "merchant_id": "m_pet__ananya_032",
+    "trigger_kind": "perf_dip",
+    "raw_context_summary": {
+      "owner_first_name": "Ananya",
+      "category_tone": "compassionate_expert",
+      "digest_title": "Monoclonal antibody therapy in canine atopic dermatitis",
+      "trial_n": 650,
+      "source": "Veterinary Dermatology India May 2026",
+      "patient_segment": "allergic_canines",
+      "actionable": "Offer steroid-sparing biological options for atopic pets",
+      "trigger_expires_at": "2026-05-30T00:00:00Z"
+    },
+    "extracted_facts_count": 47,
+    "selected_facts_paths": [
+      "merchant.identity.owner_first_name",
+      "category.digest[d_pet_01].trial_n",
+      "category.digest[d_pet_01].title",
+      "category.digest[d_pet_01].source",
+      "category.digest[d_pet_01].patient_segment",
+      "merchant.customer_aggregate.total_unique_ytd"
+    ],
+    "envelope_facts_count": 6,
+    "composer_output_body": "Hi Ananya, Veterinary Dermatology India's May issue landed. One item relevant to your allergic canines patients \u2014 Monthly lokivetmab injections achieved 76% pruritus reduction with zero steroid-induced liver enzyme elevation in chronic atopic dogs (N=650). Worth a look (2-min abstract). Want me to pull the key takeaways for your team? \u2014 Veterinary Dermatology India May 2026",
+    "validator_passed": true,
+    "final_api_body": "Hi Ananya, Veterinary Dermatology India's May issue landed. One item relevant to your allergic canines patients \u2014 Monthly lokivetmab injections achieved 76% pruritus reduction with zero steroid-induced liver enzyme elevation in chronic atopic dogs (N=650). Worth a look (2-min abstract). Want me to pull the key takeaways for your team? \u2014 Veterinary Dermatology India May 2026",
+    "stored_forensic_body": "",
+    "body_mismatch": true,
+    "judge_score": 50,
+    "dimension_scores": {
+      "specificity": 10,
+      "category_fit": 10,
+      "merchant_fit": 10,
+      "trigger_relevance": 10,
+      "engagement_compulsion": 10
+    },
+    "deductions": []
+  },
+  {
+    "case_id": "qc_0036",
+    "dataset": "520_BENCHMARK",
+    "category_slug": "restaurants",
+    "merchant_id": "m_rest_sunil_036",
+    "trigger_kind": "curious_ask_due",
+    "raw_context_summary": {
+      "owner_first_name": "Sunil",
+      "category_tone": "operator_to_operator",
+      "digest_title": "Pre-monsoon Delivery Packaging & AOV",
+      "trial_n": 680,
+      "source": "NRAI Quarterly Brief May 2026",
+      "patient_segment": "delivery_customers",
+      "actionable": "Upgrade delivery packaging before monsoon",
+      "trigger_expires_at": "2026-05-30T00:00:00Z"
+    },
+    "extracted_facts_count": 40,
+    "selected_facts_paths": [
+      "merchant.identity.owner_first_name",
+      "category.digest[d_rest_01].trial_n",
+      "category.digest[d_rest_01].title",
+      "category.digest[d_rest_01].source",
+      "category.digest[d_rest_01].patient_segment",
+      "merchant.customer_aggregate.total_unique_ytd"
+    ],
+    "envelope_facts_count": 6,
+    "composer_output_body": "Hi Sunil, NRAI Quarterly Brief's May issue landed. One item relevant to your delivery customers patients \u2014 Vented tamper-proof boxes improved crispy item delivery ratings by 0.6 stars and cut refund requests by 41% (N=680). Worth a look (2-min abstract). Want me to pull the key takeaways for your team? \u2014 NRAI Quarterly Brief May 2026",
+    "validator_passed": true,
+    "final_api_body": "Hi Sunil, NRAI Quarterly Brief's May issue landed. One item relevant to your delivery customers patients \u2014 Vented tamper-proof boxes improved crispy item delivery ratings by 0.6 stars and cut refund requests by 41% (N=680). Worth a look (2-min abstract). Want me to pull the key takeaways for your team? \u2014 NRAI Quarterly Brief May 2026",
+    "stored_forensic_body": "",
+    "body_mismatch": true,
+    "judge_score": 50,
+    "dimension_scores": {
+      "specificity": 10,
+      "category_fit": 10,
+      "merchant_fit": 10,
+      "trigger_relevance": 10,
+      "engagement_compulsion": 10
+    },
+    "deductions": []
+  },
+  {
+    "case_id": "qc_0040",
+    "dataset": "520_BENCHMARK",
+    "category_slug": "pet_care",
+    "merchant_id": "m_pet__sneha_040",
+    "trigger_kind": "supply_alert",
+    "raw_context_summary": {
+      "owner_first_name": null,
+      "category_tone": "compassionate_expert",
+      "digest_title": "Monoclonal antibody therapy in canine atopic dermatitis",
+      "trial_n": 650,
+      "source": "Veterinary Dermatology India May 2026",
+      "patient_segment": "allergic_canines",
+      "actionable": "Offer steroid-sparing biological options for atopic pets",
+      "trigger_expires_at": "2026-05-30T00:00:00Z"
+    },
+    "extracted_facts_count": 28,
+    "selected_facts_paths": [
+      "category.digest[d_pet_01].trial_n",
+      "category.digest[d_pet_01].title",
+      "category.digest[d_pet_01].source",
+      "category.digest[d_pet_01].summary",
+      "category.digest[d_pet_01].patient_segment",
+      "category.digest[d_pet_01].actionable"
+    ],
+    "envelope_facts_count": 6,
+    "composer_output_body": "Hi there, Veterinary Dermatology India's May issue landed. One item relevant to your allergic canines patients \u2014 Monthly lokivetmab injections achieved 76% pruritus reduction with zero steroid-induced liver enzyme elevation in chronic atopic dogs (N=650). Worth a look (2-min abstract). Want me to pull the key takeaways for your team? \u2014 Veterinary Dermatology India May 2026",
+    "validator_passed": true,
+    "final_api_body": "Hi there, Veterinary Dermatology India's May issue landed. One item relevant to your allergic canines patients \u2014 Monthly lokivetmab injections achieved 76% pruritus reduction with zero steroid-induced liver enzyme elevation in chronic atopic dogs (N=650). Worth a look (2-min abstract). Want me to pull the key takeaways for your team? \u2014 Veterinary Dermatology India May 2026",
+    "stored_forensic_body": "",
+    "body_mismatch": true,
+    "judge_score": 49,
+    "dimension_scores": {
+      "specificity": 10,
+      "category_fit": 10,
+      "merchant_fit": 9,
+      "trigger_relevance": 10,
+      "engagement_compulsion": 10
+    },
+    "deductions": [
+      {
+        "dimension": "merchant_fit",
+        "points_lost": 1,
+        "reason": "Upstream context omitted owner_first_name (fallback to business greeting)",
+        "stage_candidate": "A_UPSTREAM_MISSING"
+      }
+    ]
+  },
+  {
+    "case_id": "qc_0044",
+    "dataset": "520_BENCHMARK",
+    "category_slug": "restaurants",
+    "merchant_id": "m_rest_tarun_044",
+    "trigger_kind": "regulation_change",
+    "raw_context_summary": {
+      "owner_first_name": "Tarun",
+      "category_tone": "operator_to_operator",
+      "digest_title": "Pre-monsoon Delivery Packaging & AOV",
+      "trial_n": 680,
+      "source": "NRAI Quarterly Brief May 2026",
+      "patient_segment": "delivery_customers",
+      "actionable": "Upgrade delivery packaging before monsoon",
+      "trigger_expires_at": "2026-05-30T00:00:00Z"
+    },
+    "extracted_facts_count": 40,
+    "selected_facts_paths": [
+      "merchant.identity.owner_first_name",
+      "category.digest[d_rest_01].trial_n",
+      "category.digest[d_rest_01].title",
+      "category.digest[d_rest_01].source",
+      "category.digest[d_rest_01].patient_segment",
+      "merchant.customer_aggregate.total_unique_ytd"
+    ],
+    "envelope_facts_count": 6,
+    "composer_output_body": "Hi Tarun, NRAI Quarterly Brief's May issue landed. One item relevant to your delivery customers patients \u2014 Vented tamper-proof boxes improved crispy item delivery ratings by 0.6 stars and cut refund requests by 41% (N=680). Worth a look (2-min abstract). Want me to pull the key takeaways for your team? \u2014 NRAI Quarterly Brief May 2026",
+    "validator_passed": true,
+    "final_api_body": "Hi Tarun, NRAI Quarterly Brief's May issue landed. One item relevant to your delivery customers patients \u2014 Vented tamper-proof boxes improved crispy item delivery ratings by 0.6 stars and cut refund requests by 41% (N=680). Worth a look (2-min abstract). Want me to pull the key takeaways for your team? \u2014 NRAI Quarterly Brief May 2026",
+    "stored_forensic_body": "",
+    "body_mismatch": true,
+    "judge_score": 50,
+    "dimension_scores": {
+      "specificity": 10,
+      "category_fit": 10,
+      "merchant_fit": 10,
+      "trigger_relevance": 10,
+      "engagement_compulsion": 10
+    },
+    "deductions": []
+  },
+  {
+    "case_id": "unseen_0005",
+    "dataset": "UNKNOWN",
+    "category_slug": "cardiology",
+    "merchant_id": "m_unseen_cardiology_004",
+    "trigger_kind": "performance_alert",
+    "raw_context_summary": {
+      "owner_first_name": "Rohan",
+      "category_tone": "clinical_rigorous",
+      "digest_title": "SGLT2 Inhibitor Microvascular Outcomes",
+      "trial_n": 4820,
+      "source": "Lancet Cardiology 2026",
+      "patient_segment": "diabetic_cardio",
+      "actionable": "Review heart-failure protocols for diabetic patients.",
+      "trigger_expires_at": null
+    },
+    "extracted_facts_count": 30,
+    "selected_facts_paths": [
+      "merchant.identity.owner_first_name",
+      "category.digest[d_card_01].trial_n",
+      "category.digest[d_card_02].trial_n",
+      "category.digest[d_card_01].title",
+      "category.digest[d_card_01].patient_segment",
+      "category.digest[d_card_01].actionable"
+    ],
+    "envelope_facts_count": 6,
+    "composer_output_body": "",
+    "validator_passed": true,
+    "final_api_body": "",
+    "stored_forensic_body": "",
+    "body_mismatch": false,
+    "judge_score": 45,
+    "dimension_scores": {
+      "specificity": 10,
+      "category_fit": 10,
+      "merchant_fit": 8,
+      "trigger_relevance": 10,
+      "engagement_compulsion": 7
+    },
+    "deductions": [
+      {
+        "dimension": "merchant_fit",
+        "points_lost": 2,
+        "reason": "Owner first name provided upstream but not included in salutation",
+        "stage_candidate": "J_OUTPUT_COMPOSER"
+      },
+      {
+        "dimension": "engagement_compulsion",
+        "points_lost": 2,
+        "reason": "Missing structured CTA (open_ended or binary_yes_no)",
+        "stage_candidate": "J_OUTPUT_COMPOSER"
+      },
+      {
+        "dimension": "engagement_compulsion",
+        "points_lost": 1,
+        "reason": "No low-friction question or conversational ask in body text",
+        "stage_candidate": "J_OUTPUT_COMPOSER"
+      }
+    ]
+  },
+  {
+    "case_id": "unseen_0012",
+    "dataset": "UNKNOWN",
+    "category_slug": "ayurveda",
+    "merchant_id": "m_unseen_ayurveda_011",
+    "trigger_kind": "performance_alert",
+    "raw_context_summary": {
+      "owner_first_name": "Ananya",
+      "category_tone": "authentic_traditional",
+      "digest_title": "Standardized Ashwagandha Extract for Chronic Stress & Cortisol",
+      "trial_n": 450,
+      "source": "Phytomedicine 2026",
+      "patient_segment": "stress_management",
+      "actionable": "Integrate standardized botanical assessments in wellness consultations.",
+      "trigger_expires_at": null
+    },
+    "extracted_facts_count": 32,
+    "selected_facts_paths": [
+      "merchant.identity.owner_first_name",
+      "category.digest[d_ayu_01].trial_n",
+      "category.digest[d_ayu_01].title",
+      "category.digest[d_ayu_01].summary",
+      "merchant.customer_aggregate.total_unique_customers_30d",
+      "merchant.customer_aggregate.high_risk_adult_count"
+    ],
+    "envelope_facts_count": 6,
+    "composer_output_body": "",
+    "validator_passed": true,
+    "final_api_body": "",
+    "stored_forensic_body": "",
+    "body_mismatch": false,
+    "judge_score": 45,
+    "dimension_scores": {
+      "specificity": 10,
+      "category_fit": 10,
+      "merchant_fit": 8,
+      "trigger_relevance": 10,
+      "engagement_compulsion": 7
+    },
+    "deductions": [
+      {
+        "dimension": "merchant_fit",
+        "points_lost": 2,
+        "reason": "Owner first name provided upstream but not included in salutation",
+        "stage_candidate": "J_OUTPUT_COMPOSER"
+      },
+      {
+        "dimension": "engagement_compulsion",
+        "points_lost": 2,
+        "reason": "Missing structured CTA (open_ended or binary_yes_no)",
+        "stage_candidate": "J_OUTPUT_COMPOSER"
+      },
+      {
+        "dimension": "engagement_compulsion",
+        "points_lost": 1,
+        "reason": "No low-friction question or conversational ask in body text",
+        "stage_candidate": "J_OUTPUT_COMPOSER"
+      }
+    ]
+  },
+  {
+    "case_id": "unseen_0018",
+    "dataset": "UNKNOWN",
+    "category_slug": "ayurveda",
+    "merchant_id": "m_unseen_ayurveda_017",
+    "trigger_kind": "seasonal_trend",
+    "raw_context_summary": {
+      "owner_first_name": "Kabir",
+      "category_tone": "authentic_traditional",
+      "digest_title": "Standardized Ashwagandha Extract for Chronic Stress & Cortisol",
+      "trial_n": 450,
+      "source": "Phytomedicine 2026",
+      "patient_segment": "stress_management",
+      "actionable": "Integrate standardized botanical assessments in wellness consultations.",
+      "trigger_expires_at": null
+    },
+    "extracted_facts_count": 23,
+    "selected_facts_paths": [
+      "merchant.identity.owner_first_name",
+      "category.digest[d_ayu_01].trial_n",
+      "category.digest[d_ayu_01].title",
+      "category.digest[d_ayu_01].summary",
+      "category.digest[d_ayu_01].patient_segment",
+      "category.digest[d_ayu_01].actionable"
+    ],
+    "envelope_facts_count": 6,
+    "composer_output_body": "",
+    "validator_passed": true,
+    "final_api_body": "",
+    "stored_forensic_body": "",
+    "body_mismatch": false,
+    "judge_score": 45,
+    "dimension_scores": {
+      "specificity": 10,
+      "category_fit": 10,
+      "merchant_fit": 8,
+      "trigger_relevance": 10,
+      "engagement_compulsion": 7
+    },
+    "deductions": [
+      {
+        "dimension": "merchant_fit",
+        "points_lost": 2,
+        "reason": "Owner first name provided upstream but not included in salutation",
+        "stage_candidate": "J_OUTPUT_COMPOSER"
+      },
+      {
+        "dimension": "engagement_compulsion",
+        "points_lost": 2,
+        "reason": "Missing structured CTA (open_ended or binary_yes_no)",
+        "stage_candidate": "J_OUTPUT_COMPOSER"
+      },
+      {
+        "dimension": "engagement_compulsion",
+        "points_lost": 1,
+        "reason": "No low-friction question or conversational ask in body text",
+        "stage_candidate": "J_OUTPUT_COMPOSER"
+      }
+    ]
+  },
+  {
+    "case_id": "syn_0010",
+    "dataset": "1000_INDEPENDENT",
+    "category_slug": "orthopedics",
+    "merchant_id": "m_syn_0010",
+    "trigger_kind": "clinical_brief",
+    "raw_context_summary": {
+      "owner_first_name": "Raghav",
+      "category_tone": "surgical_clinical",
+      "digest_title": "Novel clinical protocols in Orthopedics management",
+      "trial_n": 85000,
+      "source": "Indian Journal of Orthopedics 2026",
+      "patient_segment": "chronic_adults",
+      "actionable": "Review standard diagnostic protocols for Orthopedics patients",
+      "trigger_expires_at": "2026-12-31T00:00:00Z"
+    },
+    "extracted_facts_count": 36,
+    "selected_facts_paths": [
+      "merchant.identity.owner_first_name",
+      "category.digest[d_syn_0010].trial_n",
+      "category.digest[d_syn_0010].id",
+      "category.digest[d_syn_0010].title",
+      "merchant.customer_aggregate.chronic_adult_count",
+      "category.digest[d_syn_0010].patient_segment"
+    ],
+    "envelope_facts_count": 6,
+    "composer_output_body": "Dr. Raghav, Indian Journal of Orthopedics 2026 landed. One item relevant to your chronic adults \u2014 Multi-center evaluation across 85,000 subjects showed 44% improvement in therapy adherence. Worth a look (2-min abstract). Want me to pull it + draft a patient-ed WhatsApp you can share? \u2014 Indian Journal of Orthopedics 2026",
+    "validator_passed": true,
+    "final_api_body": "Dr. Raghav, Indian Journal of Orthopedics 2026 landed. One item relevant to your chronic adults \u2014 Multi-center evaluation across 85,000 subjects showed 44% improvement in therapy adherence. Worth a look (2-min abstract). Want me to pull it + draft a patient-ed WhatsApp you can share? \u2014 Indian Journal of Orthopedics 2026",
+    "stored_forensic_body": "",
+    "body_mismatch": true,
+    "judge_score": 50,
+    "dimension_scores": {
+      "specificity": 10,
+      "category_fit": 10,
+      "merchant_fit": 10,
+      "trigger_relevance": 10,
+      "engagement_compulsion": 10
+    },
+    "deductions": []
+  },
+  {
+    "case_id": "syn_0024",
+    "dataset": "1000_INDEPENDENT",
+    "category_slug": "gastroenterology",
+    "merchant_id": "m_syn_0024",
+    "trigger_kind": "guideline_alert",
+    "raw_context_summary": {
+      "owner_first_name": "Pooja",
+      "category_tone": "digestive_clinical",
+      "digest_title": "Novel clinical protocols in Gastroenterology management",
+      "trial_n": 45,
+      "source": "Indian Journal of Gastroenterology 2026",
+      "patient_segment": "chronic_adults",
+      "actionable": "Review standard diagnostic protocols for Gastroenterology patients",
+      "trigger_expires_at": "2026-12-31T00:00:00Z"
+    },
+    "extracted_facts_count": 37,
+    "selected_facts_paths": [
+      "merchant.identity.owner_first_name",
+      "category.digest[d_syn_0024].trial_n",
+      "category.digest[d_syn_0024].id",
+      "category.digest[d_syn_0024].title",
+      "merchant.customer_aggregate.chronic_adult_count",
+      "category.digest[d_syn_0024].patient_segment"
+    ],
+    "envelope_facts_count": 6,
+    "composer_output_body": "Dr. Pooja, Indian Journal of Gastroenterology 2026 landed. One item relevant to your chronic adults \u2014 Multi-center evaluation across 45 subjects showed 44% improvement in therapy adherence. Worth a look (2-min abstract). Want me to pull it + draft a patient-ed WhatsApp you can share? \u2014 Indian Journal of Gastroenterology 2026",
+    "validator_passed": true,
+    "final_api_body": "Dr. Pooja, Indian Journal of Gastroenterology 2026 landed. One item relevant to your chronic adults \u2014 Multi-center evaluation across 45 subjects showed 44% improvement in therapy adherence. Worth a look (2-min abstract). Want me to pull it + draft a patient-ed WhatsApp you can share? \u2014 Indian Journal of Gastroenterology 2026",
+    "stored_forensic_body": "",
+    "body_mismatch": true,
+    "judge_score": 50,
+    "dimension_scores": {
+      "specificity": 10,
+      "category_fit": 10,
+      "merchant_fit": 10,
+      "trigger_relevance": 10,
+      "engagement_compulsion": 10
+    },
+    "deductions": []
+  }
+]

@@ -1,0 +1,979 @@
+{
+  "evaluated_cases": 25,
+  "bottleneck_percentages": {
+    "A_Missing_Upstream_Data": 59.7,
+    "D_Deterministic_Composition": 37.5,
+    "B_Context_Extraction_or_Relevance": 1.1,
+    "E_LLM_Envelope_Omission": 0.9,
+    "H_Judge_Evaluation_Strictness": 0.9
+  },
+  "scores_by_density": {
+    "medium": 29.8,
+    "missing_optional": 31.0,
+    "rich": 31.17,
+    "sparse": 30.0
+  },
+  "scores_by_category": {
+    "dentists": 30.71,
+    "salons": 30.33,
+    "pharmacies": 30.17,
+    "physiotherapy": 30.33
+  },
+  "frequent_selected_facts": {
+    "category.voice.tone": 25,
+    "category.voice.vocab_taboo": 25,
+    "merchant.identity.owner_first_name": 19,
+    "category.digest[d_dent_01].title": 7,
+    "category.digest[d_dent_01].source": 7,
+    "category.digest[d_dent_01].trial_n": 7,
+    "category.digest[d_dent_01].patient_segment": 7,
+    "category.digest[d_dent_01].summary": 7,
+    "category.digest[d_dent_01].actionable": 7,
+    "category.digest[d_sal_01].title": 6
+  },
+  "frequent_omitted_facts": [
+    {
+      "path": "merchant.merchant_id",
+      "reason": "omitted_low_relevance_to_trigger",
+      "count": 25
+    },
+    {
+      "path": "merchant.category_slug",
+      "reason": "omitted_low_relevance_to_trigger",
+      "count": 25
+    },
+    {
+      "path": "merchant.subscription.status",
+      "reason": "omitted_low_relevance_to_trigger",
+      "count": 25
+    },
+    {
+      "path": "merchant.subscription.plan",
+      "reason": "omitted_low_relevance_to_trigger",
+      "count": 25
+    },
+    {
+      "path": "merchant.subscription.days_remaining",
+      "reason": "omitted_low_relevance_to_trigger",
+      "count": 25
+    },
+    {
+      "path": "category.slug",
+      "reason": "omitted_low_relevance_to_trigger",
+      "count": 25
+    },
+    {
+      "path": "category.voice.register",
+      "reason": "omitted_low_relevance_to_trigger",
+      "count": 25
+    },
+    {
+      "path": "category.voice.code_mix",
+      "reason": "omitted_low_relevance_to_trigger",
+      "count": 25
+    },
+    {
+      "path": "category.voice.vocab_allowed",
+      "reason": "omitted_low_relevance_to_trigger",
+      "count": 25
+    },
+    {
+      "path": "trigger.id",
+      "reason": "omitted_low_relevance_to_trigger",
+      "count": 25
+    }
+  ],
+  "sample_trace": {
+    "trace_id": "trc_diag_qc_0001",
+    "timestamp": "2026-04-26T10:00:00Z",
+    "request_type": "tick",
+    "merchant_id": "m_dent_sneha_001",
+    "customer_id": null,
+    "trigger_id": "trg_qc_0001_research_digest",
+    "conversation_id": null,
+    "raw_input": {
+      "scopes_received": [
+        "category",
+        "merchant",
+        "trigger"
+      ],
+      "available_field_paths": [
+        "merchant.merchant_id",
+        "merchant.category_slug",
+        "merchant.identity.name",
+        "merchant.identity.owner_first_name",
+        "merchant.identity.city",
+        "merchant.identity.locality",
+        "merchant.identity.verified",
+        "merchant.identity.languages",
+        "merchant.subscription.status",
+        "merchant.subscription.plan",
+        "merchant.subscription.days_remaining",
+        "merchant.performance.window_days",
+        "merchant.performance.views",
+        "merchant.performance.calls",
+        "merchant.performance.ctr",
+        "merchant.signals",
+        "merchant.customer_aggregate.total_unique_ytd",
+        "category.slug",
+        "category.voice.tone",
+        "category.voice.register",
+        "category.voice.code_mix",
+        "category.voice.vocab_allowed",
+        "category.voice.vocab_taboo",
+        "category.digest[d_dent_01].id",
+        "category.digest[d_dent_01].title",
+        "category.digest[d_dent_01].source",
+        "category.digest[d_dent_01].trial_n",
+        "category.digest[d_dent_01].patient_segment",
+        "category.digest[d_dent_01].summary",
+        "category.digest[d_dent_01].actionable",
+        "category.digest[d_dent_02].id",
+        "category.digest[d_dent_02].title",
+        "category.digest[d_dent_02].source",
+        "category.digest[d_dent_02].trial_n",
+        "category.digest[d_dent_02].patient_segment",
+        "category.digest[d_dent_02].summary",
+        "category.digest[d_dent_02].actionable",
+        "trigger.id",
+        "trigger.scope",
+        "trigger.kind",
+        "trigger.merchant_id",
+        "trigger.payload.category",
+        "trigger.payload.top_item_id",
+        "trigger.payload.urgency_score",
+        "trigger.urgency",
+        "trigger.suppression_key",
+        "trigger.expires_at"
+      ]
+    },
+    "gating": {
+      "suppression_status": {},
+      "is_expired": false,
+      "category_match": true,
+      "subscription_eligible": true,
+      "has_opted_out": false,
+      "is_terminal": false,
+      "is_replay": false,
+      "gating_passed": true,
+      "rejection_reason": null
+    },
+    "fact_selection": {
+      "candidate_facts": [
+        {
+          "fact_id": "F_MER_MERCHANT_MERCHANT_ID_A7C9",
+          "path": "merchant.merchant_id",
+          "value": "m_dent_sneha_001",
+          "source_scope": "merchant",
+          "source_id": "m_dent_sneha_001",
+          "allowed_triggers": [],
+          "sensitivity": "public"
+        },
+        {
+          "fact_id": "F_MER_MERCHANT_CATEGORY_SLUG_880E",
+          "path": "merchant.category_slug",
+          "value": "dentists",
+          "source_scope": "merchant",
+          "source_id": "m_dent_sneha_001",
+          "allowed_triggers": [],
+          "sensitivity": "public"
+        },
+        {
+          "fact_id": "F_MER_MERCHANT_IDENTITY_NAME_376F",
+          "path": "merchant.identity.name",
+          "value": "Sneha's Dentists",
+          "source_scope": "merchant",
+          "source_id": "m_dent_sneha_001",
+          "allowed_triggers": [],
+          "sensitivity": "public"
+        },
+        {
+          "fact_id": "F_MER_MERCHANT_IDENTITY_OWNER_FIRST_NAME_1AD3",
+          "path": "merchant.identity.owner_first_name",
+          "value": "Sneha",
+          "source_scope": "merchant",
+          "source_id": "m_dent_sneha_001",
+          "allowed_triggers": [],
+          "sensitivity": "pii"
+        },
+        {
+          "fact_id": "F_MER_MERCHANT_IDENTITY_CITY_77CB",
+          "path": "merchant.identity.city",
+          "value": "Hyderabad",
+          "source_scope": "merchant",
+          "source_id": "m_dent_sneha_001",
+          "allowed_triggers": [],
+          "sensitivity": "public"
+        },
+        {
+          "fact_id": "F_MER_MERCHANT_IDENTITY_LOCALITY_5406",
+          "path": "merchant.identity.locality",
+          "value": "Bandra West",
+          "source_scope": "merchant",
+          "source_id": "m_dent_sneha_001",
+          "allowed_triggers": [],
+          "sensitivity": "public"
+        },
+        {
+          "fact_id": "F_MER_MERCHANT_IDENTITY_VERIFIED_F44A",
+          "path": "merchant.identity.verified",
+          "value": false,
+          "source_scope": "merchant",
+          "source_id": "m_dent_sneha_001",
+          "allowed_triggers": [],
+          "sensitivity": "public"
+        },
+        {
+          "fact_id": "F_MER_MERCHANT_IDENTITY_LANGUAGES_7DB9",
+          "path": "merchant.identity.languages",
+          "value": [
+            "en"
+          ],
+          "source_scope": "merchant",
+          "source_id": "m_dent_sneha_001",
+          "allowed_triggers": [],
+          "sensitivity": "public"
+        },
+        {
+          "fact_id": "F_MER_MERCHANT_SUBSCRIPTION_STATUS_87D8",
+          "path": "merchant.subscription.status",
+          "value": "active",
+          "source_scope": "merchant",
+          "source_id": "m_dent_sneha_001",
+          "allowed_triggers": [],
+          "sensitivity": "public"
+        },
+        {
+          "fact_id": "F_MER_MERCHANT_SUBSCRIPTION_PLAN_9EA7",
+          "path": "merchant.subscription.plan",
+          "value": "Pro",
+          "source_scope": "merchant",
+          "source_id": "m_dent_sneha_001",
+          "allowed_triggers": [],
+          "sensitivity": "public"
+        },
+        {
+          "fact_id": "F_MER_MERCHANT_SUBSCRIPTION_DAYS_REMAINING_60C7",
+          "path": "merchant.subscription.days_remaining",
+          "value": 84,
+          "source_scope": "merchant",
+          "source_id": "m_dent_sneha_001",
+          "allowed_triggers": [],
+          "sensitivity": "public"
+        },
+        {
+          "fact_id": "F_MER_MERCHANT_PERFORMANCE_WINDOW_DAYS_3AB7",
+          "path": "merchant.performance.window_days",
+          "value": 30,
+          "source_scope": "merchant",
+          "source_id": "m_dent_sneha_001",
+          "allowed_triggers": [],
+          "sensitivity": "internal_metric"
+        },
+        {
+          "fact_id": "F_MER_MERCHANT_PERFORMANCE_VIEWS_32AD",
+          "path": "merchant.performance.views",
+          "value": 642,
+          "source_scope": "merchant",
+          "source_id": "m_dent_sneha_001",
+          "allowed_triggers": [],
+          "sensitivity": "internal_metric"
+        },
+        {
+          "fact_id": "F_MER_MERCHANT_PERFORMANCE_CALLS_5568",
+          "path": "merchant.performance.calls",
+          "value": 8,
+          "source_scope": "merchant",
+          "source_id": "m_dent_sneha_001",
+          "allowed_triggers": [],
+          "sensitivity": "internal_metric"
+        },
+        {
+          "fact_id": "F_MER_MERCHANT_PERFORMANCE_CTR_DAFA",
+          "path": "merchant.performance.ctr",
+          "value": 0.018,
+          "source_scope": "merchant",
+          "source_id": "m_dent_sneha_001",
+          "allowed_triggers": [],
+          "sensitivity": "internal_metric"
+        },
+        {
+          "fact_id": "F_MER_MERCHANT_SIGNALS_BED0",
+          "path": "merchant.signals",
+          "value": [
+            "stale_posts:18d"
+          ],
+          "source_scope": "merchant",
+          "source_id": "m_dent_sneha_001",
+          "allowed_triggers": [],
+          "sensitivity": "internal_metric"
+        },
+        {
+          "fact_id": "F_MER_MERCHANT_CUSTOMER_AGGREGATE_TOTAL_UNIQUE_YTD_B5AD",
+          "path": "merchant.customer_aggregate.total_unique_ytd",
+          "value": 323,
+          "source_scope": "merchant",
+          "source_id": "m_dent_sneha_001",
+          "allowed_triggers": [],
+          "sensitivity": "public"
+        },
+        {
+          "fact_id": "F_CAT_CATEGORY_SLUG_D1F9",
+          "path": "category.slug",
+          "value": "dentists",
+          "source_scope": "category",
+          "source_id": "dentists",
+          "allowed_triggers": [],
+          "sensitivity": "public"
+        },
+        {
+          "fact_id": "F_CAT_CATEGORY_VOICE_TONE_CEB8",
+          "path": "category.voice.tone",
+          "value": "peer_clinical",
+          "source_scope": "category",
+          "source_id": "dentists",
+          "allowed_triggers": [],
+          "sensitivity": "public"
+        },
+        {
+          "fact_id": "F_CAT_CATEGORY_VOICE_REGISTER_E0FE",
+          "path": "category.voice.register",
+          "value": "respectful_collegial",
+          "source_scope": "category",
+          "source_id": "dentists",
+          "allowed_triggers": [],
+          "sensitivity": "public"
+        },
+        {
+          "fact_id": "F_CAT_CATEGORY_VOICE_CODE_MIX_630C",
+          "path": "category.voice.code_mix",
+          "value": "hindi_english_natural",
+          "source_scope": "category",
+          "source_id": "dentists",
+          "allowed_triggers": [],
+          "sensitivity": "public"
+        },
+        {
+          "fact_id": "F_CAT_CATEGORY_VOICE_VOCAB_ALLOWED_8C59",
+          "path": "category.voice.vocab_allowed",
+          "value": [
+            "caries",
+            "fluoride varnish",
+            "scaling",
+            "occlusion",
+            "IOPA",
+            "RCT",
+            "GIC"
+          ],
+          "source_scope": "category",
+          "source_id": "dentists",
+          "allowed_triggers": [],
+          "sensitivity": "public"
+        },
+        {
+          "fact_id": "F_CAT_CATEGORY_VOICE_VOCAB_TABOO_6494",
+          "path": "category.voice.vocab_taboo",
+          "value": [
+            "guaranteed",
+            "100% safe",
+            "completely cure",
+            "miracle",
+            "best in city"
+          ],
+          "source_scope": "category",
+          "source_id": "dentists",
+          "allowed_triggers": [],
+          "sensitivity": "public"
+        },
+        {
+          "fact_id": "F_CAT_CATEGORY_DIGEST_D_DENT_01_ID_F257",
+          "path": "category.digest[d_dent_01].id",
+          "value": "d_dent_01",
+          "source_scope": "category",
+          "source_id": "dentists",
+          "allowed_triggers": [],
+          "sensitivity": "public"
+        },
+        {
+          "fact_id": "F_CAT_CATEGORY_DIGEST_D_DENT_01_TITLE_A638",
+          "path": "category.digest[d_dent_01].title",
+          "value": "High-viscosity GIC in root caries",
+          "source_scope": "category",
+          "source_id": "dentists",
+          "allowed_triggers": [],
+          "sensitivity": "public"
+        },
+        {
+          "fact_id": "F_CAT_CATEGORY_DIGEST_D_DENT_01_SOURCE_A032",
+          "path": "category.digest[d_dent_01].source",
+          "value": "JIDA Oct 2026, p.14",
+          "source_scope": "category",
+          "source_id": "dentists",
+          "allowed_triggers": [],
+          "sensitivity": "public"
+        },
+        {
+          "fact_id": "F_CAT_CATEGORY_DIGEST_D_DENT_01_TRIAL_N_5647",
+          "path": "category.digest[d_dent_01].trial_n",
+          "value": 2100,
+          "source_scope": "category",
+          "source_id": "dentists",
+          "allowed_triggers": [],
+          "sensitivity": "public"
+        },
+        {
+          "fact_id": "F_CAT_CATEGORY_DIGEST_D_DENT_01_PATIENT_SEGMENT_007A",
+          "path": "category.digest[d_dent_01].patient_segment",
+          "value": "high_risk_adults",
+          "source_scope": "category",
+          "source_id": "dentists",
+          "allowed_triggers": [],
+          "sensitivity": "public"
+        },
+        {
+          "fact_id": "F_CAT_CATEGORY_DIGEST_D_DENT_01_SUMMARY_E55F",
+          "path": "category.digest[d_dent_01].summary",
+          "value": "Multi-center Indian trial shows 38% lower caries recurrence with high-viscosity GIC vs composite in adults with active decay history.",
+          "source_scope": "category",
+          "source_id": "dentists",
+          "allowed_triggers": [],
+          "sensitivity": "public"
+        },
+        {
+          "fact_id": "F_CAT_CATEGORY_DIGEST_D_DENT_01_ACTIONABLE_F81D",
+          "path": "category.digest[d_dent_01].actionable",
+          "value": "Reassess recall interval for adults flagged high-risk in your charting",
+          "source_scope": "category",
+          "source_id": "dentists",
+          "allowed_triggers": [],
+          "sensitivity": "public"
+        },
+        {
+          "fact_id": "F_CAT_CATEGORY_DIGEST_D_DENT_02_ID_FEF7",
+          "path": "category.digest[d_dent_02].id",
+          "value": "d_dent_02",
+          "source_scope": "category",
+          "source_id": "dentists",
+          "allowed_triggers": [],
+          "sensitivity": "public"
+        },
+        {
+          "fact_id": "F_CAT_CATEGORY_DIGEST_D_DENT_02_TITLE_C543",
+          "path": "category.digest[d_dent_02].title",
+          "value": "CBCT vs OPG in impacted third molar assessment",
+          "source_scope": "category",
+          "source_id": "dentists",
+          "allowed_triggers": [],
+          "sensitivity": "public"
+        },
+        {
+          "fact_id": "F_CAT_CATEGORY_DIGEST_D_DENT_02_SOURCE_6631",
+          "path": "category.digest[d_dent_02].source",
+          "value": "Indian Journal of Dental Research Nov 2026",
+          "source_scope": "category",
+          "source_id": "dentists",
+          "allowed_triggers": [],
+          "sensitivity": "public"
+        },
+        {
+          "fact_id": "F_CAT_CATEGORY_DIGEST_D_DENT_02_TRIAL_N_0823",
+          "path": "category.digest[d_dent_02].trial_n",
+          "value": 950,
+          "source_scope": "category",
+          "source_id": "dentists",
+          "allowed_triggers": [],
+          "sensitivity": "public"
+        },
+        {
+          "fact_id": "F_CAT_CATEGORY_DIGEST_D_DENT_02_PATIENT_SEGMENT_A280",
+          "path": "category.digest[d_dent_02].patient_segment",
+          "value": "surgical_cases",
+          "source_scope": "category",
+          "source_id": "dentists",
+          "allowed_triggers": [],
+          "sensitivity": "public"
+        },
+        {
+          "fact_id": "F_CAT_CATEGORY_DIGEST_D_DENT_02_SUMMARY_D7EF",
+          "path": "category.digest[d_dent_02].summary",
+          "value": "Pre-op CBCT reduced inferior alveolar nerve injury by 44% in high-difficulty impactions.",
+          "source_scope": "category",
+          "source_id": "dentists",
+          "allowed_triggers": [],
+          "sensitivity": "public"
+        },
+        {
+          "fact_id": "F_CAT_CATEGORY_DIGEST_D_DENT_02_ACTIONABLE_F978",
+          "path": "category.digest[d_dent_02].actionable",
+          "value": "Adopt 3D imaging protocols for deep impactions",
+          "source_scope": "category",
+          "source_id": "dentists",
+          "allowed_triggers": [],
+          "sensitivity": "public"
+        },
+        {
+          "fact_id": "F_TRI_TRIGGER_ID_80F7",
+          "path": "trigger.id",
+          "value": "trg_qc_0001_research_digest",
+          "source_scope": "trigger",
+          "source_id": "trg_qc_0001_research_digest",
+          "allowed_triggers": [],
+          "sensitivity": "public"
+        },
+        {
+          "fact_id": "F_TRI_TRIGGER_SCOPE_2DB5",
+          "path": "trigger.scope",
+          "value": "merchant",
+          "source_scope": "trigger",
+          "source_id": "trg_qc_0001_research_digest",
+          "allowed_triggers": [],
+          "sensitivity": "public"
+        },
+        {
+          "fact_id": "F_TRI_TRIGGER_KIND_CD19",
+          "path": "trigger.kind",
+          "value": "research_digest",
+          "source_scope": "trigger",
+          "source_id": "trg_qc_0001_research_digest",
+          "allowed_triggers": [],
+          "sensitivity": "public"
+        },
+        {
+          "fact_id": "F_TRI_TRIGGER_MERCHANT_ID_87F5",
+          "path": "trigger.merchant_id",
+          "value": "m_dent_sneha_001",
+          "source_scope": "trigger",
+          "source_id": "trg_qc_0001_research_digest",
+          "allowed_triggers": [],
+          "sensitivity": "public"
+        },
+        {
+          "fact_id": "F_TRI_TRIGGER_PAYLOAD_CATEGORY_795D",
+          "path": "trigger.payload.category",
+          "value": "dentists",
+          "source_scope": "trigger",
+          "source_id": "trg_qc_0001_research_digest",
+          "allowed_triggers": [],
+          "sensitivity": "public"
+        },
+        {
+          "fact_id": "F_TRI_TRIGGER_PAYLOAD_TOP_ITEM_ID_E2D3",
+          "path": "trigger.payload.top_item_id",
+          "value": "d_dent_01",
+          "source_scope": "trigger",
+          "source_id": "trg_qc_0001_research_digest",
+          "allowed_triggers": [],
+          "sensitivity": "public"
+        },
+        {
+          "fact_id": "F_TRI_TRIGGER_PAYLOAD_URGENCY_SCORE_E931",
+          "path": "trigger.payload.urgency_score",
+          "value": 1,
+          "source_scope": "trigger",
+          "source_id": "trg_qc_0001_research_digest",
+          "allowed_triggers": [],
+          "sensitivity": "public"
+        },
+        {
+          "fact_id": "F_TRI_TRIGGER_URGENCY_C8EE",
+          "path": "trigger.urgency",
+          "value": 1,
+          "source_scope": "trigger",
+          "source_id": "trg_qc_0001_research_digest",
+          "allowed_triggers": [],
+          "sensitivity": "public"
+        },
+        {
+          "fact_id": "F_TRI_TRIGGER_SUPPRESSION_KEY_03D0",
+          "path": "trigger.suppression_key",
+          "value": "research_digest:dentists:1",
+          "source_scope": "trigger",
+          "source_id": "trg_qc_0001_research_digest",
+          "allowed_triggers": [],
+          "sensitivity": "public"
+        },
+        {
+          "fact_id": "F_TRI_TRIGGER_EXPIRES_AT_8015",
+          "path": "trigger.expires_at",
+          "value": "2026-05-30T00:00:00Z",
+          "source_scope": "trigger",
+          "source_id": "trg_qc_0001_research_digest",
+          "allowed_triggers": [],
+          "sensitivity": "public"
+        }
+      ],
+      "selected_facts": [
+        {
+          "fact_id": "F_MER_MERCHANT_IDENTITY_OWNER_FIRST_NAME_1AD3",
+          "path": "merchant.identity.owner_first_name",
+          "value": "Sneha",
+          "source_scope": "merchant",
+          "source_id": "m_dent_sneha_001",
+          "allowed_triggers": [],
+          "sensitivity": "pii"
+        },
+        {
+          "fact_id": "F_CAT_CATEGORY_VOICE_TONE_CEB8",
+          "path": "category.voice.tone",
+          "value": "peer_clinical",
+          "source_scope": "category",
+          "source_id": "dentists",
+          "allowed_triggers": [],
+          "sensitivity": "public"
+        },
+        {
+          "fact_id": "F_CAT_CATEGORY_VOICE_VOCAB_TABOO_6494",
+          "path": "category.voice.vocab_taboo",
+          "value": [
+            "guaranteed",
+            "100% safe",
+            "completely cure",
+            "miracle",
+            "best in city"
+          ],
+          "source_scope": "category",
+          "source_id": "dentists",
+          "allowed_triggers": [],
+          "sensitivity": "public"
+        },
+        {
+          "fact_id": "F_CAT_CATEGORY_DIGEST_D_DENT_01_TITLE_A638",
+          "path": "category.digest[d_dent_01].title",
+          "value": "High-viscosity GIC in root caries",
+          "source_scope": "category",
+          "source_id": "dentists",
+          "allowed_triggers": [],
+          "sensitivity": "public"
+        },
+        {
+          "fact_id": "F_CAT_CATEGORY_DIGEST_D_DENT_01_SOURCE_A032",
+          "path": "category.digest[d_dent_01].source",
+          "value": "JIDA Oct 2026, p.14",
+          "source_scope": "category",
+          "source_id": "dentists",
+          "allowed_triggers": [],
+          "sensitivity": "public"
+        },
+        {
+          "fact_id": "F_CAT_CATEGORY_DIGEST_D_DENT_01_TRIAL_N_5647",
+          "path": "category.digest[d_dent_01].trial_n",
+          "value": 2100,
+          "source_scope": "category",
+          "source_id": "dentists",
+          "allowed_triggers": [],
+          "sensitivity": "public"
+        },
+        {
+          "fact_id": "F_CAT_CATEGORY_DIGEST_D_DENT_01_PATIENT_SEGMENT_007A",
+          "path": "category.digest[d_dent_01].patient_segment",
+          "value": "high_risk_adults",
+          "source_scope": "category",
+          "source_id": "dentists",
+          "allowed_triggers": [],
+          "sensitivity": "public"
+        },
+        {
+          "fact_id": "F_CAT_CATEGORY_DIGEST_D_DENT_01_SUMMARY_E55F",
+          "path": "category.digest[d_dent_01].summary",
+          "value": "Multi-center Indian trial shows 38% lower caries recurrence with high-viscosity GIC vs composite in adults with active decay history.",
+          "source_scope": "category",
+          "source_id": "dentists",
+          "allowed_triggers": [],
+          "sensitivity": "public"
+        },
+        {
+          "fact_id": "F_CAT_CATEGORY_DIGEST_D_DENT_01_ACTIONABLE_F81D",
+          "path": "category.digest[d_dent_01].actionable",
+          "value": "Reassess recall interval for adults flagged high-risk in your charting",
+          "source_scope": "category",
+          "source_id": "dentists",
+          "allowed_triggers": [],
+          "sensitivity": "public"
+        }
+      ],
+      "omitted_facts": [
+        {
+          "fact_id": "F_MER_MERCHANT_MERCHANT_ID_A7C9",
+          "path": "merchant.merchant_id",
+          "reason": "omitted_low_relevance_to_trigger",
+          "detail": "Field merchant.merchant_id not mapped to research_digest template"
+        },
+        {
+          "fact_id": "F_MER_MERCHANT_CATEGORY_SLUG_880E",
+          "path": "merchant.category_slug",
+          "reason": "omitted_low_relevance_to_trigger",
+          "detail": "Field merchant.category_slug not mapped to research_digest template"
+        },
+        {
+          "fact_id": "F_MER_MERCHANT_IDENTITY_NAME_376F",
+          "path": "merchant.identity.name",
+          "reason": "omitted_secondary_identity",
+          "detail": "owner_first_name is available, business name redundant for salutation"
+        },
+        {
+          "fact_id": "F_MER_MERCHANT_IDENTITY_CITY_77CB",
+          "path": "merchant.identity.city",
+          "reason": "omitted_irrelevant_geographic_in_scientific_digest",
+          "detail": "Scientific research digest is clinical and non-geographic"
+        },
+        {
+          "fact_id": "F_MER_MERCHANT_IDENTITY_LOCALITY_5406",
+          "path": "merchant.identity.locality",
+          "reason": "omitted_irrelevant_geographic_in_scientific_digest",
+          "detail": "Scientific research digest is clinical and non-geographic"
+        },
+        {
+          "fact_id": "F_MER_MERCHANT_IDENTITY_VERIFIED_F44A",
+          "path": "merchant.identity.verified",
+          "reason": "omitted_low_relevance_to_trigger",
+          "detail": "Field merchant.identity.verified not mapped to research_digest template"
+        },
+        {
+          "fact_id": "F_MER_MERCHANT_IDENTITY_LANGUAGES_7DB9",
+          "path": "merchant.identity.languages",
+          "reason": "omitted_low_relevance_to_trigger",
+          "detail": "Field merchant.identity.languages not mapped to research_digest template"
+        },
+        {
+          "fact_id": "F_MER_MERCHANT_SUBSCRIPTION_STATUS_87D8",
+          "path": "merchant.subscription.status",
+          "reason": "omitted_low_relevance_to_trigger",
+          "detail": "Field merchant.subscription.status not mapped to research_digest template"
+        },
+        {
+          "fact_id": "F_MER_MERCHANT_SUBSCRIPTION_PLAN_9EA7",
+          "path": "merchant.subscription.plan",
+          "reason": "omitted_low_relevance_to_trigger",
+          "detail": "Field merchant.subscription.plan not mapped to research_digest template"
+        },
+        {
+          "fact_id": "F_MER_MERCHANT_SUBSCRIPTION_DAYS_REMAINING_60C7",
+          "path": "merchant.subscription.days_remaining",
+          "reason": "omitted_low_relevance_to_trigger",
+          "detail": "Field merchant.subscription.days_remaining not mapped to research_digest template"
+        },
+        {
+          "fact_id": "F_MER_MERCHANT_PERFORMANCE_WINDOW_DAYS_3AB7",
+          "path": "merchant.performance.window_days",
+          "reason": "omitted_commercial_metrics_in_clinical_digest",
+          "detail": "Views and call volume conflict with peer-clinical research tone"
+        },
+        {
+          "fact_id": "F_MER_MERCHANT_PERFORMANCE_VIEWS_32AD",
+          "path": "merchant.performance.views",
+          "reason": "omitted_commercial_metrics_in_clinical_digest",
+          "detail": "Views and call volume conflict with peer-clinical research tone"
+        },
+        {
+          "fact_id": "F_MER_MERCHANT_PERFORMANCE_CALLS_5568",
+          "path": "merchant.performance.calls",
+          "reason": "omitted_commercial_metrics_in_clinical_digest",
+          "detail": "Views and call volume conflict with peer-clinical research tone"
+        },
+        {
+          "fact_id": "F_MER_MERCHANT_PERFORMANCE_CTR_DAFA",
+          "path": "merchant.performance.ctr",
+          "reason": "omitted_commercial_metrics_in_clinical_digest",
+          "detail": "Views and call volume conflict with peer-clinical research tone"
+        },
+        {
+          "fact_id": "F_MER_MERCHANT_SIGNALS_BED0",
+          "path": "merchant.signals",
+          "reason": "omitted_low_relevance_to_trigger",
+          "detail": "Field merchant.signals not mapped to research_digest template"
+        },
+        {
+          "fact_id": "F_MER_MERCHANT_CUSTOMER_AGGREGATE_TOTAL_UNIQUE_YTD_B5AD",
+          "path": "merchant.customer_aggregate.total_unique_ytd",
+          "reason": "omitted_generic_volume_in_topic_digest",
+          "detail": "Total YTD volume not referenced in specific topic digest"
+        },
+        {
+          "fact_id": "F_CAT_CATEGORY_SLUG_D1F9",
+          "path": "category.slug",
+          "reason": "omitted_low_relevance_to_trigger",
+          "detail": "Field category.slug not mapped to research_digest template"
+        },
+        {
+          "fact_id": "F_CAT_CATEGORY_VOICE_REGISTER_E0FE",
+          "path": "category.voice.register",
+          "reason": "omitted_low_relevance_to_trigger",
+          "detail": "Field category.voice.register not mapped to research_digest template"
+        },
+        {
+          "fact_id": "F_CAT_CATEGORY_VOICE_CODE_MIX_630C",
+          "path": "category.voice.code_mix",
+          "reason": "omitted_low_relevance_to_trigger",
+          "detail": "Field category.voice.code_mix not mapped to research_digest template"
+        },
+        {
+          "fact_id": "F_CAT_CATEGORY_VOICE_VOCAB_ALLOWED_8C59",
+          "path": "category.voice.vocab_allowed",
+          "reason": "omitted_low_relevance_to_trigger",
+          "detail": "Field category.voice.vocab_allowed not mapped to research_digest template"
+        },
+        {
+          "fact_id": "F_CAT_CATEGORY_DIGEST_D_DENT_01_ID_F257",
+          "path": "category.digest[d_dent_01].id",
+          "reason": "omitted_low_relevance_to_trigger",
+          "detail": "Field category.digest[d_dent_01].id not mapped to research_digest template"
+        },
+        {
+          "fact_id": "F_CAT_CATEGORY_DIGEST_D_DENT_02_ID_FEF7",
+          "path": "category.digest[d_dent_02].id",
+          "reason": "omitted_unmatched_digest_item",
+          "detail": "Fact belongs to non-active digest item, active is d_dent_01"
+        },
+        {
+          "fact_id": "F_CAT_CATEGORY_DIGEST_D_DENT_02_TITLE_C543",
+          "path": "category.digest[d_dent_02].title",
+          "reason": "omitted_unmatched_digest_item",
+          "detail": "Fact belongs to non-active digest item, active is d_dent_01"
+        },
+        {
+          "fact_id": "F_CAT_CATEGORY_DIGEST_D_DENT_02_SOURCE_6631",
+          "path": "category.digest[d_dent_02].source",
+          "reason": "omitted_unmatched_digest_item",
+          "detail": "Fact belongs to non-active digest item, active is d_dent_01"
+        },
+        {
+          "fact_id": "F_CAT_CATEGORY_DIGEST_D_DENT_02_TRIAL_N_0823",
+          "path": "category.digest[d_dent_02].trial_n",
+          "reason": "omitted_unmatched_digest_item",
+          "detail": "Fact belongs to non-active digest item, active is d_dent_01"
+        },
+        {
+          "fact_id": "F_CAT_CATEGORY_DIGEST_D_DENT_02_PATIENT_SEGMENT_A280",
+          "path": "category.digest[d_dent_02].patient_segment",
+          "reason": "omitted_unmatched_digest_item",
+          "detail": "Fact belongs to non-active digest item, active is d_dent_01"
+        },
+        {
+          "fact_id": "F_CAT_CATEGORY_DIGEST_D_DENT_02_SUMMARY_D7EF",
+          "path": "category.digest[d_dent_02].summary",
+          "reason": "omitted_unmatched_digest_item",
+          "detail": "Fact belongs to non-active digest item, active is d_dent_01"
+        },
+        {
+          "fact_id": "F_CAT_CATEGORY_DIGEST_D_DENT_02_ACTIONABLE_F978",
+          "path": "category.digest[d_dent_02].actionable",
+          "reason": "omitted_unmatched_digest_item",
+          "detail": "Fact belongs to non-active digest item, active is d_dent_01"
+        },
+        {
+          "fact_id": "F_TRI_TRIGGER_ID_80F7",
+          "path": "trigger.id",
+          "reason": "omitted_low_relevance_to_trigger",
+          "detail": "Field trigger.id not mapped to research_digest template"
+        },
+        {
+          "fact_id": "F_TRI_TRIGGER_SCOPE_2DB5",
+          "path": "trigger.scope",
+          "reason": "omitted_low_relevance_to_trigger",
+          "detail": "Field trigger.scope not mapped to research_digest template"
+        },
+        {
+          "fact_id": "F_TRI_TRIGGER_KIND_CD19",
+          "path": "trigger.kind",
+          "reason": "omitted_low_relevance_to_trigger",
+          "detail": "Field trigger.kind not mapped to research_digest template"
+        },
+        {
+          "fact_id": "F_TRI_TRIGGER_MERCHANT_ID_87F5",
+          "path": "trigger.merchant_id",
+          "reason": "omitted_low_relevance_to_trigger",
+          "detail": "Field trigger.merchant_id not mapped to research_digest template"
+        },
+        {
+          "fact_id": "F_TRI_TRIGGER_PAYLOAD_CATEGORY_795D",
+          "path": "trigger.payload.category",
+          "reason": "omitted_low_relevance_to_trigger",
+          "detail": "Field trigger.payload.category not mapped to research_digest template"
+        },
+        {
+          "fact_id": "F_TRI_TRIGGER_PAYLOAD_TOP_ITEM_ID_E2D3",
+          "path": "trigger.payload.top_item_id",
+          "reason": "omitted_low_relevance_to_trigger",
+          "detail": "Field trigger.payload.top_item_id not mapped to research_digest template"
+        },
+        {
+          "fact_id": "F_TRI_TRIGGER_PAYLOAD_URGENCY_SCORE_E931",
+          "path": "trigger.payload.urgency_score",
+          "reason": "omitted_low_relevance_to_trigger",
+          "detail": "Field trigger.payload.urgency_score not mapped to research_digest template"
+        },
+        {
+          "fact_id": "F_TRI_TRIGGER_URGENCY_C8EE",
+          "path": "trigger.urgency",
+          "reason": "omitted_low_relevance_to_trigger",
+          "detail": "Field trigger.urgency not mapped to research_digest template"
+        },
+        {
+          "fact_id": "F_TRI_TRIGGER_SUPPRESSION_KEY_03D0",
+          "path": "trigger.suppression_key",
+          "reason": "omitted_low_relevance_to_trigger",
+          "detail": "Field trigger.suppression_key not mapped to research_digest template"
+        },
+        {
+          "fact_id": "F_TRI_TRIGGER_EXPIRES_AT_8015",
+          "path": "trigger.expires_at",
+          "reason": "omitted_low_relevance_to_trigger",
+          "detail": "Field trigger.expires_at not mapped to research_digest template"
+        }
+      ],
+      "selection_reasons": {
+        "F_MER_MERCHANT_IDENTITY_OWNER_FIRST_NAME_1AD3": "selected_salutation_personalization",
+        "F_CAT_CATEGORY_VOICE_TONE_CEB8": "selected_category_governance_tone",
+        "F_CAT_CATEGORY_VOICE_VOCAB_TABOO_6494": "selected_category_governance_vocab_taboo",
+        "F_CAT_CATEGORY_DIGEST_D_DENT_01_TITLE_A638": "selected_active_digest_title",
+        "F_CAT_CATEGORY_DIGEST_D_DENT_01_SOURCE_A032": "selected_active_digest_source",
+        "F_CAT_CATEGORY_DIGEST_D_DENT_01_TRIAL_N_5647": "selected_active_digest_trial_n",
+        "F_CAT_CATEGORY_DIGEST_D_DENT_01_PATIENT_SEGMENT_007A": "selected_active_digest_patient_segment",
+        "F_CAT_CATEGORY_DIGEST_D_DENT_01_SUMMARY_E55F": "selected_active_digest_summary",
+        "F_CAT_CATEGORY_DIGEST_D_DENT_01_ACTIONABLE_F81D": "selected_active_digest_actionable"
+      }
+    },
+    "llm_boundary": {
+      "invoked": false,
+      "invocation_reason": "not_invoked",
+      "envelope_fact_ids": [],
+      "envelope_summary": null,
+      "provider": null,
+      "model": null,
+      "latency_ms": null,
+      "timeout": false,
+      "circuit_broken": false,
+      "fallback_triggered": false
+    },
+    "llm_output": {
+      "raw_intent": null,
+      "raw_action": null,
+      "raw_draft_body": null,
+      "raw_cta": null,
+      "raw_confidence": null,
+      "validation_passed": true,
+      "validator_errors": [],
+      "sanitized_body": null,
+      "sanitized_action": null
+    },
+    "final_output": {
+      "action": "send",
+      "body": "Dr. Sneha, JIDA's Oct issue landed. One item relevant to high risk adults patients \u2014 Multi-center Indian trial shows 38% lower caries recurrence with high-viscosity GIC vs composite in adults with active decay history (N=2,100). Worth a look (2-min abstract). Want me to pull the key takeaways for your team? Reply YES. \u2014 JIDA Oct 2026, p.14",
+      "cta": "open_ended",
+      "is_deterministic": true,
+      "fallback_reason": null,
+      "conversation_id": "conv_m_dent_sneha_001_trg_qc_0001_research_digest"
+    },
+    "evaluation": {
+      "evaluator": "Groq120B_Scorer",
+      "total_score": 28.0,
+      "specificity": 3.0,
+      "category_fit": 8.0,
+      "merchant_fit": 4.0,
+      "decision_quality": 6.0,
+      "engagement": 7.0,
+      "penalties": 0.0,
+      "hint": "Anchor claims to merchant data and cite real sources."
+    }
+  }
+}

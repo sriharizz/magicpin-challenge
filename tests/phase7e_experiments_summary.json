@@ -1,0 +1,302 @@
+{
+  "timestamp": "2026-08-27T10:30:00Z",
+  "evaluations": [
+    {
+      "dataset": "Original 520 Benchmark Cases",
+      "case_count": 520,
+      "baseline": {
+        "avg_selected_facts": 3.17,
+        "distracting_facts_rate": 0.0,
+        "sensitive_leakage_rate": 0.0,
+        "vital_facts_omitted_rate": 0.0,
+        "budget_compliance_rate": 92.7,
+        "avg_latency_ms": 0.973
+      },
+      "general_selector": {
+        "avg_selected_facts": 6.0,
+        "distracting_facts_rate": 0.0,
+        "sensitive_leakage_rate": 0.0,
+        "vital_facts_omitted_rate": 0.0,
+        "budget_compliance_rate": 100.0,
+        "avg_latency_ms": 1.748
+      },
+      "sample_traces": [
+        {
+          "case_id": "qc_0001",
+          "category": "dentists",
+          "trigger_kind": "research_digest",
+          "baseline_selected": [
+            "merchant.identity.owner_first_name",
+            "category.voice.tone",
+            "category.voice.vocab_taboo",
+            "category.digest[d_dent_01].title",
+            "category.digest[d_dent_01].source",
+            "category.digest[d_dent_01].trial_n",
+            "category.digest[d_dent_01].patient_segment",
+            "category.digest[d_dent_01].summary",
+            "category.digest[d_dent_01].actionable"
+          ],
+          "general_selected": [
+            "merchant.identity.owner_first_name",
+            "category.digest[d_dent_01].trial_n",
+            "category.digest[d_dent_01].title",
+            "category.digest[d_dent_01].source",
+            "category.digest[d_dent_01].patient_segment",
+            "merchant.customer_aggregate.total_unique_ytd"
+          ],
+          "general_reasons": {
+            "F_MER_MERCHANT_IDENTITY_OWNER_FIRST_NAME_1AD3": "scored_above_threshold [slot_identity] (score=6.85)",
+            "F_CAT_CATEGORY_DIGEST_D_DENT_01_TRIAL_N_5647": "scored_above_threshold [slot_primary_content] (score=4.6)",
+            "F_CAT_CATEGORY_DIGEST_D_DENT_01_TITLE_A638": "scored_above_threshold [slot_primary_content] (score=4.3)",
+            "F_CAT_CATEGORY_DIGEST_D_DENT_01_SOURCE_A032": "scored_above_threshold [slot_primary_content] (score=4.3)",
+            "F_CAT_CATEGORY_DIGEST_D_DENT_01_PATIENT_SEGMENT_007A": "scored_above_threshold [slot_cohort_actionable] (score=6.3)",
+            "F_MER_MERCHANT_CUSTOMER_AGGREGATE_TOTAL_UNIQUE_YTD_B5AD": "scored_above_threshold [slot_cohort_actionable] (score=6.0)"
+          }
+        },
+        {
+          "case_id": "qc_0002",
+          "category": "gyms",
+          "trigger_kind": "regulation_change",
+          "baseline_selected": [
+            "merchant.identity.name",
+            "merchant.identity.owner_first_name",
+            "category.digest[d_gym_01].summary"
+          ],
+          "general_selected": [
+            "merchant.identity.owner_first_name",
+            "category.digest[d_gym_01].trial_n",
+            "category.digest[d_gym_01].title",
+            "category.digest[d_gym_01].source",
+            "category.digest[d_gym_01].patient_segment",
+            "merchant.customer_aggregate.total_unique_ytd"
+          ],
+          "general_reasons": {
+            "F_MER_MERCHANT_IDENTITY_OWNER_FIRST_NAME_1AD3": "scored_above_threshold [slot_identity] (score=6.85)",
+            "F_CAT_CATEGORY_DIGEST_D_GYM_01_TRIAL_N_1FFD": "scored_above_threshold [slot_primary_content] (score=4.6)",
+            "F_CAT_CATEGORY_DIGEST_D_GYM_01_TITLE_6471": "scored_above_threshold [slot_primary_content] (score=4.3)",
+            "F_CAT_CATEGORY_DIGEST_D_GYM_01_SOURCE_8FDA": "scored_above_threshold [slot_primary_content] (score=4.3)",
+            "F_CAT_CATEGORY_DIGEST_D_GYM_01_PATIENT_SEGMENT_B8A9": "scored_above_threshold [slot_cohort_actionable] (score=6.3)",
+            "F_MER_MERCHANT_CUSTOMER_AGGREGATE_TOTAL_UNIQUE_YTD_B5AD": "scored_above_threshold [slot_cohort_actionable] (score=6.0)"
+          }
+        },
+        {
+          "case_id": "qc_0003",
+          "category": "pharmacies",
+          "trigger_kind": "recall_due",
+          "baseline_selected": [
+            "merchant.identity.name",
+            "merchant.identity.owner_first_name",
+            "category.digest[d_pharm_01].summary"
+          ],
+          "general_selected": [
+            "merchant.identity.owner_first_name",
+            "category.digest[d_pharm_01].trial_n",
+            "category.digest[d_pharm_01].id",
+            "category.digest[d_pharm_01].title",
+            "category.digest[d_pharm_01].patient_segment",
+            "merchant.customer_aggregate.total_unique_ytd"
+          ],
+          "general_reasons": {
+            "F_MER_MERCHANT_IDENTITY_OWNER_FIRST_NAME_1AD3": "scored_above_threshold [slot_identity] (score=6.85)",
+            "F_CAT_CATEGORY_DIGEST_D_PHARM_01_TRIAL_N_705D": "scored_above_threshold [slot_primary_content] (score=4.6)",
+            "F_CAT_CATEGORY_DIGEST_D_PHARM_01_ID_342F": "scored_above_threshold [slot_primary_content] (score=4.3)",
+            "F_CAT_CATEGORY_DIGEST_D_PHARM_01_TITLE_2289": "scored_above_threshold [slot_primary_content] (score=4.3)",
+            "F_CAT_CATEGORY_DIGEST_D_PHARM_01_PATIENT_SEGMENT_21B5": "scored_above_threshold [slot_cohort_actionable] (score=6.3)",
+            "F_MER_MERCHANT_CUSTOMER_AGGREGATE_TOTAL_UNIQUE_YTD_B5AD": "scored_above_threshold [slot_cohort_actionable] (score=6.0)"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "Unseen 220 Novel Scenarios",
+      "case_count": 220,
+      "baseline": {
+        "avg_selected_facts": 2.85,
+        "distracting_facts_rate": 0.0,
+        "sensitive_leakage_rate": 0.0,
+        "vital_facts_omitted_rate": 0.0,
+        "budget_compliance_rate": 86.8,
+        "avg_latency_ms": 0.594
+      },
+      "general_selector": {
+        "avg_selected_facts": 5.85,
+        "distracting_facts_rate": 0.0,
+        "sensitive_leakage_rate": 0.0,
+        "vital_facts_omitted_rate": 0.0,
+        "budget_compliance_rate": 100.0,
+        "avg_latency_ms": 1.039
+      },
+      "sample_traces": [
+        {
+          "case_id": "unseen_0001",
+          "category": "dermatology",
+          "trigger_kind": "performance_alert",
+          "baseline_selected": [],
+          "general_selected": [
+            "merchant.identity.name",
+            "category.digest[d_derm_01].trial_n",
+            "category.digest[d_derm_01].title",
+            "category.digest[d_derm_01].summary",
+            "category.digest[d_derm_01].patient_segment",
+            "category.digest[d_derm_01].actionable"
+          ],
+          "general_reasons": {
+            "F_MER_MERCHANT_IDENTITY_NAME_376F": "scored_above_threshold [slot_identity] (score=5.7)",
+            "F_CAT_CATEGORY_DIGEST_D_DERM_01_TRIAL_N_FD92": "scored_above_threshold [slot_primary_content] (score=4.3)",
+            "F_CAT_CATEGORY_DIGEST_D_DERM_01_TITLE_5D66": "scored_above_threshold [slot_primary_content] (score=4.0)",
+            "F_CAT_CATEGORY_DIGEST_D_DERM_01_SUMMARY_58BB": "scored_above_threshold [slot_primary_content] (score=4.0)",
+            "F_CAT_CATEGORY_DIGEST_D_DERM_01_PATIENT_SEGMENT_000B": "scored_above_threshold [slot_cohort_actionable] (score=5.7)",
+            "F_CAT_CATEGORY_DIGEST_D_DERM_01_ACTIONABLE_FA01": "scored_above_threshold [slot_cohort_actionable] (score=5.5)"
+          }
+        },
+        {
+          "case_id": "unseen_0002",
+          "category": "optometry",
+          "trigger_kind": "performance_alert",
+          "baseline_selected": [
+            "merchant.identity.owner_first_name",
+            "merchant.performance.views_30d",
+            "merchant.performance.calls_30d",
+            "merchant.performance.leads_30d"
+          ],
+          "general_selected": [
+            "merchant.identity.owner_first_name",
+            "category.digest[d_opt_01].trial_n",
+            "category.digest[d_opt_01].title",
+            "category.digest[d_opt_01].summary",
+            "merchant.customer_aggregate.total_unique_customers_30d",
+            "merchant.customer_aggregate.high_risk_adult_count"
+          ],
+          "general_reasons": {
+            "F_MER_MERCHANT_IDENTITY_OWNER_FIRST_NAME_1AD3": "scored_above_threshold [slot_identity] (score=6.85)",
+            "F_CAT_CATEGORY_DIGEST_D_OPT_01_TRIAL_N_4306": "scored_above_threshold [slot_primary_content] (score=4.3)",
+            "F_CAT_CATEGORY_DIGEST_D_OPT_01_TITLE_0308": "scored_above_threshold [slot_primary_content] (score=4.0)",
+            "F_CAT_CATEGORY_DIGEST_D_OPT_01_SUMMARY_6499": "scored_above_threshold [slot_primary_content] (score=4.0)",
+            "F_MER_MERCHANT_CUSTOMER_AGGREGATE_TOTAL_UNIQUE_CUSTOMERS_30D_74D5": "scored_above_threshold [slot_cohort_actionable] (score=6.0)",
+            "F_MER_MERCHANT_CUSTOMER_AGGREGATE_HIGH_RISK_ADULT_COUNT_E5A3": "scored_above_threshold [slot_cohort_actionable] (score=6.0)"
+          }
+        },
+        {
+          "case_id": "unseen_0003",
+          "category": "diagnostic_labs",
+          "trigger_kind": "inbound_inquiry",
+          "baseline_selected": [
+            "merchant.identity.name",
+            "merchant.identity.owner_first_name",
+            "category.digest[d_lab_01].summary"
+          ],
+          "general_selected": [
+            "merchant.identity.owner_first_name",
+            "category.digest[d_lab_01].trial_n",
+            "category.digest[d_lab_01].title",
+            "category.digest[d_lab_01].summary",
+            "category.digest[d_lab_01].patient_segment",
+            "category.digest[d_lab_01].actionable"
+          ],
+          "general_reasons": {
+            "F_MER_MERCHANT_IDENTITY_OWNER_FIRST_NAME_1AD3": "scored_above_threshold [slot_identity] (score=6.85)",
+            "F_CAT_CATEGORY_DIGEST_D_LAB_01_TRIAL_N_634B": "scored_above_threshold [slot_primary_content] (score=4.3)",
+            "F_CAT_CATEGORY_DIGEST_D_LAB_01_TITLE_1BFA": "scored_above_threshold [slot_primary_content] (score=4.0)",
+            "F_CAT_CATEGORY_DIGEST_D_LAB_01_SUMMARY_2AB3": "scored_above_threshold [slot_primary_content] (score=4.0)",
+            "F_CAT_CATEGORY_DIGEST_D_LAB_01_PATIENT_SEGMENT_39DE": "scored_above_threshold [slot_cohort_actionable] (score=5.7)",
+            "F_CAT_CATEGORY_DIGEST_D_LAB_01_ACTIONABLE_6837": "scored_above_threshold [slot_cohort_actionable] (score=5.5)"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "Adversarial 110 Distraction Scenarios",
+      "case_count": 110,
+      "baseline": {
+        "avg_selected_facts": 2.39,
+        "distracting_facts_rate": 0.0,
+        "sensitive_leakage_rate": 0.0,
+        "vital_facts_omitted_rate": 0.0,
+        "budget_compliance_rate": 84.5,
+        "avg_latency_ms": 0.631
+      },
+      "general_selector": {
+        "avg_selected_facts": 5.98,
+        "distracting_facts_rate": 0.0,
+        "sensitive_leakage_rate": 0.0,
+        "vital_facts_omitted_rate": 0.0,
+        "budget_compliance_rate": 100.0,
+        "avg_latency_ms": 1.067
+      },
+      "sample_traces": [
+        {
+          "case_id": "adv_0001",
+          "category": "veterinary",
+          "trigger_kind": "performance_alert",
+          "baseline_selected": [
+            "merchant.identity.owner_first_name"
+          ],
+          "general_selected": [
+            "merchant.identity.owner_first_name",
+            "category.digest[d_vet_01].trial_n",
+            "category.digest[d_vet_01].title",
+            "category.digest[d_vet_01].summary",
+            "category.digest[d_vet_01].patient_segment",
+            "category.digest[d_vet_01].actionable"
+          ],
+          "general_reasons": {
+            "F_MER_MERCHANT_IDENTITY_OWNER_FIRST_NAME_1AD3": "scored_above_threshold [slot_identity] (score=6.85)",
+            "F_CAT_CATEGORY_DIGEST_D_VET_01_TRIAL_N_2F20": "scored_above_threshold [slot_primary_content] (score=4.3)",
+            "F_CAT_CATEGORY_DIGEST_D_VET_01_TITLE_81F4": "scored_above_threshold [slot_primary_content] (score=4.0)",
+            "F_CAT_CATEGORY_DIGEST_D_VET_01_SUMMARY_723E": "scored_above_threshold [slot_primary_content] (score=4.0)",
+            "F_CAT_CATEGORY_DIGEST_D_VET_01_PATIENT_SEGMENT_AB76": "scored_above_threshold [slot_cohort_actionable] (score=5.7)",
+            "F_CAT_CATEGORY_DIGEST_D_VET_01_ACTIONABLE_1056": "scored_above_threshold [slot_cohort_actionable] (score=5.5)"
+          }
+        },
+        {
+          "case_id": "adv_0002",
+          "category": "diagnostic_labs",
+          "trigger_kind": "performance_alert",
+          "baseline_selected": [
+            "merchant.identity.owner_first_name"
+          ],
+          "general_selected": [
+            "merchant.identity.owner_first_name",
+            "category.digest[d_lab_01].trial_n",
+            "category.digest[d_lab_01].title",
+            "category.digest[d_lab_01].summary",
+            "category.digest[d_lab_01].patient_segment",
+            "category.digest[d_lab_01].actionable"
+          ],
+          "general_reasons": {
+            "F_MER_MERCHANT_IDENTITY_OWNER_FIRST_NAME_1AD3": "scored_above_threshold [slot_identity] (score=6.85)",
+            "F_CAT_CATEGORY_DIGEST_D_LAB_01_TRIAL_N_634B": "scored_above_threshold [slot_primary_content] (score=4.3)",
+            "F_CAT_CATEGORY_DIGEST_D_LAB_01_TITLE_1BFA": "scored_above_threshold [slot_primary_content] (score=4.0)",
+            "F_CAT_CATEGORY_DIGEST_D_LAB_01_SUMMARY_2AB3": "scored_above_threshold [slot_primary_content] (score=4.0)",
+            "F_CAT_CATEGORY_DIGEST_D_LAB_01_PATIENT_SEGMENT_39DE": "scored_above_threshold [slot_cohort_actionable] (score=5.7)",
+            "F_CAT_CATEGORY_DIGEST_D_LAB_01_ACTIONABLE_6837": "scored_above_threshold [slot_cohort_actionable] (score=5.5)"
+          }
+        },
+        {
+          "case_id": "adv_0003",
+          "category": "cardiology",
+          "trigger_kind": "performance_alert",
+          "baseline_selected": [
+            "merchant.identity.owner_first_name"
+          ],
+          "general_selected": [
+            "merchant.identity.owner_first_name",
+            "category.digest[d_card_01].trial_n",
+            "category.digest[d_card_02].trial_n",
+            "category.digest[d_card_01].title",
+            "category.digest[d_card_01].patient_segment",
+            "category.digest[d_card_01].actionable"
+          ],
+          "general_reasons": {
+            "F_MER_MERCHANT_IDENTITY_OWNER_FIRST_NAME_1AD3": "scored_above_threshold [slot_identity] (score=6.85)",
+            "F_CAT_CATEGORY_DIGEST_D_CARD_01_TRIAL_N_D97E": "scored_above_threshold [slot_primary_content] (score=4.3)",
+            "F_CAT_CATEGORY_DIGEST_D_CARD_02_TRIAL_N_4A67": "scored_above_threshold [slot_primary_content] (score=4.3)",
+            "F_CAT_CATEGORY_DIGEST_D_CARD_01_TITLE_CFBB": "scored_above_threshold [slot_primary_content] (score=4.0)",
+            "F_CAT_CATEGORY_DIGEST_D_CARD_01_PATIENT_SEGMENT_9C24": "scored_above_threshold [slot_cohort_actionable] (score=5.7)",
+            "F_CAT_CATEGORY_DIGEST_D_CARD_01_ACTIONABLE_91FA": "scored_above_threshold [slot_cohort_actionable] (score=5.5)"
+          }
+        }
+      ]
+    }
+  ]
+}

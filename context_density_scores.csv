@@ -1,0 +1,5 @@
+Context_Density,N,Average,Median,Min,Max
+medium,15,33.6,34.0,28,39
+missing_optional,7,27.9,27.0,25,32
+rich,9,32.6,31.0,26,39
+sparse,6,34.3,34.0,31,38
