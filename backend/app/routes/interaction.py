@@ -62,7 +62,12 @@ async def handle_tick(
         if not trg_entity:
             continue
         trg_payload = trg_entity.get("payload", {})
-        urgency = int(trg_payload.get("urgency", 1))
+        raw_urg = trg_payload.get("urgency", 1)
+        try:
+            urgency = int(raw_urg)
+        except (ValueError, TypeError):
+            urg_map = {"critical": 5, "highest": 5, "urgent": 4, "high": 3, "medium": 2, "normal": 2, "low": 1, "lowest": 0}
+            urgency = urg_map.get(str(raw_urg).lower(), 1) if isinstance(raw_urg, str) else 1
         # Prioritize by highest urgency first, stable trigger ID tiebreaker
         candidates.append((urgency, trg_id, trg_payload))
 
