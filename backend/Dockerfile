@@ -24,6 +24,4 @@ COPY run.py .
 
 EXPOSE 8080
 
-VOLUME ["/data"]
-
 CMD ["python", "run.py"]
